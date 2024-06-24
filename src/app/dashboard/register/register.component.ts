@@ -54,9 +54,4 @@ name: string = '';
 
   }
 
-  signInWithGoogle() {
-    this.auth.googleSignIn();
-  }
-  
-
 }

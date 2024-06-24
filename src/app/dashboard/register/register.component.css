@@ -109,7 +109,7 @@ input, textarea, select, button {
     .form-control:focus {
       border-bottom: 1px solid #accffe; }
   
-  button {
+  .register_btn {
     border: none;
     width: 100%;
     height: 49px;
@@ -128,10 +128,10 @@ input, textarea, select, button {
     transition: all 0.5s;
     position: relative;
     overflow: hidden; }
-    button span {
+    .register_btn span {
       position: relative;
       z-index: 2; }
-    button:before, button:after {
+    .register_btn:before, .register_btn:after {
       content: '';
       position: absolute;
       top: 0;
@@ -148,10 +148,10 @@ input, textarea, select, button {
       transform: translate(-100%, 0);
       -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
       transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1); }
-    button:after {
+    .register_btn:after {
       -webkit-transition-delay: 0.2s;
       transition-delay: 0.2s; }
-    button:hover:before, button:hover:after {
+    .register_btn:hover:before, .register_btn:hover:after {
       -webkit-transform: translate(0, 0);
       transform: translate(0, 0); }
   
@@ -228,4 +228,43 @@ input, textarea, select, button {
 
 a{
   color: black;
+}
+
+.google-button {
+  all: unset;
+  margin: auto;
+  width: fit-content;
+  height: 42px;
+  background-color: #6baae9;
+  border-radius: 2px;
+  transition: all 300ms ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+.google-button .google-icon-wrapper {
+  margin: 1px;
+  width: 40px;
+  height: 40px;
+  border-radius: 1px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.google-button .google-button-text {
+  display: flex;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  margin-left: 1em;
+  margin-right: 1em;
+  align-items: center;
+}
+.google-button:hover {
+  box-shadow: 0 0 3px 3px rgba(66, 133, 244, 0.3);
+  cursor: pointer;
+}
+.google-button:active {
+  background: #3367d6;
 }

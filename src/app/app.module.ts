@@ -17,6 +17,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { HeaderComponent } from './template/header/header.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { TestDashComponent } from './dashboard/test-dash/test-dash.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     RegisterComponent,
     LoginComponent,
     HeaderComponent,
+    TestDashComponent,
   ],
   imports: [
     BrowserModule,
