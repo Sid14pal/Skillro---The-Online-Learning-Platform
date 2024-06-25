@@ -21,10 +21,10 @@
            <input type="password" class="form-control" placeholder="Enter Your Password" name="password" [(ngModel)]="password">
         </div>
         <a>
-           <p class="text-end text-size text-danger">Forget Password?</p>
+           <a routerLink="/forgot-password"><p class="text-end text-size text-danger">Forget Password?</p></a>
         </a>
         <button class="register_btn" (click)="login()">
-        <span>Sign In</span>
+        <span>Submit</span>
         </button>
         <div class="mt-4">
            <button class="google-button" (click)="signInWithGoogle()">

@@ -17,7 +17,9 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { HeaderComponent } from './template/header/header.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { TestDashComponent } from './dashboard/test-dash/test-dash.component';
+import { ForgotPasswordComponent } from './dashboard/forgot-password/forgot-password.component';
+import { VarifyEmailComponent } from './dashboard/varify-email/varify-email.component';
+import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { TestDashComponent } from './dashboard/test-dash/test-dash.component';
     RegisterComponent,
     LoginComponent,
     HeaderComponent,
-    TestDashComponent,
+    ForgotPasswordComponent,
+    VarifyEmailComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
