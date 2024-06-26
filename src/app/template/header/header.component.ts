@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouteStatusService } from '../../services/route-status.service';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+
+  constructor(public routeStatusService: RouteStatusService){}
 
 }
