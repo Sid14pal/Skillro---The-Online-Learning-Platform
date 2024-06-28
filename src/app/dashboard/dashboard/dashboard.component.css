@@ -1919,7 +1919,7 @@
   .nav-link {
     display: block;
     padding: 0.5rem 1rem;
-    color: #0d6efd !important;
+    color: #ffffff !important;
     text-decoration: none;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
   }
@@ -2328,7 +2328,7 @@
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
+    background-color: #212130;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
@@ -21090,7 +21090,7 @@
     margin: 0; }
   
   h1, h2, h3, h4, h5, h6 {
-    color: #323232;
+    color: #fff;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 0.5rem; }
@@ -21116,7 +21116,7 @@
     line-height: 1.858rem; }
   
   h6 {
-    font-size: 1.143rem;
+    font-size: 1rem;
     line-height: 1.858rem; }
   
   a, a:hover, a:focus {
@@ -21141,7 +21141,7 @@
   
   .accordion .acd-group .acd-heading {
     font-weight: 500;
-    font-size: 1.143rem;
+    font-size: 1rem;
     position: relative;
     padding: 12px 0;
     color: #323232;
@@ -21160,7 +21160,7 @@
       display: block;
       padding: 3px 6px 2px;
       content: "\f105";
-      font-size: 1.143rem;
+      font-size: 1rem;
       line-height: 1.571rem; }
     .accordion .acd-group .acd-heading:hover {
       color: #84ba3f; }
@@ -21176,20 +21176,20 @@
   /*plus-icon*/
   .accordion.plus-icon .acd-group.acd-active .acd-heading:before {
     content: "\f068";
-    font-size: 1.143rem; }
+    font-size: 1rem; }
   
   .accordion.plus-icon .acd-group .acd-heading:before {
     content: "\f067";
-    font-size: 1.143rem; }
+    font-size: 1rem; }
   
   /*plus-icon.round*/
   .accordion.plus-icon.round .acd-group.acd-active .acd-heading:before {
     content: "\f056";
-    font-size: 1.143rem; }
+    font-size: 1rem; }
   
   .accordion.plus-icon.round .acd-group .acd-heading:before {
     content: "\f055";
-    font-size: 1.143rem; }
+    font-size: 1rem; }
   
   /*gray*/
   .accordion.gray .acd-heading {
@@ -21516,7 +21516,7 @@
       position: absolute;
       left: 0;
       top: 5px;
-      font-size: 1.143rem; }
+      font-size: 1rem; }
   
   ul.list li {
     color: #323232; }
@@ -21550,7 +21550,7 @@
       position: relative; }
       ul.list-arrow li:after {
         content: "\f105";
-        font-size: 1.143rem; }
+        font-size: 1rem; }
   
   ul.list-hand {
     padding: 0;
@@ -21867,7 +21867,7 @@
       height: 32px;
       width: 32px;
       line-height: 2.14rem;
-      font-size: 1.143rem;
+      font-size: 1rem;
       text-align: center;
       margin: 0;
       border-radius: 4px;
@@ -22245,7 +22245,7 @@
   
   /*header*/
   .admin-header {
-    background: #ffffff;
+    background: #212130;
     -webkit-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
     box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1); }
@@ -22254,7 +22254,7 @@
     margin-top: 6px; }
   
   .admin-header.navbar.fixed-top + .container-fluid {
-    padding: 4.7rem 0px 0px 0px; }
+    padding: 3.7rem 0px 0px 0px;}
   
   .admin-header.navbar .navbar-menu-wrapper {
     transition: width .8s ease;
@@ -22410,6 +22410,7 @@
   .content-wrapper {
     padding: 30px;
     overflow: hidden;
+    font-size: 14px;
     min-height: 100vh;
     -webkit-transition: all 0.9s ease;
     -moz-transition: all 0.9s ease;
@@ -22576,7 +22577,7 @@
     .side-menu-fixed .side-menu-bg {
       height: 100%;
       width: 100%;
-      background: #282a39; 
+      background: #212130; 
       overflow: hidden;
     }
     .side-menu-fixed .side-menu {
@@ -22761,7 +22762,7 @@
   
   .content-wrapper {
     padding-left: 260px;
-    background: #fafafa;
+    background: #17171E;
     position: relative;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -22897,6 +22898,12 @@
       position: absolute;
       background: #282a39;
       z-index: 0; }
+
+      .card .mat-icon{
+        height: 40px;
+    width: 40px;
+    font-size: 35px;
+      }
   
   .header-info .card .info-drop.header-info-button {
     right: 0; }
@@ -22965,7 +22972,7 @@
   
   /*card*/
   .card {
-    border-radius: 0;
+    border-radius: 12px;
     border: 0;
     -webkit-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
@@ -24349,9 +24356,7 @@
   .table {
       color: #626262;
   }
-  .table > :not(caption) > * > * {
-      padding: 1rem 0.5rem;
-  }
+
   .table td {
     vertical-align: middle; }
   
@@ -24696,4 +24701,94 @@
   
   div.style-customizer .content-chooser input[type=radio]:checked ~ label {
     color: #323232; }
+
+    .box {
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 25px;
+    }
+    .box .text {
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+      height: 250px;
+      padding: 20px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      color: #ffffff;
+      position: relative;
+      transition: background-image 0.5s linear;
+    }
+    .box .text #selections {
+      text-align: center;
+      width: 100%;
+    }
+    .box .text #selections * {
+      margin: 0 5px;
+      padding: 5px 10px;
+    }
+    .box .text #selections #year-input {
+      width: 80px;
+    }
+    .box .text #selections input[type=submit] {
+      border-radius: 10px;
+    }
+    .box .text h2, .box .text p {
+      text-shadow: 0 0 9px rgba(0, 0, 0, 0.8);
+    }
+    .box .text h2 {
+      font-size: 1.7em;
+    }
+    .box .text p {
+      margin-top: 5px;
+      font-size: 1.3em;
+      letter-spacing: 2px;
+    }
+    .box .dates {
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+      grid-gap: 10px;
+      height: 250px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background: #ffffff;
+      color: #000;
+    }
+    .box .dates div:nth-child(7n) {
+      color: red;
+      font-weight: bold;
+    }
+    .box .dates .today {
+      background: #fbff0d;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+    
+    @media (max-width: 565px) {
+      .box {
+        width: 350px;
+      }
+      .box .text {
+        height: 200px;
+      }
+      .box .text h2 {
+        margin-top: 10px;
+        font-size: 1.2em;
+      }
+      .box .text p {
+        margin-top: 5px;
+        font-size: 1.1em;
+        letter-spacing: 1px;
+      }
+      .box .dates {
+        grid-template-columns: repeat(7, 1fr);
+        grid-gap: 0px;
+      }
+    }
   
