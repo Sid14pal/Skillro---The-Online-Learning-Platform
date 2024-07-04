@@ -3,6 +3,7 @@ import {FormsModule} from '@angular/forms'
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule, withFetch, provideHttpClient } from '@angular/common/http';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
@@ -20,6 +21,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ForgotPasswordComponent } from './dashboard/forgot-password/forgot-password.component';
 import { VarifyEmailComponent } from './dashboard/varify-email/varify-email.component';
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
+import { AddStudentComponent } from './dashboard/add-student/add-student.component';
+import { AllStudentsComponent } from './dashboard/all-students/all-students.component';
+import { DashboardSidebarComponent } from './dashboard/dashboard-sidebar/dashboard-sidebar.component';
 
 
 @NgModule({
@@ -31,6 +35,9 @@ import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
     ForgotPasswordComponent,
     VarifyEmailComponent,
     DashboardComponent,
+    AddStudentComponent,
+    AllStudentsComponent,
+    DashboardSidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +55,8 @@ import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
     provideFirestore(() => getFirestore()),
     provideDatabase(() => getDatabase()),
     provideMessaging(() => getMessaging()),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideHttpClient(withFetch()),
   ],
   bootstrap: [AppComponent]
 })

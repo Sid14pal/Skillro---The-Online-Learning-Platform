@@ -1,0 +1,23 @@
+ <!-- Left Sidebar start-->
+ <div class="side-menu-fixed">
+    <div class="scrollbar side-menu-bg">
+      <ul class="nav navbar-nav side-menu" id="sidebarnav">
+        <li>
+          <a class="cursor-pointer" routerLink="/dashboard"><mat-icon>home</mat-icon><span class="right-nav-text">Dashboard</span> </a>
+        </li>
+        <!-- menu item chat-->
+        <li>
+          <div ngbDropdown class="d-inline-block w-100 cursor-pointer">
+            <a id="dropdownBasic1" ngbDropdownToggle> <mat-icon>groups</mat-icon> <span class="right-nav-text">Students</span>  </a>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <a ngbDropdownItem class="dropdown-item" routerLink="/all-student">All Students</a>
+              <a ngbDropdownItem routerLink="/add-student">Add Students</a>
+              <a ngbDropdownItem>Edit Students</a>
+              <a ngbDropdownItem>About Students</a>
+            </div>
+            </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Left Sidebar End-->

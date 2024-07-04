@@ -24298,11 +24298,12 @@
     font-size: 13px;
     height: auto;
     line-height: 1.33333;
-    padding: 15px 15px 15px 20px;
-    background: #f6f7f8;
-    color: #323232;
-    border: 0px solid transparent;
-    box-shadow: none; }
+    padding: 12px 8px 12px 20px;
+    background: #212130;
+    color: #ffffff;
+    border: 1px solid #3d3d4e;
+    box-shadow: none;
+   }
     .form-control label {
       color: #323232;
       margin-top: 8px;
@@ -24835,5 +24836,25 @@
   background-color: #ffaa16;
 }
 
+.form-label{
+  color: white;
+}
 
+.form-control:focus {
+  background: none;
+  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border: 1px solid #86b7fe !important;
+}
+
+.form-control::placeholder {
+  color: gray;
+  padding: 0px;
+}
   
