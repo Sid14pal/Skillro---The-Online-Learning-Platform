@@ -115,39 +115,35 @@
               <h5 class="card-title">Basic Info</h5>
               <form>
                 <div class="row">
-                  <div class="col-sm-6 mb-3">
+                  <div class="col-sm-12 mb-3">
                     <label class="form-label" for="inputEmail4">First name</label>
-                    <input type="text" class="form-control mb-3" placeholder="First name">
-                  </div>
-                  <div class="col-sm-6 mb-3">
-                    <label class="form-label" for="inputEmail4">Last name</label>
-                    <input type="text" class="form-control mb-3" placeholder="Last name">
+                    <input type="text" class="form-control mb-3" placeholder="First name" name="name" [(ngModel)]="name">
                   </div>
                 </div>
                 <div class="row">
                   <div class="mb-3 col-md-6">
                     <label class="form-label" for="inputEmail4">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name="email" [(ngModel)]="email">
                   </div>
                   <div class="mb-3 col-md-6">
                     <label class="form-label" for="inputRoll">Roll No</label>
-                    <input type="password" class="form-control" id="inputRoll" placeholder="Roll No">
+                    <input type="password" class="form-control" id="inputRoll" placeholder="Roll No" name="roll">
                   </div>
                 </div>
                <div class="row">
                 <div class="mb-3 col-md-6">
                   <label class="form-label" for="inputClass">Class</label>
-                  <input type="text" class="form-control" id="inputClass" placeholder="Class">
+                  <input type="text" class="form-control" id="inputClass" placeholder="Class" name="class">
                 </div>
                 <div class="mb-3 col-md-6">
                   <label class="form-label" for="inputMobile">Mobile Number</label>
-                  <input type="text" class="form-control" id="inputMobile" placeholder="Mobile Number">
+                  <input type="text" class="form-control" id="inputMobile" placeholder="Mobile Number" name="mobilenumber">
                 </div>
                </div>
                 <div class="row">
                   <div class="col-sm-4 col-xl-12 col-xxl-6 mb-3">
                     <label class="form-label" for="inputBlood">Blood Group</label>
-                    <input type="text" class="form-control" id="inputBlood" placeholder="Blood Group">
+                    <input type="text" class="form-control" id="inputBlood" placeholder="Blood Group" name="bloodgroup">
                   </div>
                   <div class="col-sm-4 col-xl-6 col-xxl-3 mb-3">
                     <label class="form-label" for="inputState">Gender</label>
@@ -165,7 +161,7 @@
                 <div class="row">
                   <div class="col-md-12 mb-3">
                     <label class="form-label" for="inputAddress">Address</label>
-                    <textarea class="form-control" id="inputAddress" placeholder="Address"></textarea>
+                    <textarea class="form-control" id="inputAddress" placeholder="Address" name="address"></textarea>
                   </div>
                 </div>
                 <div class="row">
@@ -174,7 +170,7 @@
                     <input type="file" class="form-control" id="inputZip">
                   </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" (click)="addStudent()">Submit</button>
               </form>
             </div>
           </div>

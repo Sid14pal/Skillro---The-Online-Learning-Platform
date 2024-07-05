@@ -118,7 +118,7 @@
                           <div class="short-panel mb-5 border-bottom">
                             <div class="d-flex justify-content-between">
                               <h6 class="mb-0"> All Student Lists</h6>
-                              <button class="btn btn-success h6" routerLink="/add-student"><small>+ Add New</small></button>
+                              <button class="btn btn-success h6" routerLink="/add-student"><small>+ Add New Student</small></button>
                             </div>
                           </div>
                             <table id="datatable" class="table table-dark table-hover dataTable p-0 mb-4 bg-table-none" role="grid" aria-describedby="datatable_info">
@@ -130,22 +130,22 @@
                                       <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 142.962px;">Education</th>
                                       <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 71.025px;">Mobile</th>
                                       <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 222.025px;">Email</th>
-                                      <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 199.975px;">Admission date</th>
+                                      <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 199.975px;">Email</th>
                                       <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 71.025px;">Action</th>
                                    </tr>
                                 </thead>
                                 <tbody>
-                                   <tr role="row" class="odd">
+                                   <tr role="row" class="odd" *ngFor="let student of studentsList">
                                     <td><img class="rounded-circle student-img" width="35" src="https://www.stryx.com/cdn/shop/articles/man-looking-attractive.jpg?v=1666662774" alt=""></td>
-                                      <td class="sorting_1">Airi Satou</td>
+                                      <td class="sorting_1">{{student.name}}</td>
                                       <td>Accountant</td>
                                       <td>Tokyo</td>
                                       <td>33</td>
                                       <td>2008/11/28</td>
-                                      <td>$162,700</td>
+                                      <td>{{student.email}}</td>
                                       <td>
                                         <a href="javascript:void(0);" class="btn btn-xs sharp btn-primary"><mat-icon>edit</mat-icon></a>
-                                        <a href="javascript:void(0);" class="btn btn-xs sharp btn-danger"><mat-icon>delete</mat-icon></a>
+                                        <a class="btn btn-xs sharp btn-danger" (click)="deleteStudent(student)"><mat-icon>delete</mat-icon></a>
                                     </td>
                                    </tr>
                                 </tbody>
