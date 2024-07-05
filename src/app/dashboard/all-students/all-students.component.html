@@ -115,6 +115,12 @@
                     <button ngbNavLink class="btn mb-3">List View</button>
                     <ng-template ngbNavContent>
                         <div class="card p-4">
+                          <div class="short-panel mb-5 border-bottom">
+                            <div class="d-flex justify-content-between">
+                              <h6 class="mb-0"> All Student Lists</h6>
+                              <button class="btn btn-success h6" routerLink="/add-student"><small>+ Add New</small></button>
+                            </div>
+                          </div>
                             <table id="datatable" class="table table-dark table-hover dataTable p-0 mb-4 bg-table-none" role="grid" aria-describedby="datatable_info">
                                 <thead>
                                    <tr role="row">
