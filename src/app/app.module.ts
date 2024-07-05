@@ -21,9 +21,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ForgotPasswordComponent } from './dashboard/forgot-password/forgot-password.component';
 import { VarifyEmailComponent } from './dashboard/varify-email/varify-email.component';
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
-import { AddStudentComponent } from './dashboard/add-student/add-student.component';
 import { AllStudentsComponent } from './dashboard/all-students/all-students.component';
 import { DashboardSidebarComponent } from './dashboard/dashboard-sidebar/dashboard-sidebar.component';
+import { AddStudentsComponent } from './dashboard/add-students/add-students.component';
 
 
 @NgModule({
@@ -35,9 +35,9 @@ import { DashboardSidebarComponent } from './dashboard/dashboard-sidebar/dashboa
     ForgotPasswordComponent,
     VarifyEmailComponent,
     DashboardComponent,
-    AddStudentComponent,
     AllStudentsComponent,
-    DashboardSidebarComponent
+    DashboardSidebarComponent,
+    AddStudentsComponent
   ],
   imports: [
     BrowserModule,
