@@ -116,7 +116,7 @@
               <form>
                 <div class="row">
                   <div class="col-sm-12 mb-3">
-                    <label class="form-label" for="inputEmail4">First name</label>
+                    <label class="form-label" for="inputEmail4">Name</label>
                     <input type="text" class="form-control mb-3" placeholder="First name" name="name" [(ngModel)]="name">
                   </div>
                 </div>
@@ -127,27 +127,27 @@
                   </div>
                   <div class="mb-3 col-md-6">
                     <label class="form-label" for="inputRoll">Roll No</label>
-                    <input type="password" class="form-control" id="inputRoll" placeholder="Roll No" name="roll">
+                    <input type="password" class="form-control" id="inputRoll" placeholder="Roll No" name="roll" [(ngModel)]="roll">
                   </div>
                 </div>
                <div class="row">
                 <div class="mb-3 col-md-6">
                   <label class="form-label" for="inputClass">Class</label>
-                  <input type="text" class="form-control" id="inputClass" placeholder="Class" name="class">
+                  <input type="text" class="form-control" id="inputClass" placeholder="Class" name="class" [(ngModel)]="class">
                 </div>
                 <div class="mb-3 col-md-6">
                   <label class="form-label" for="inputMobile">Mobile Number</label>
-                  <input type="text" class="form-control" id="inputMobile" placeholder="Mobile Number" name="mobilenumber">
+                  <input type="text" class="form-control" id="inputMobile" placeholder="Mobile Number" name="mobile" [(ngModel)]="mobile">
                 </div>
                </div>
                 <div class="row">
                   <div class="col-sm-4 col-xl-12 col-xxl-6 mb-3">
                     <label class="form-label" for="inputBlood">Blood Group</label>
-                    <input type="text" class="form-control" id="inputBlood" placeholder="Blood Group" name="bloodgroup">
+                    <input type="text" class="form-control" id="inputBlood" placeholder="Blood Group" name="bloodgroup" [(ngModel)]="bloodgroup">
                   </div>
                   <div class="col-sm-4 col-xl-6 col-xxl-3 mb-3">
                     <label class="form-label" for="inputState">Gender</label>
-                    <select id="inputState" class="form-control">
+                    <select id="inputState" class="form-control" name="gender" [(ngModel)]="gender">
                       <option selected="">Choose...</option>
                       <option>Male</option>
                       <option>Female</option>
@@ -155,22 +155,23 @@
                   </div>
                   <div class="col-sm-4 col-xl-6 col-xxl-3 mb-3">
                     <label class="form-label" for="inputZip">Date of Birth</label>
-                    <input type="date" class="form-control" id="inputZip">
+                    <input type="date" class="form-control" id="inputZip" name="birthDay" [(ngModel)]="birthDay">
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-12 mb-3">
                     <label class="form-label" for="inputAddress">Address</label>
-                    <textarea class="form-control" id="inputAddress" placeholder="Address" name="address"></textarea>
+                    <textarea class="form-control" id="inputAddress" placeholder="Address" name="address" [(ngModel)]="address"></textarea>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-4 mb-3">
-                    <label class="form-label" for="inputAddress">Address</label>
-                    <input type="file" class="form-control" id="inputZip">
+                    <label class="form-label" for="inputAddress">Choose Image</label>
+                    <input type="file" class="form-control" id="inputZip" name="file"> 
                   </div>
                 </div>
-                <button type="submit" class="btn btn-primary" (click)="addStudent()">Submit</button>
+                <button type="submit" class="btn btn-primary mx-2" (click)="addStudent()">Submit</button>
+                <button type="submit" class="btn btn-danger" (click)="resetForm()">Reset</button>
               </form>
             </div>
           </div>

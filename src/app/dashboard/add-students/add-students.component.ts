@@ -15,12 +15,26 @@ export class AddStudentsComponent {
     id: '',
     name: '',
     email: '',
+    roll: '',
+    class: '',
+    mobile: '',
+    bloodgroup: '',
+    address: '',
+    gender: '',
+    birthDay: '',
     
   };
 
   id: string = '';
   name: string = '';
   email: string = '';
+  roll: string = '';
+  class: string = '';
+  mobile: string = '';
+  bloodgroup: string = '';
+  address: string = '';
+  gender: string = '';
+  birthDay: string = '';
 
   constructor(private routeStatusService: RouteStatusService, private data: StudentService){
     this.routeStatusService.hideHeader = true;
@@ -32,6 +46,13 @@ export class AddStudentsComponent {
     this.id = '';
     this.name = '';
     this.email = '';
+    this.roll = '';
+    this.class = '';
+    this.mobile = '';
+    this.bloodgroup = '';
+    this.gender = '';
+    this.address = '';
+    this.birthDay = '';
   }
 
   addStudent() {
@@ -39,6 +60,13 @@ export class AddStudentsComponent {
     this.studentObj.id = '';
     this.studentObj.name = this.name;
     this.studentObj.email = this.email;
+    this.studentObj.roll = this.roll;
+    this.studentObj.class = this.class;
+    this.studentObj.mobile = this.mobile;
+    this.studentObj.bloodgroup = this.bloodgroup;
+    this.studentObj.gender = this.gender;
+    this.studentObj.gender = this.gender;
+    this.studentObj.birthDay = this.birthDay;
 
     this.data.addStudent(this.studentObj);
     this.resetForm();

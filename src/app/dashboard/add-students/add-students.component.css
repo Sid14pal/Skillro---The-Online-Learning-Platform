@@ -254,7 +254,7 @@
     cursor: pointer;
   }
   .form-control:focus {
-    color: #212529;
+    color: #fff;
     background-color: #fff;
     border-color: #86b7fe;
     outline: 0;

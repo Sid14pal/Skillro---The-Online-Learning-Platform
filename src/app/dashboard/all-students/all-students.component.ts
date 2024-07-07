@@ -14,6 +14,13 @@ export class AllStudentsComponent {
     id: '',
     name: '',
     email: '',
+    roll: '',
+    class: '',
+    mobile: '',
+    bloodgroup: '',
+    address: '',
+    gender: '',
+    birthDay: '',
   };
 
   constructor(private routeStatusService: RouteStatusService, private data: StudentService){

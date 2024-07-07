@@ -126,23 +126,27 @@
                                    <tr role="row">
                                     <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 50.525px;">Profile</th>
                                       <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 197.525px;">Name</th>
-                                      <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 140.087px;">Roll No</th>
-                                      <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 142.962px;">Education</th>
-                                      <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 71.025px;">Mobile</th>
-                                      <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 222.025px;">Email</th>
-                                      <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 199.975px;">Email</th>
+                                      <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 140.087px;">Email</th>
+                                      <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 142.962px;">Roll No</th>
+                                      <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 71.025px;">Class</th>
+                                      <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 222.025px;">Mobile Number</th>
+                                      <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 199.975px;">Blood Group</th>
+                                      <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 199.975px;">Gender</th>
+                                      <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 199.975px;">Date of Birth</th>
                                       <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 71.025px;">Action</th>
                                    </tr>
                                 </thead>
                                 <tbody>
                                    <tr role="row" class="odd" *ngFor="let student of studentsList">
-                                    <td><img class="rounded-circle student-img" width="35" src="https://www.stryx.com/cdn/shop/articles/man-looking-attractive.jpg?v=1666662774" alt=""></td>
+                                    <td><img class="rounded-circle student-img" width="35" src="" alt=""></td>
                                       <td class="sorting_1">{{student.name}}</td>
-                                      <td>Accountant</td>
-                                      <td>Tokyo</td>
-                                      <td>33</td>
-                                      <td>2008/11/28</td>
                                       <td>{{student.email}}</td>
+                                      <td>{{student.roll}}</td>
+                                      <td>{{student.class}}</td>
+                                      <td>{{student.mobile}}</td>
+                                      <td>{{student.bloodgroup}}</td>
+                                      <td>{{student.gender}}</td>
+                                      <td>{{student.birthDay}}</td>
                                       <td>
                                         <a href="javascript:void(0);" class="btn btn-xs sharp btn-primary"><mat-icon>edit</mat-icon></a>
                                         <a class="btn btn-xs sharp btn-danger" (click)="deleteStudent(student)"><mat-icon>delete</mat-icon></a>

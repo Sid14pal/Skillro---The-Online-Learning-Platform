@@ -59,7 +59,7 @@
     cursor: pointer;
   }
   .form-control:focus {
-    color: #212529;
+    color: #ffffff;
     background-color: #fff;
     border-color: #86b7fe;
     outline: 0;
@@ -24127,7 +24127,9 @@
       -ms-transition: all 0.5s ease;
       -o-transition: all 0.5s ease;
       transition: all 0.5s ease;
-      border-color: transparent; }
+      border-color: transparent; 
+      color: #fff;
+    }
   
   .form-control.input-lg {
     resize: none;
