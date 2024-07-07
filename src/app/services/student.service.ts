@@ -31,4 +31,11 @@ export class StudentService {
     this.deleteStudent(student);
     this.addStudent(student);
   }
+
+   // Upload image
+   async uploadImage(file: File, path: string): Promise<string> {
+    const fileRef = this.fireStorage.ref(path);
+    await this.fireStorage.upload(path, file);
+    return fileRef.getDownloadURL().toPromise();
+  }
 }

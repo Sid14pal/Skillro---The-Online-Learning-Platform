@@ -24681,14 +24681,14 @@
   border-bottom: none;
   padding: 1em;
 }
-
+.student-img
 .bg-table-none{
   --bs-table-bg: none;
 }
   
 .student-img{
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
 }
 
 .sharp {

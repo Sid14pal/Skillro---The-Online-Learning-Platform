@@ -9,4 +9,5 @@ export interface Student {
     address: string;
     gender: string;
     birthDay: string;
+    imageUrl?: string;
 }

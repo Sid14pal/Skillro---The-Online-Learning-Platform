@@ -24,6 +24,7 @@ import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { AllStudentsComponent } from './dashboard/all-students/all-students.component';
 import { DashboardSidebarComponent } from './dashboard/dashboard-sidebar/dashboard-sidebar.component';
 import { AddStudentsComponent } from './dashboard/add-students/add-students.component';
+import { TestImageUploadComponent } from './dashboard/test-image-upload/test-image-upload.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { AddStudentsComponent } from './dashboard/add-students/add-students.comp
     DashboardComponent,
     AllStudentsComponent,
     DashboardSidebarComponent,
-    AddStudentsComponent
+    AddStudentsComponent,
+    TestImageUploadComponent
   ],
   imports: [
     BrowserModule,

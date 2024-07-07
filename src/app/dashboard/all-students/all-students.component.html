@@ -138,7 +138,7 @@
                                 </thead>
                                 <tbody>
                                    <tr role="row" class="odd" *ngFor="let student of studentsList">
-                                    <td><img class="rounded-circle student-img" width="35" src="" alt=""></td>
+                                    <td><img class="rounded-circle student-img" [src]="student.imageUrl" width="35" src="" alt=""></td>
                                       <td class="sorting_1">{{student.name}}</td>
                                       <td>{{student.email}}</td>
                                       <td>{{student.roll}}</td>
