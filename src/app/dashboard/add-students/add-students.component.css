@@ -23014,7 +23014,8 @@
     font-size: 3.125rem; }
   
   .card.card-statistics p {
-    margin-bottom: 0.25rem; }
+    margin-bottom: 0.25rem;
+  color: white; }
   
   .card.card-statistics .bg {
     overflow: inherit; }
@@ -24856,5 +24857,48 @@
 .form-control::placeholder {
   color: gray;
   padding: 0px;
+}
+
+.loader{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  right: 50px;
+  top: 13px;
+}
+
+.loader span{
+  background: #ecf0f6;
+  border: 1pz solid rgba(144,163,204,0.24);
+  height: 17px;
+  width: 4px;
+  margin-left: 4px;
+  transform-origin: center center;
+  animation: .8s ease spinner1 999;
+}
+
+.loader .spinner2{
+  animation-delay: .1s;
+}
+
+.loader .spinner3{
+  animation-delay: .2s;
+}
+
+@keyframes spinner1{
+  0%,50%{
+    transform: scaleX(1) scaleY(1);
+  }
+  25%{
+    transform: scaleX(1.2) scaleY(1.6);
+    background: #90a3cc;
+    border-color: #335890;
+  }
+}
+
+::ng-deep .success{
+  --mdc-snackbar-container-color: #008046;
+  --mdc-snackbar-supporting-text-color: white;
+  --mat-snack-bar-button-color: #fff;
 }
   

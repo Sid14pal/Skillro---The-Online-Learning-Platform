@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouteStatusService } from '../../services/route-status.service';
 import { StudentService } from '../../services/student.service';
 import { Student } from '../../datatype';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-add-students',
@@ -28,7 +29,7 @@ export class AddStudentsComponent {
   isLoading = false;
   successMessage = '';
 
-  constructor(private routeStatusService: RouteStatusService, private data: StudentService) {
+  constructor(private routeStatusService: RouteStatusService, private data: StudentService, private snackBar: MatSnackBar) {
     this.routeStatusService.hideHeader = true;
   }
 
@@ -61,7 +62,8 @@ export class AddStudentsComponent {
         this.studentObj.imageUrl = await this.data.uploadImage(this.selectedImage, path);
         this.saveStudentData();
         this.isLoading = false;
-        this.successMessage = 'Student added successfully!';
+        this.openSnackBar('Student added successfully!', 'Close',)
+        
       } catch (error) {
         console.error("Error uploading image: ", error);
         this.isLoading = false;
@@ -75,6 +77,15 @@ export class AddStudentsComponent {
   saveStudentData() {
     this.data.addStudent(this.studentObj).then(() => {
       this.resetForm();
+    });
+  }
+
+  openSnackBar(message: string, action: string = 'Close', duration: number = 5000) {
+    this.snackBar.open(message, action, {
+      duration: duration,
+      verticalPosition: 'top',
+      horizontalPosition: 'center',
+      panelClass: ['success'] 
     });
   }
 }
