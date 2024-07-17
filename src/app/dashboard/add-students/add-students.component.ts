@@ -3,6 +3,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { RouteStatusService } from '../../services/route-status.service';
 import { StudentService } from '../../services/student.service';
 import { Student } from '../../datatype';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-add-students',
@@ -64,7 +65,12 @@ export class AddStudentsComponent {
         this.studentObj.imageUrl = await this.data.uploadImage(this.selectedImage, path);
         this.saveStudentData();
         this.isLoading = false;
+<<<<<<< HEAD
         this.snackBar.open('Student added successfully!', 'Close', { duration: 3000, panelClass: ['success', 'vertical-center-snackba'],});
+=======
+        this.openSnackBar('Student added successfully!', 'Close',)
+        
+>>>>>>> 78364f1d133cb99cd4270b23c47457544598ef09
       } catch (error) {
         console.error("Error uploading image: ", error);
         this.isLoading = false;
@@ -81,6 +87,7 @@ export class AddStudentsComponent {
     });
   }
 
+<<<<<<< HEAD
   validateForm(): boolean {
     if (!this.studentObj.name) {
       this.snackBar.open('Please Enter the name', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
@@ -122,11 +129,18 @@ export class AddStudentsComponent {
   }
 
   openSnackBar(message: string, action: string = 'Close', duration: number = 3000) {
+=======
+  openSnackBar(message: string, action: string = 'Close', duration: number = 5000) {
+>>>>>>> 78364f1d133cb99cd4270b23c47457544598ef09
     this.snackBar.open(message, action, {
       duration: duration,
       verticalPosition: 'top',
       horizontalPosition: 'center',
+<<<<<<< HEAD
       panelClass: ['snackbar-class'] // Customize this class as needed
+=======
+      panelClass: ['success'] 
+>>>>>>> 78364f1d133cb99cd4270b23c47457544598ef09
     });
   }
 }
