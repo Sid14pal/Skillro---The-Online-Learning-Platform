@@ -8,9 +8,6 @@ import firebase from 'firebase/compat/app';
   providedIn: 'root'
 })
 export class AuthService {
-  getCurrentUser() {
-    throw new Error('Method not implemented.');
-  }
 
   constructor(private fireauth: AngularFireAuth, private router: Router) { }
 
@@ -66,6 +63,20 @@ export class AuthService {
     const credential = firebase.auth.PhoneAuthProvider.credential(verificationId, otp);
     return this.fireauth.signInWithCredential(credential);
   }
+
+    // Get current user
+    getCurrentUser() {
+      return this.fireauth.authState;
+    }
+
+    logout() {
+      this.fireauth.signOut().then( () => {
+        localStorage.removeItem('token');
+        this.router.navigate(['/login']);
+      }, err => {
+        alert(err.message);
+      })
+    }
 
 
 

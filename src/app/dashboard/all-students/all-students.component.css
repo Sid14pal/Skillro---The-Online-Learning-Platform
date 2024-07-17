@@ -24636,7 +24636,7 @@
 
 .dropdown-item:hover, .dropdown-item:focus {
   color: #282a39;
-  background-color: #ffaa16;
+  background-color: #17171e;
 }
 
 .form-label{
@@ -24700,4 +24700,25 @@
   font-size: 18px;
   height: 16px;
   width: 26px;
+}
+
+.dataTable {
+  --bs-table-bg: #212130;
+}
+
+.list-group-item {
+  background-color: #212130;
+}
+
+.card-dropdown .mat-icon{
+  color: #fff;
+}
+
+.card-dropdown button{
+  font-size: 13px;
+}
+
+.card-image{
+  width: 140px;
+  height: 140px;
 }

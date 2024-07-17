@@ -19,7 +19,7 @@ name: string = '';
   }
 
   
-  openSnackBar(message: string, action: string = 'Close', duration: number = 3000) {
+  openSnackBar(message: string, action: string = 'Close', duration: number = 56000) {
     this.snackBar.open(message, action, {
       duration: duration,
       verticalPosition: 'top', // 'top' | 'bottom'

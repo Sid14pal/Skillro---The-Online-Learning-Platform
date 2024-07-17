@@ -24836,4 +24836,14 @@
 }
 
 
-  
+.initials-circle {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+}  

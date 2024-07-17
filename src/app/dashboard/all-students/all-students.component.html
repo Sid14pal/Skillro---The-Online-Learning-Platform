@@ -148,7 +148,7 @@
                                       <td>{{student.gender}}</td>
                                       <td>{{student.birthDay}}</td>
                                       <td>
-                                        <a href="javascript:void(0);" class="btn btn-xs sharp btn-primary"><mat-icon>edit</mat-icon></a>
+                                        <a href="javascript:void(0);" class="btn btn-xs sharp btn-primary" routerLink="/edit-student"><mat-icon>edit</mat-icon></a>
                                         <a class="btn btn-xs sharp btn-danger" (click)="deleteStudent(student)"><mat-icon>delete</mat-icon></a>
                                     </td>
                                    </tr>
@@ -160,14 +160,53 @@
                 <li [ngbNavItem]="2">
                     <button ngbNavLink class="btn">Grid View</button>
                     <ng-template ngbNavContent>
-                        <p>
-                            Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
-                            farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
-                            ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar
-                            helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson
-                            8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
-                            stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
-                        </p>
+                       <div class="row">
+                        <div class="col-md-4" *ngFor="let student of studentsList">
+                          <div class="card card-profile">
+                            <div class="card-header justify-content-end pb-0 border-0">
+                              <div ngbDropdown class="d-inline-block card-dropdown">
+                                <mat-icon id="dropdownBasic1" ngbDropdownToggle>more_horiz</mat-icon>
+                                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                  <button ngbDropdownItem class="text-light" routerLink="/edit-student">Edit</button>
+                                  <button ngbDropdownItem class="text-danger" (click)="deleteStudent(student)">Remove</button>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="card-body pt-2">
+                               <div class="text-center">
+                                  <div class="profile-photo">
+                                     <img [src]="student.imageUrl" width="100" height="100" class="img-fluid rounded-circle card-image" alt="">
+                                  </div>
+                                  <h5 class="mt-4 mb-1">{{student.name}}</h5>
+                                  <p class="text-muted mb-3">Class: {{student.class}}</p>
+                                  <ul class="list-group mb-3 list-group-flush">
+                                     <li class="list-group-item px-0 d-flex justify-content-between text-light">
+                                        <span class="mb-0">Gender :</span><strong>{{student.gender}}</strong>
+                                     </li>
+                                     <li class="list-group-item px-0 d-flex justify-content-between text-light">
+                                        <span class="mb-0">Phone No. :</span><strong>{{student.mobile}}</strong>
+                                     </li>
+                                     <li class="list-group-item px-0 d-flex justify-content-between text-light">
+                                        <span class="mb-0">Email:</span><strong>{{student.email}}</strong>
+                                     </li>
+                                     <li class="list-group-item px-0 d-flex justify-content-between text-light">
+                                      <span class="mb-0">Roll:</span><strong>{{student.roll}}</strong>
+                                   </li>
+                                   <li class="list-group-item px-0 d-flex justify-content-between text-light">
+                                    <span class="mb-0">Blood Group:</span><strong>{{student.bloodgroup}}</strong>
+                                 </li>
+                                 <li class="list-group-item px-0 d-flex justify-content-between text-light">
+                                  <span class="mb-0">Birthday:</span><strong>{{student.birthDay}}</strong>
+                               </li>
+                                     <li class="list-group-item px-0 d-flex justify-content-between text-light">
+                                        <span class="mb-0">Address:</span><strong>#8901 Marmora Road</strong>
+                                     </li>
+                                  </ul>
+                               </div>
+                            </div>
+                         </div>
+                        </div>
+                       </div>
                     </ng-template>
                 </li>
             </ul>
