@@ -162,11 +162,6 @@
               <div class="row">
                 <div class="col-md-4 mb-3">
                   <label class="form-label" for="inputImage">Choose Image</label>
-<<<<<<< HEAD
-                  <div class="d-flex">
-                    <input type="file" class="form-control" id="inputImage" name="imageUrl" (change)="onFileSelected($event)">
-                  </div>
-=======
                  <span class="d-flex">
                   <input type="file" class="form-control" id="inputImage" name="file" (change)="onFileSelected($event)">
                   <div class="loader" *ngIf="isLoading">
@@ -175,23 +170,11 @@
                     <span class="spinner3"></span>
                   </div>
                  </span>
->>>>>>> 78364f1d133cb99cd4270b23c47457544598ef09
                 </div>
               </div>
               <button type="button" class="btn btn-primary mx-2" (click)="addStudent()">Submit</button>
-              <div class="loader" *ngIf="isLoading">
-                <span class="spinner1"></span>
-                <span class="spinner2"></span>
-                <span class="spinner3"></span>
-              </div>
               <button type="button" class="btn btn-danger" (click)="resetForm()">Reset</button>
             </form>
-<<<<<<< HEAD
-
-            <!-- Success Message -->
-
-=======
->>>>>>> 78364f1d133cb99cd4270b23c47457544598ef09
           </div>
         </div>
       </div>

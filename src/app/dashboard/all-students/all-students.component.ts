@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouteStatusService } from '../../services/route-status.service';
 import { Student } from '../../datatype';
 import { StudentService } from '../../services/student.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-all-students',
@@ -23,7 +24,7 @@ export class AllStudentsComponent {
     birthDay: '',
   };
 
-  constructor(private routeStatusService: RouteStatusService, private data: StudentService){
+  constructor(private routeStatusService: RouteStatusService, private data: StudentService, private router: Router){
     this.routeStatusService.hideHeader = true;
   }
 
@@ -53,6 +54,10 @@ export class AllStudentsComponent {
     if (window.confirm('Are you sure you want to delete ' + student.name + ' ?')) {
       this.data.deleteStudent(student);
     }
+  }
+
+  editStudent(studentId: string): void {
+    this.router.navigate(['/edit-student', studentId]);
   }
 
 }

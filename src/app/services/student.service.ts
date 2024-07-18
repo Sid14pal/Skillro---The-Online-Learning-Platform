@@ -8,32 +8,36 @@ import { Student } from '../datatype';
 })
 export class StudentService {
 
-  constructor(private afs : AngularFirestore, private fireStorage : AngularFireStorage) { }
+  constructor(private afs: AngularFirestore, private fireStorage: AngularFireStorage) { }
 
-  // add student
-  addStudent(student : Student) {
+  // Add student
+  addStudent(student: Student) {
     student.id = this.afs.createId();
     return this.afs.collection('/Students').add(student);
   }
 
-  // get all students
+  // Get all students
   getAllStudents() {
     return this.afs.collection('/Students').snapshotChanges();
   }
 
-  // delete student
-  deleteStudent(student : Student) {
-     this.afs.doc('/Students/'+student.id).delete();
+  // Delete student
+  deleteStudent(student: Student) {
+    this.afs.doc('/Students/' + student.id).delete();
   }
 
-  // update student
-  updateStudent(student : Student) {
-    this.deleteStudent(student);
-    this.addStudent(student);
+  // Get student by ID
+  getStudentById(studentId: string) {
+    return this.afs.doc<Student>(`/Students/${studentId}`).valueChanges();
   }
 
-   // Upload image
-   async uploadImage(file: File, path: string): Promise<string> {
+  // Update student
+  updateStudent(studentId: string, student: Student) {
+    return this.afs.doc(`/Students/${studentId}`).update(student);
+  }
+
+  // Upload image
+  async uploadImage(file: File, path: string): Promise<string> {
     const fileRef = this.fireStorage.ref(path);
     await this.fireStorage.upload(path, file);
     return fileRef.getDownloadURL().toPromise();

@@ -1,15 +1,94 @@
-import { Component } from '@angular/core';
-import { RouteStatusService } from '../../services/route-status.service';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { StudentService } from '../../services/student.service';
+import { Student } from '../../datatype';
 
 @Component({
   selector: 'app-edit-student',
   templateUrl: './edit-student.component.html',
-  styleUrl: './edit-student.component.css'
+  styleUrls: ['./edit-student.component.css']
 })
-export class EditStudentComponent {
+export class EditStudentComponent implements OnInit {
+  studentId: string = '';
+  studentObj: Student = {
+    id: '',
+    name: '',
+    email: '',
+    roll: '',
+    class: '',
+    mobile: '',
+    bloodgroup: '',
+    address: '',
+    gender: '',
+    birthDay: '',
+    imageUrl: ''
+  };
 
-  constructor(private routeStatusService: RouteStatusService){
-    this.routeStatusService.hideHeader = true;
+  selectedImage?: File;
+  isLoading = false;
+
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private data: StudentService,
+    private snackBar: MatSnackBar
+  ) {}
+
+  ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.studentId = params['id'];
+      this.loadStudentData();
+    });
   }
 
+  loadStudentData(): void {
+    this.data.getStudentById(this.studentId).subscribe((student: Student | undefined) => {
+      if (student) {
+        this.studentObj = student;
+      }
+    });
+  }
+
+  onFileSelected(event: any) {
+    this.selectedImage = event.target.files[0];
+  }
+
+  async updateStudent() {
+    if (!this.validateForm()) {
+      return;
+    }
+
+    this.isLoading = true;
+    if (this.selectedImage) {
+      const path = `images/${Date.now()}_${this.selectedImage.name}`;
+      try {
+        this.studentObj.imageUrl = await this.data.uploadImage(this.selectedImage, path);
+        this.saveStudentData();
+        this.isLoading = false;
+      } catch (error) {
+        console.error("Error uploading image: ", error);
+        this.isLoading = false;
+      }
+    } else {
+      this.saveStudentData();
+      this.isLoading = false;
+    }
+  }
+
+  saveStudentData() {
+    this.data.updateStudent(this.studentId, this.studentObj).then(() => {
+      this.isLoading = false;
+      this.snackBar.open('Student Updated Successfully', 'Close', { duration: 4000, panelClass: ['success', 'vertical-center-snackba'] });
+   this.router.navigate(['/all-student']);
+    });
+  }
+
+  validateForm(): boolean {
+    if (!this.studentObj.name) {
+      this.snackBar.open('Please Enter the name', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'] });
+      return false;
+    }
+    return true;
+  }
 }

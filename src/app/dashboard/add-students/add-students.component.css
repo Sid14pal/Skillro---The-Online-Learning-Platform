@@ -24864,21 +24864,15 @@
   flex-direction: row;
   position: relative;
   right: 50px;
-<<<<<<< HEAD
   top: 11px;
-=======
   top: 13px;
->>>>>>> 78364f1d133cb99cd4270b23c47457544598ef09
 }
 
 .loader span{
   background: #ecf0f6;
   border: 1pz solid rgba(144,163,204,0.24);
-<<<<<<< HEAD
   height: 18px;
-=======
   height: 17px;
->>>>>>> 78364f1d133cb99cd4270b23c47457544598ef09
   width: 4px;
   margin-left: 4px;
   transform-origin: center center;
@@ -24904,7 +24898,6 @@
   }
 }
 
-<<<<<<< HEAD
 select {
   background: #212130 !important;
   color: #6c757d !important;
@@ -24928,11 +24921,10 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-=======
+}
 ::ng-deep .success{
   --mdc-snackbar-container-color: #008046;
   --mdc-snackbar-supporting-text-color: white;
   --mat-snack-bar-button-color: #fff;
->>>>>>> 78364f1d133cb99cd4270b23c47457544598ef09
 }
   
