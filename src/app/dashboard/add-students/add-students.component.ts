@@ -64,7 +64,7 @@ export class AddStudentsComponent {
         this.studentObj.imageUrl = await this.data.uploadImage(this.selectedImage, path);
         this.saveStudentData();
         this.isLoading = false;
-        this.openSnackBar('Student added successfully!', 'Close',)
+        this.snackBar.open('Student Added Successfully', 'Close', { duration: 4000, panelClass: ['success', 'vertical-center-snackba'],});
       } catch (error) {
         console.error("Error uploading image: ", error);
         this.isLoading = false;
@@ -121,13 +121,13 @@ export class AddStudentsComponent {
     return true;
   }
 
-  openSnackBar(message: string, action: string = 'Close', duration: number = 5000) {
+ /*  openSnackBar(message: string, action: string = 'Close', duration: number = 5000) {
     this.snackBar.open(message, action, {
       duration: duration,
       verticalPosition: 'top',
       horizontalPosition: 'center',
       panelClass: ['snackbar-class'] // Customize this class as needed
     });
-  }
+  } */
 
 }

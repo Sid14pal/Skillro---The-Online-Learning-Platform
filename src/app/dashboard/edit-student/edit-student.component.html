@@ -108,7 +108,7 @@
        <div class="card card-statistics mb-30">
          <div class="card-body">
            <h5 class="card-title">Basic Info</h5>
-           <form>
+           <form (submit)="updateStudent()">
              <div class="row">
                <div class="col-sm-12 mb-3">
                  <label class="form-label" for="inputEmail4">Name</label>
@@ -156,24 +156,27 @@
              <div class="row">
                <div class="col-md-12 mb-3">
                  <label class="form-label" for="inputAddress">Address</label>
-                 <textarea class="form-control" id="inputAddress" placeholder="Address" name="address" ></textarea>
+                 <textarea class="form-control" id="inputAddress" placeholder="Address" name="address" [(ngModel)]="studentObj.address"></textarea>
                </div>
              </div>
              <div class="row">
                <div class="col-md-4 mb-3">
                  <label class="form-label" for="inputImage">Choose Image</label>
                 <span class="d-flex">
-                 <input type="file" class="form-control" id="inputImage" name="file" (change)="onFileSelected($event)" [(ngModel)]="studentObj.imageUrl">
-                 <div class="loader" *ngIf="isLoading">
-                   <span class="spinner1"></span>
-                   <span class="spinner2"></span>
-                   <span class="spinner3"></span>
-                 </div>
+                 <input type="file" class="form-control" (change)="onFileSelected($event)">
                 </span>
                </div>
              </div>
-             <button type="button" class="btn btn-primary mx-2" (click)="saveStudentData()">Submit</button>
+             <button class="submitbutton" [disabled]="isLoading" type="submit">
+              <div class="main-bar">
+                <div class="bar" *ngIf="isLoading"></div>
+              </div>
+              <span *ngIf="isLoading">Loading</span>
+              <span *ngIf="!isLoading">Submit</span>
+            </button>
            </form>
+           <div>
+          </div>
          </div>
        </div>
      </div>

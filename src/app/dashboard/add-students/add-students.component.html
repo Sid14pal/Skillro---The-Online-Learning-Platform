@@ -164,16 +164,16 @@
                   <label class="form-label" for="inputImage">Choose Image</label>
                  <span class="d-flex">
                   <input type="file" class="form-control" id="inputImage" name="file" (change)="onFileSelected($event)">
-                  <div class="loader" *ngIf="isLoading">
-                    <span class="spinner1"></span>
-                    <span class="spinner2"></span>
-                    <span class="spinner3"></span>
-                  </div>
                  </span>
                 </div>
               </div>
-              <button type="button" class="btn btn-primary mx-2" (click)="addStudent()">Submit</button>
-              <button type="button" class="btn btn-danger" (click)="resetForm()">Reset</button>
+              <button class="submitbutton" (click)="addStudent()" type="submit">
+                <div class="main-bar">
+                  <div class="bar" *ngIf="isLoading"></div>
+                </div>
+                <span *ngIf="isLoading">Loading</span>
+                <span *ngIf="!isLoading">Submit</span>
+              </button>
             </form>
           </div>
         </div>

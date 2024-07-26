@@ -24927,4 +24927,57 @@ select {
   --mdc-snackbar-supporting-text-color: white;
   --mat-snack-bar-button-color: #fff;
 }
+
+
+.submitbutton {
+  padding: 16px 65px;
+  border: 0;
+  border-radius: 5px;
+  background: #82aae0;
+  color: white;
+  letter-spacing: 1px;
+  position: relative;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+.main-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.bar {
+  background-color: rgb(164, 164, 252);
+  min-width: 100%;
+  min-height: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.bar::after {
+  content: "";
+  min-height: 5px;
+  position: absolute;
+  background: #fff;
+  transform: translateX(-100%);
+  animation: animate 2s infinite;
+}
+.bar::before {
+  content: "";
+  min-height: 5px;
+  position: absolute;
+  background: #fff;
+  transform: translateX(-100%);
+  animation: animate 2s infinite;
+  animation-delay: 1s;
+}
+@keyframes animate {
+  0% {
+    transform: translateX(-150%);
+    min-width: 100px;
+  }
+  100% {
+    transform: translateX(300%);
+    min-width: 400px;
+  }
+}
   

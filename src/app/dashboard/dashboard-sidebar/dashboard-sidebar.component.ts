@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './dashboard-sidebar.component.css'
 })
 export class DashboardSidebarComponent {
+student: any;
+
+  constructor(){}
 
 }

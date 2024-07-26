@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { StudentService } from '../../services/student.service';
 import { Student } from '../../datatype';
+import { RouteStatusService } from '../../services/route-status.service';
 
 @Component({
   selector: 'app-edit-student',
@@ -32,8 +33,11 @@ export class EditStudentComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private data: StudentService,
-    private snackBar: MatSnackBar
-  ) {}
+    private snackBar: MatSnackBar,
+    private routeStatusService: RouteStatusService,
+  ) {
+    this.routeStatusService.hideHeader = true;
+  }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
@@ -65,28 +69,26 @@ export class EditStudentComponent implements OnInit {
       try {
         this.studentObj.imageUrl = await this.data.uploadImage(this.selectedImage, path);
         this.saveStudentData();
-        this.isLoading = false;
       } catch (error) {
         console.error("Error uploading image: ", error);
         this.isLoading = false;
       }
     } else {
       this.saveStudentData();
-      this.isLoading = false;
     }
   }
 
   saveStudentData() {
     this.data.updateStudent(this.studentId, this.studentObj).then(() => {
       this.isLoading = false;
-      this.snackBar.open('Student Updated Successfully', 'Close', { duration: 4000, panelClass: ['success', 'vertical-center-snackba'] });
-   this.router.navigate(['/all-student']);
+      this.snackBar.open('Student Updated Successfully', 'Close', { duration: 4000, panelClass: ['success', 'vertical-center-snackbar'] });
+      this.router.navigate(['/all-student']);
     });
   }
 
   validateForm(): boolean {
     if (!this.studentObj.name) {
-      this.snackBar.open('Please Enter the name', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'] });
+      this.snackBar.open('Please Enter the name', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackbar'] });
       return false;
     }
     return true;
