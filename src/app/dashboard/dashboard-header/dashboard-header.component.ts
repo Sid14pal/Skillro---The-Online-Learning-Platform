@@ -16,6 +16,16 @@ export class DashboardHeaderComponent {
     this.routeStatusService.hideHeader = true;
   }
 
+  ngOnInit(): void {
+    this.auth.getCurrentUser().subscribe(user => {
+      if (user) {
+        this.user = user;
+        this.userInitials = this.getInitials(user);
+        console.log('User data:', this.user);
+      }
+    });
+  }
+
 
   getInitials(user: any): string {
     if (user.displayName) {

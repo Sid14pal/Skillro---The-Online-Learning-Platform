@@ -5,20 +5,7 @@
       <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-icon-dark.png" alt=""></a>
     </div>
     <!-- Top bar left -->
-    <ul class="nav navbar-nav me-auto">
-      <li class="nav-item">
-        <a id="button-toggle" class="button-toggle-nav inline-block ml-20 pull-left" href="javascript:void(0);"><i class="zmdi zmdi-menu ti-align-right"></i></a>
-      </li>
-      <li class="nav-item">
-        <div class="search">
-          <a class="search-btn not_click" href="javascript:void(0);"></a>
-          <div class="search-box not-click">
-            <input type="text" class="not-click form-control" placeholder="Search" value="" name="search">
-            <button class="search-button" type="submit"> <i class="fa fa-search not-click"></i></button>
-          </div>
-        </div>
-      </li>
-    </ul>
+   
     <!-- top bar right -->
     <ul class="nav navbar-nav ms-auto">
       <li class="nav-item dropdown ">
@@ -70,7 +57,7 @@
             <span>{{ user.email }}</span>
           </div>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" (click)="signOut()"><i class="text-danger ti-unlock"></i>Logout</a>
+          <a class="dropdown-item cursor-pointer" (click)="signOut()"><mat-icon>logout</mat-icon><span class="position">Logout</span></a>
         </div>
       </li>
     </ul>

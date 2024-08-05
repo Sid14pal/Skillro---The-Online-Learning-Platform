@@ -5561,6 +5561,7 @@
   
   .rounded-circle {
     border-radius: 50% !important;
+    min-height: 60px;
   }
   
   .rounded-pill {
@@ -22303,7 +22304,10 @@
     left: -32px; }
   
   .admin-header .navbar-nav {
-    flex-direction: row; }
+    flex-direction: row;
+    position: relative;
+    right: 30px;
+   }
     .admin-header .navbar-nav .dropdown-menu {
       position: absolute; }
   
@@ -22412,6 +22416,7 @@
     overflow: hidden;
     font-size: 14px;
     min-height: 100vh;
+    margin-top: 58px;
     -webkit-transition: all 0.9s ease;
     -moz-transition: all 0.9s ease;
     -ms-transition: all 0.9s ease;

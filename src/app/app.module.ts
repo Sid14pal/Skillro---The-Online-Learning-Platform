@@ -26,6 +26,7 @@ import { DashboardSidebarComponent } from './dashboard/dashboard-sidebar/dashboa
 import { AddStudentsComponent } from './dashboard/add-students/add-students.component';
 import { EditStudentComponent } from './dashboard/edit-student/edit-student.component';
 import { DashboardHeaderComponent } from './dashboard/dashboard-header/dashboard-header.component';
+import { AboutStudentComponent } from './dashboard/about-student/about-student.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { DashboardHeaderComponent } from './dashboard/dashboard-header/dashboard
     DashboardSidebarComponent,
     AddStudentsComponent,
     EditStudentComponent,
-    DashboardHeaderComponent
+    DashboardHeaderComponent,
+    AboutStudentComponent,
   ],
   imports: [
     BrowserModule,
