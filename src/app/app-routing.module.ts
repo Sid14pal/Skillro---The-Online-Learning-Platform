@@ -9,6 +9,7 @@ import { AllStudentsComponent } from './dashboard/all-students/all-students.comp
 import { AddStudentsComponent } from './dashboard/add-students/add-students.component';
 import { EditStudentComponent } from './dashboard/edit-student/edit-student.component';
 import { AboutStudentComponent } from './dashboard/about-student/about-student.component';
+import { AddCoursesComponent } from './dashboard/add-courses/add-courses.component';
 
 const routes: Routes = [
 
@@ -22,6 +23,8 @@ const routes: Routes = [
   {path: 'all-student', component : AllStudentsComponent},
   {path: 'edit-student/:id', component : EditStudentComponent},
   {path: 'about-student', component : AboutStudentComponent},
+  {path: 'add-courses', component : AddCoursesComponent},
+
 ];
 
 @NgModule({

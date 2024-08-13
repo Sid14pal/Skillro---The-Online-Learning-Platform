@@ -27,6 +27,7 @@ import { AddStudentsComponent } from './dashboard/add-students/add-students.comp
 import { EditStudentComponent } from './dashboard/edit-student/edit-student.component';
 import { DashboardHeaderComponent } from './dashboard/dashboard-header/dashboard-header.component';
 import { AboutStudentComponent } from './dashboard/about-student/about-student.component';
+import { AddCoursesComponent } from './dashboard/add-courses/add-courses.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { AboutStudentComponent } from './dashboard/about-student/about-student.c
     EditStudentComponent,
     DashboardHeaderComponent,
     AboutStudentComponent,
+    AddCoursesComponent,
   ],
   imports: [
     BrowserModule,

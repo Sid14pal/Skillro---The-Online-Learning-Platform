@@ -25,7 +25,7 @@ export class AllStudentsComponent {
     birthDay: '',
   };
 
-  user: any;
+  user: any = {};
   userInitials: string | undefined;
 
   constructor(private routeStatusService: RouteStatusService, private data: StudentService, private router: Router, private auth:AuthService,){

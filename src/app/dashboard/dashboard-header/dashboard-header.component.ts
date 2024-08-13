@@ -9,7 +9,7 @@ import { RouteStatusService } from '../../services/route-status.service';
 })
 export class DashboardHeaderComponent {
 
-  user: any;
+  user: any = {};
   userInitials: string | undefined;
 
   constructor(private auth:AuthService, private routeStatusService: RouteStatusService,){
