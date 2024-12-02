@@ -41,7 +41,8 @@
             ],
             "scripts": [
               "src/assets/js/calender.js",
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "src/assets/js/productSlider.js"
             ],
             "server": "src/main.server.ts",
             "prerender": true,

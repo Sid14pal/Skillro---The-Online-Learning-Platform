@@ -1,29 +1,80 @@
-.slider-container {
-    width: 300px;
-    height: 400px;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .slider {
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease-in-out;
-    transform: translateY(calc(-100% * {{ currentIndex }}));
-  }
-  
-  .card {
-    width: 100%;
-    margin-bottom: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .card-body {
-    text-align: center;
-  }
-  
+.slider {
+  width: 220px; /* Adjust width to fit the card */
+  height: 500px; /* Adjust height to show multiple items */
+  position: relative;
+  margin: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.slider::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+.slider .slide {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  position: absolute;
+  top: 0;
+  transition: 0.3s top ease-in-out;
+}
+
+.slider .item {
+  margin-bottom: 15px; /* Spacing between items */
+}
+
+.slider .item:last-child {
+  margin-bottom: 0; /* No margin for the last item */
+}
+
+/* Card Styling */
+.card {
+  width: 200px; /* Card width */
+  height: auto; /* Allow card height to adjust based on content */
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover; /* Ensure image fits the card */
+}
+
+.card-body {
+  padding: 10px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.ctrl-btn {
+  padding: 10px 20px;
+  min-width: 50px;
+  background: #fff;
+  border: none;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ctrl-btn.pro-prev {
+  top: 10px; /* Position at the top */
+}
+
+.ctrl-btn.pro-next {
+  bottom: 10px; /* Position at the bottom */
+}
