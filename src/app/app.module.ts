@@ -28,6 +28,13 @@ import { EditStudentComponent } from './dashboard/edit-student/edit-student.comp
 import { DashboardHeaderComponent } from './dashboard/dashboard-header/dashboard-header.component';
 import { AboutStudentComponent } from './dashboard/about-student/about-student.component';
 import { AddCoursesComponent } from './dashboard/add-courses/add-courses.component';
+import { BannerComponent } from './template/banner/banner.component';
+import { HomeComponent } from './template/home/home.component';
+import { BenefitsComponent } from './template/benefits/benefits.component';
+import { ServicesComponent } from './template/services/services.component';
+import { CoursesComponent } from './template/courses/courses.component';
+import { RecentCoursesComponent } from './template/recent-courses/recent-courses.component';
+import { CourseSliderComponent } from './template/course-slider/course-slider.component';
 
 
 @NgModule({
@@ -46,6 +53,13 @@ import { AddCoursesComponent } from './dashboard/add-courses/add-courses.compone
     DashboardHeaderComponent,
     AboutStudentComponent,
     AddCoursesComponent,
+    BannerComponent,
+    HomeComponent,
+    BenefitsComponent,
+    ServicesComponent,
+    CoursesComponent,
+    RecentCoursesComponent,
+    CourseSliderComponent,
   ],
   imports: [
     BrowserModule,

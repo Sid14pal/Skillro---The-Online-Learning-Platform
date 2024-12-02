@@ -1,0 +1,28 @@
+.banner{
+background: rgb(237,239,243);
+background: linear-gradient(180deg, rgba(237,239,243,1) 0%, rgba(239,228,217,1) 100%);
+border-radius: 40px;
+margin-top: 24px;
+}
+
+.text-main{
+    font-family: "Inter", sans-serif;
+}
+
+.text-main span{
+    color: #F020B3;
+    font-style: italic;
+}
+
+.banner-btn{
+    background: linear-gradient(180deg, #323544 0%, #121219 100%);
+    border: none;
+    padding: 12px 25px 12px 25px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.banner-img{
+    right: 35px;
+    top:  50px;
+}

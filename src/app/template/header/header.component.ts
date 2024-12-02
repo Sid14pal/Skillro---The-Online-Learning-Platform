@@ -8,6 +8,8 @@ import { RouteStatusService } from '../../services/route-status.service';
 })
 export class HeaderComponent {
 
-  constructor(public routeStatusService: RouteStatusService){}
+  constructor(public routeStatusService: RouteStatusService){
+    this.routeStatusService.hideHeader = true;
+  }
 
 }

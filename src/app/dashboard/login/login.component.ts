@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { RouteStatusService } from '../../services/route-status.service';
 
 @Component({
   selector: 'app-login',
@@ -20,8 +21,11 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private auth : AuthService,
-    private snackBar: MatSnackBar
-  ) {}
+    private snackBar: MatSnackBar,
+    private routeStatusService: RouteStatusService
+  ) {
+    this.routeStatusService.hideHeader = true;
+  }
 
   ngOnInit(): void {
   }

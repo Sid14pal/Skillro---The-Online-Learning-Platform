@@ -10,10 +10,12 @@ import { AddStudentsComponent } from './dashboard/add-students/add-students.comp
 import { EditStudentComponent } from './dashboard/edit-student/edit-student.component';
 import { AboutStudentComponent } from './dashboard/about-student/about-student.component';
 import { AddCoursesComponent } from './dashboard/add-courses/add-courses.component';
+import { HomeComponent } from './template/home/home.component';
+import { CoursesComponent } from './template/courses/courses.component';
 
 const routes: Routes = [
 
-  
+  {path: '', component : HomeComponent},
   {path: 'register', component : RegisterComponent},
   {path: 'login', component : LoginComponent},
   {path: 'forgot-password', component : ForgotPasswordComponent},
@@ -24,6 +26,7 @@ const routes: Routes = [
   {path: 'edit-student/:id', component : EditStudentComponent},
   {path: 'about-student', component : AboutStudentComponent},
   {path: 'add-courses', component : AddCoursesComponent},
+  {path: 'courses', component : CoursesComponent},
 
 ];
 
