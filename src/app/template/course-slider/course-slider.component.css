@@ -1,5 +1,12 @@
+.slider-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: auto;
+}
 .slider {
-  width: 220px; /* Adjust width to fit the card */
+  width: 100%; /* Adjust width to fit the card */
   height: 500px; /* Adjust height to show multiple items */
   position: relative;
   margin: auto;
@@ -14,7 +21,7 @@
 .slider .slide {
   display: flex;
   flex-direction: column; /* Stack items vertically */
-  position: absolute;
+  position: relative;
   top: 0;
   transition: 0.3s top ease-in-out;
 }
@@ -29,18 +36,18 @@
 
 /* Card Styling */
 .card {
-  width: 200px; /* Card width */
+  width: 100%; /* Card width */
   height: auto; /* Allow card height to adjust based on content */
   background: #fff;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 44px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card-img {
   width: 100%;
-  height: 150px;
+  height: 195px;
   object-fit: cover; /* Ensure image fits the card */
 }
 
@@ -56,25 +63,29 @@
   margin: 0;
 }
 
+/* Control buttons */
 .ctrl-btn {
-  padding: 10px 20px;
-  min-width: 50px;
-  background: #fff;
+  background-color: #fff;
+  width: 35px;
+  height: 35px;
   border: none;
-  font-weight: 600;
-  text-align: center;
+  line-height: 0px;
+  color: #000000;
+  border-radius: 50%;
+  font-size: 16px;
   cursor: pointer;
   outline: none;
-
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  transition: background-color 0.3s;
 }
 
-.ctrl-btn.pro-prev {
-  top: 10px; /* Position at the top */
+.ctrl-btn:hover {
+  background-color: #c3c3c3;
 }
 
-.ctrl-btn.pro-next {
-  bottom: 10px; /* Position at the bottom */
+.pro-prev {
+  margin-bottom: 10px; /* Space between prev button and slider */
+}
+
+.pro-next {
+  margin-top: 10px; /* Space between next button and slider */
 }
