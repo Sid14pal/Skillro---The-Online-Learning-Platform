@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
-import { Student } from '../datatype';
+import { courses, Student } from '../datatype';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +15,12 @@ export class StudentService {
     student.id = this.afs.createId();
     return this.afs.collection('/Students').add(student);
   }
+
+    // Add student
+    addCourse(course: courses) {
+      course.id = this.afs.createId();
+      return this.afs.collection('/Courses').add(course);
+    }
 
   // Get all students
   getAllStudents() {

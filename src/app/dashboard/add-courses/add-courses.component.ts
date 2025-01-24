@@ -11,18 +11,14 @@ import { courses } from '../../datatype';
 })
 export class AddCoursesComponent {
 
-  studentsList: courses[] = [];
-  studentObj: courses = {
+  coursesList: courses[] = [];
+  courseObj: courses = {
     id: '',
-    name: '',
-    email: '',
-    roll: '',
-    class: '',
-    mobile: '',
-    bloodgroup: '',
-    address: '',
-    gender: '',
-    birthDay: '',
+    course: '',
+    code: '',
+    description: '',
+    department: '',
+    duration: '',
     imageUrl: ''
   };
 
@@ -38,22 +34,18 @@ export class AddCoursesComponent {
   }
 
   resetForm() {
-    this.studentObj = {
+    this.courseObj = {
       id: '',
-      name: '',
-      email: '',
-      roll: '',
-      class: '',
-      mobile: '',
-      bloodgroup: '',
-      address: '',
-      gender: '',
-      birthDay: '',
+      course: '',
+      code: '',
+      description: '',
+      department: '',
+      duration: '',
       imageUrl: ''
     };
   }
 
-  async addStudent() {
+  async addCourse() {
     if (!this.validateForm()) {
       return;
     }
@@ -62,8 +54,7 @@ export class AddCoursesComponent {
     if (this.selectedImage) {
       const path = `images/${Date.now()}_${this.selectedImage.name}`;
       try {
-        this.studentObj.imageUrl = await this.data.uploadImage(this.selectedImage, path);
-        this.saveStudentData();
+        this.courseObj.imageUrl = await this.data.uploadImage(this.selectedImage, path);
         this.isLoading = false;
         this.snackBar.open('Student Added Successfully', 'Close', { duration: 4000, panelClass: ['success', 'vertical-center-snackba'],});
       } catch (error) {
@@ -71,52 +62,36 @@ export class AddCoursesComponent {
         this.isLoading = false;
       }
     } else {
-      this.saveStudentData();
       this.isLoading = false;
     }
   }
 
-  saveStudentData() {
-    this.data.addStudent(this.studentObj).then(() => {
+  saveCourseData() {
+    this.data.addCourse(this.courseObj).then(() => {
       this.resetForm();
     });
   }
+ 
 
   validateForm(): boolean {
-    if (!this.studentObj.name) {
-      this.snackBar.open('Please Enter the name', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
+    if (!this.courseObj.course) {
+      this.snackBar.open('Please Enter the course', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
       return false;
     }
-    if (!this.studentObj.email) {
-      this.snackBar.open('Please Enter the email', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
+    if (!this.courseObj.code) {
+      this.snackBar.open('Please Enter the code', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
       return false;
     }
-    if (!this.studentObj.roll) {
-      this.snackBar.open('Please Enter the Roll No', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
+    if (!this.courseObj.description) {
+      this.snackBar.open('Please Enter the description', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
       return false;
     }
-    if (!this.studentObj.class) {
-      this.snackBar.open('Please Enter the class', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
+    if (!this.courseObj.department) {
+      this.snackBar.open('Please Enter the department', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
       return false;
     }
-    if (!this.studentObj.mobile) {
-      this.snackBar.open('Please Enter the mobile', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
-      return false;
-    }
-    if (!this.studentObj.bloodgroup) {
-      this.snackBar.open('Please Enter the blood group', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
-      return false;
-    }
-    if (!this.studentObj.address) {
-      this.snackBar.open('Please Enter the address', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
-      return false;
-    }
-    if (!this.studentObj.gender) {
-      this.snackBar.open('Please Enter the gender', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
-      return false;
-    }
-    if (!this.studentObj.birthDay) {
-      this.snackBar.open('Please Enter the birthday', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
+    if (!this.courseObj.duration) {
+      this.snackBar.open('Please Enter the duration', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
       return false;
     }
     return true;

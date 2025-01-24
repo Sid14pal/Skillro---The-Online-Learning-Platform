@@ -36,13 +36,12 @@
 
 /* Card Styling */
 .card {
-  width: 100%; /* Card width */
-  height: auto; /* Allow card height to adjust based on content */
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 44px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+    height: auto;
+    background: #ffffff00;
+    border-radius: 44px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card-img {
@@ -54,13 +53,21 @@
 .card-body {
   padding: 10px;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .card-title {
   font-size: 16px;
   font-weight: bold;
-  color: #333;
+  color: #ffffff;
+  text-align: left;
   margin: 0;
+}
+
+.card-title span{
+  font-weight: 200;
+  font-size: 13px;
 }
 
 /* Control buttons */

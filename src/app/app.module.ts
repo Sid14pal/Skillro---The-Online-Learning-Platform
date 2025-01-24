@@ -35,6 +35,8 @@ import { ServicesComponent } from './template/services/services.component';
 import { CoursesComponent } from './template/courses/courses.component';
 import { RecentCoursesComponent } from './template/recent-courses/recent-courses.component';
 import { CourseSliderComponent } from './template/course-slider/course-slider.component';
+import { GalleryComponent } from './template/gallery/gallery.component';
+import { AllCoursesComponent } from './dashboard/all-courses/all-courses.component';
 
 
 @NgModule({
@@ -60,6 +62,8 @@ import { CourseSliderComponent } from './template/course-slider/course-slider.co
     CoursesComponent,
     RecentCoursesComponent,
     CourseSliderComponent,
+    GalleryComponent,
+    AllCoursesComponent,
   ],
   imports: [
     BrowserModule,

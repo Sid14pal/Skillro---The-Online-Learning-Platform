@@ -14,14 +14,10 @@ export interface Student {
 
 export interface courses {
     id: string;
-    name : string;
-    email : string;
-    roll : string;
-    class: string;
-    mobile: string;
-    bloodgroup: string;
-    address: string;
-    gender: string;
-    birthDay: string;
+    course : string;
+    code : string;
+    description : string;
+    department: string;
+    duration: string;
     imageUrl?: string;
 }

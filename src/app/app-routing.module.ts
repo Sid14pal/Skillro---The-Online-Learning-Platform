@@ -12,6 +12,7 @@ import { AboutStudentComponent } from './dashboard/about-student/about-student.c
 import { AddCoursesComponent } from './dashboard/add-courses/add-courses.component';
 import { HomeComponent } from './template/home/home.component';
 import { CoursesComponent } from './template/courses/courses.component';
+import { AllCoursesComponent } from './dashboard/all-courses/all-courses.component';
 
 const routes: Routes = [
 
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path: 'about-student', component : AboutStudentComponent},
   {path: 'add-courses', component : AddCoursesComponent},
   {path: 'courses', component : CoursesComponent},
+  {path: 'all-courses', component : AllCoursesComponent},
 
 ];
 
