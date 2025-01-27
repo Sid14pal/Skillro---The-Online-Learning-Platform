@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouteStatusService } from '../../services/route-status.service';
 import { StudentService } from '../../services/student.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { courses } from '../../datatype';
+import { courses, Student } from '../../datatype';
 
 @Component({
   selector: 'app-add-courses',
@@ -11,14 +11,18 @@ import { courses } from '../../datatype';
 })
 export class AddCoursesComponent {
 
-  coursesList: courses[] = [];
-  courseObj: courses = {
+ studentsList: Student[] = [];
+  studentObj: Student = {
     id: '',
-    course: '',
-    code: '',
-    description: '',
-    department: '',
-    duration: '',
+    name: '',
+    email: '',
+    roll: '',
+    class: '',
+    mobile: '',
+    bloodgroup: '',
+    address: '',
+    gender: '',
+    birthDay: '',
     imageUrl: ''
   };
 
@@ -34,18 +38,22 @@ export class AddCoursesComponent {
   }
 
   resetForm() {
-    this.courseObj = {
+    this.studentObj = {
       id: '',
-      course: '',
-      code: '',
-      description: '',
-      department: '',
-      duration: '',
+      name: '',
+      email: '',
+      roll: '',
+      class: '',
+      mobile: '',
+      bloodgroup: '',
+      address: '',
+      gender: '',
+      birthDay: '',
       imageUrl: ''
     };
   }
 
-  async addCourse() {
+  async addStudent() {
     if (!this.validateForm()) {
       return;
     }
@@ -54,7 +62,8 @@ export class AddCoursesComponent {
     if (this.selectedImage) {
       const path = `images/${Date.now()}_${this.selectedImage.name}`;
       try {
-        this.courseObj.imageUrl = await this.data.uploadImage(this.selectedImage, path);
+        this.studentObj.imageUrl = await this.data.uploadImage(this.selectedImage, path);
+        this.saveStudentData();
         this.isLoading = false;
         this.snackBar.open('Student Added Successfully', 'Close', { duration: 4000, panelClass: ['success', 'vertical-center-snackba'],});
       } catch (error) {
@@ -62,36 +71,32 @@ export class AddCoursesComponent {
         this.isLoading = false;
       }
     } else {
+      this.saveStudentData();
       this.isLoading = false;
     }
   }
 
-  saveCourseData() {
-    this.data.addCourse(this.courseObj).then(() => {
+  saveStudentData() {
+    this.data.addStudent(this.studentObj).then(() => {
       this.resetForm();
     });
   }
- 
 
   validateForm(): boolean {
-    if (!this.courseObj.course) {
-      this.snackBar.open('Please Enter the course', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
+    if (!this.studentObj.name) {
+      this.snackBar.open('Please Enter the name', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
       return false;
     }
-    if (!this.courseObj.code) {
-      this.snackBar.open('Please Enter the code', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
+    if (!this.studentObj.email) {
+      this.snackBar.open('Please Enter the email', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
       return false;
     }
-    if (!this.courseObj.description) {
-      this.snackBar.open('Please Enter the description', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
+    if (!this.studentObj.roll) {
+      this.snackBar.open('Please Enter the Roll No', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
       return false;
     }
-    if (!this.courseObj.department) {
-      this.snackBar.open('Please Enter the department', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
-      return false;
-    }
-    if (!this.courseObj.duration) {
-      this.snackBar.open('Please Enter the duration', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
+    if (!this.studentObj.class) {
+      this.snackBar.open('Please Enter the class', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
       return false;
     }
     return true;

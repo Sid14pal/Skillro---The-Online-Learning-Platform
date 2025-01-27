@@ -1,77 +1,72 @@
 <div class="wrapper">
 
-    <app-dashboard-header></app-dashboard-header>
-  
-      <!--=================================
-      Main content -->
-    <!-- ... -->
-    <div>
-      <app-dashboard-sidebar></app-dashboard-sidebar>
-      <div class="content-wrapper">
-        <div class="page-title">
-          <div class="row">
-            <div class="col-sm-6">
-              <h4 class="mb-0"> Add Student</h4>
-            </div>
-            <div class="col-sm-6">
-              <ol class="breadcrumb pt-0 pe-0 float-start float-sm-end">
-                <li class="breadcrumb-item"><a routerLink="/dashboard" class="default-color text-light">Dashboard</a></li>
-                <li class="breadcrumb-item active ps-0 text-light">Add Student</li>
-              </ol>
-            </div>
+  <app-dashboard-header></app-dashboard-header>
+
+    <!--=================================
+    Main content -->
+  <!-- ... -->
+  <div>
+    <app-dashboard-sidebar></app-dashboard-sidebar>
+    <div class="content-wrapper">
+      <div class="page-title">
+        <div class="row">
+          <div class="col-sm-6">
+            <h4 class="mb-0"> Add Student</h4>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb pt-0 pe-0 float-start float-sm-end">
+              <li class="breadcrumb-item"><a routerLink="/dashboard" class="default-color text-light">Dashboard</a></li>
+              <li class="breadcrumb-item active ps-0 text-light">Add Student</li>
+            </ol>
           </div>
         </div>
-        <div class="row">
-          <div class="card card-statistics mb-30">
-            <div class="card-body">
-              <h5 class="card-title">Basic Info</h5>
-              <form>
-                <div class="row">
-                  <div class="col-sm-12 mb-3">
-                    <label class="form-label" for="inputEmail4">Course Name</label>
-                    <input type="text" class="form-control mb-3" placeholder="Course Name" name="course" [(ngModel)]="courseObj.course">
-                  </div>
+      </div>
+      <div class="row">
+        <div class="card card-statistics mb-30">
+          <div class="card-body">
+            <h5 class="card-title">Basic Info</h5>
+            <form>
+              <div class="row">
+                <div class="col-sm-12 mb-3">
+                  <label class="form-label" for="inputEmail4">Course Name</label>
+                  <input type="text" class="form-control mb-3" placeholder="Course Name" name="name" [(ngModel)]="studentObj.name">
                 </div>
-                <div class="row">
-                  <div class="mb-3 col-md-6">
-                    <label class="form-label" for="inputEmail4">Code</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Code" name="code" [(ngModel)]="courseObj.code">
-                  </div>
-                  <div class="mb-3 col-md-6">
-                    <label class="form-label" for="inputRoll">Description</label>
-                    <input type="text" class="form-control" id="inputRoll" placeholder="Description" name="description" [(ngModel)]="courseObj.description">
-                  </div>
+              </div>
+              <div class="row">
+                <div class="mb-3 col-md-6">
+                  <label class="form-label" for="inputEmail4">Course Id</label>
+                  <input type="email" class="form-control" id="inputEmail4" placeholder="Course Id" name="email" [(ngModel)]="studentObj.email">
                 </div>
-                <div class="row">
-                  <div class="mb-3 col-md-6">
-                    <label class="form-label" for="inputClass">Department</label>
-                    <input type="text" class="form-control" id="inputClass" placeholder="department" name="department" [(ngModel)]="courseObj.department">
-                  </div>
-                  <div class="mb-3 col-md-6">
-                    <label class="form-label" for="inputMobile">Duration </label>
-                    <input type="text" class="form-control" id="inputMobile" placeholder="Duration" name="duration" [(ngModel)]="courseObj.duration">
-                  </div>
+                <div class="mb-3 col-md-6">
+                  <label class="form-label" for="inputRoll">Duration</label>
+                  <input type="text" class="form-control" id="inputRoll" placeholder="Duration" name="roll" [(ngModel)]="studentObj.roll">
                 </div>
-                <div class="row">
-                  <div class="col-md-4 mb-3">
-                    <label class="form-label" for="inputImage">Choose Image</label>
-                   <span class="d-flex">
-                    <input type="file" class="form-control" id="inputImage" name="file" (change)="onFileSelected($event)">
-                   </span>
-                  </div>
+              </div>
+              <div class="row">
+                <div class="mb-3 col-md-6">
+                  <label class="form-label" for="inputClass">Class</label>
+                  <input type="text" class="form-control" id="inputClass" placeholder="Class" name="class" [(ngModel)]="studentObj.class">
                 </div>
-                <button class="submitbutton" (click)="addCourse()" type="submit">
-                  <div class="main-bar">
-                    <div class="bar" *ngIf="isLoading"></div>
-                  </div>
-                  <span *ngIf="isLoading">Loading</span>
-                  <span *ngIf="!isLoading">Submit</span>
-                </button>
-              </form>
-            </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 mb-3">
+                  <label class="form-label" for="inputImage">Choose Image</label>
+                 <span class="d-flex">
+                  <input type="file" class="form-control" id="inputImage" name="file" (change)="onFileSelected($event)">
+                 </span>
+                </div>
+              </div>
+              <button class="submitbutton" (click)="addStudent()" type="submit">
+                <div class="main-bar">
+                  <div class="bar" *ngIf="isLoading"></div>
+                </div>
+                <span *ngIf="isLoading">Loading</span>
+                <span *ngIf="!isLoading">Submit</span>
+              </button>
+            </form>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
+</div>

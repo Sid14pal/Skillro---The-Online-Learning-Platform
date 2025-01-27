@@ -14,10 +14,9 @@ export interface Student {
 
 export interface courses {
     id: string;
-    course : string;
-    code : string;
-    description : string;
-    department: string;
-    duration: string;
+    courseName : string;
+    courseId : string;
+    duration : string;
+    courseClass: string;
     imageUrl?: string;
 }

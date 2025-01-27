@@ -2,56 +2,11 @@
   <button class="ctrl-btn pro-prev"><mat-icon>arrow_upward</mat-icon></button>
   <div class="slider" id="slider">
     <div class="slide" id="slide">
-      <div class="item">
+      <div class="item" *ngFor="let student of studentsList">
         <div class="card">
-          <img class="card-img" src="../assets/templates/slide.jpg" alt="Motion Graphic Design">
+          <img class="card-img" [src]="student.imageUrl" alt="{{student.name}}">
           <div class="card-body">
-            <h3 class="card-title">Motion Graphic Design <br><span>13 Month</span></h3>
-            <button class="btn-primary btn">Enroll Now</button>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="card">
-          <img class="card-img" src="../assets/templates/slide.jpg" alt="Motion Graphic Design">
-          <div class="card-body">
-            <h3 class="card-title">Motion Graphic Design <br><span>13 Month</span></h3>
-            <button class="btn-primary btn">Enroll Now</button>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="card">
-          <img class="card-img" src="../assets/templates/slide.jpg" alt="Motion Graphic Design">
-          <div class="card-body">
-            <h3 class="card-title">Motion Graphic Design <br><span>13 Month</span></h3>
-            <button class="btn-primary btn">Enroll Now</button>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="card">
-          <img class="card-img" src="../assets/templates/slide.jpg" alt="Motion Graphic Design">
-          <div class="card-body">
-            <h3 class="card-title">Motion Graphic Design <br><span>13 Month</span></h3>
-            <button class="btn-primary btn">Enroll Now</button>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="card">
-          <img class="card-img" src="../assets/templates/slide.jpg" alt="Motion Graphic Design">
-          <div class="card-body">
-            <h3 class="card-title">Motion Graphic Design <br><span>13 Month</span></h3>
-            <button class="btn-primary btn">Enroll Now</button>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="card">
-          <img class="card-img" src="../assets/templates/slide.jpg" alt="Motion Graphic Design">
-          <div class="card-body">
-            <h3 class="card-title">Motion Graphic Design <br><span>13 Month</span></h3>
+            <h3 class="card-title">{{student.name}} <br><span>Class: {{student.roll}} </span></h3>
             <button class="btn-primary btn">Enroll Now</button>
           </div>
         </div>

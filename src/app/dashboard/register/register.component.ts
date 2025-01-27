@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { RouteStatusService } from '../../services/route-status.service';
 
 
 @Component({
@@ -13,7 +14,9 @@ email: string = '';
 password: string = '';
 name: string = '';
 
-  constructor(private auth : AuthService, private snackBar: MatSnackBar){}
+  constructor(private auth : AuthService, private snackBar: MatSnackBar, private routeStatusService: RouteStatusService){
+    this.routeStatusService.hideHeader = true;
+  }
 
   ngOnInit(): void {
   }

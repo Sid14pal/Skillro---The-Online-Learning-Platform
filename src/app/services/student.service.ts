@@ -16,12 +16,6 @@ export class StudentService {
     return this.afs.collection('/Students').add(student);
   }
 
-    // Add student
-    addCourse(course: courses) {
-      course.id = this.afs.createId();
-      return this.afs.collection('/Courses').add(course);
-    }
-
   // Get all students
   getAllStudents() {
     return this.afs.collection('/Students').snapshotChanges();
