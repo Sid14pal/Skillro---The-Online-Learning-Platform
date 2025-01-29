@@ -10,20 +10,53 @@
         </p>
     </div>
     <div class="row">
-        <div class="col-md-4">
-            <img src="assets/templates/gallery_img_1.jpg" class="img-fluid main__image radius" alt="Toy car on the road." />
+        <div class="col-md-4 position-relative">
+            <div class="image-container"  (click)="openLightbox('assets/templates/gallery_img_1.jpg')">
+                <img src="assets/templates/gallery_img_1.jpg" class="img-fluid main__image radius hover-effect" alt="Toy car on the road."/>
+                <div class="overlay">
+                    <span class="material-icons">zoom_in</span>
+                </div>
+            </div>
         </div>
         <div class="col-md-8">
             <div class="row">
-                <div class="col-md-6">
-                    <img src="assets/templates/gallery_img_2.jpg" class="img-fluid radius" alt="Toy car on the road." />
-                    <img src="assets/templates/gallery_img_4.webp" class="img-fluid radius my-4" alt="Toy car on the road." />
+                <div class="col-md-6 position-relative">
+                    <div class="image-container" (click)="openLightbox('assets/templates/gallery_img_2.jpg')">
+                        <img src="assets/templates/gallery_img_2.jpg" class="img-fluid radius hover-effect" alt="Toy car on the road."  />
+                        <div class="overlay">
+                            <span class="material-icons">zoom_in</span>
+                        </div>
+                    </div>
+                    <div class="image-container my-4" (click)="openLightbox('assets/templates/gallery_img_4.webp')">
+                        <img src="assets/templates/gallery_img_4.webp" class="img-fluid radius hover-effect" alt="Toy car on the road." />
+                        <div class="overlay">
+                            <span class="material-icons">zoom_in</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <img src="assets/templates/gallery_img_3.jpg" class="img-fluid radius" alt="Toy car on the road." />
-                    <img src="assets/templates/gallery_img_5.jpg" class="img-fluid radius my-4" alt="Toy car on the road." />
+                <div class="col-md-6 position-relative">
+                    <div class="image-container" (click)="openLightbox('assets/templates/gallery_img_3.jpg')">
+                        <img src="assets/templates/gallery_img_3.jpg" class="img-fluid radius hover-effect" alt="Toy car on the road." />
+                        <div class="overlay">
+                            <span class="material-icons">zoom_in</span>
+                        </div>
+                    </div>
+                    <div class="image-container my-4" (click)="openLightbox('assets/templates/gallery_img_5.jpg')">
+                        <img src="assets/templates/gallery_img_5.jpg" class="img-fluid radius hover-effect" alt="Toy car on the road." />
+                        <div class="overlay">
+                            <span class="material-icons">zoom_in</span>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" *ngIf="lightboxVisible">
+        <div class="lightbox-content">
+            <img [src]="lightboxImage" class="img-fluid" alt="Lightbox image">
+            <button class="close-btn" (click)="closeLightbox()">&times;</button>
         </div>
     </div>
 </div>

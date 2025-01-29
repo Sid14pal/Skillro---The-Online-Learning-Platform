@@ -37,6 +37,7 @@ import { RecentCoursesComponent } from './template/recent-courses/recent-courses
 import { CourseSliderComponent } from './template/course-slider/course-slider.component';
 import { GalleryComponent } from './template/gallery/gallery.component';
 import { AllCoursesComponent } from './dashboard/all-courses/all-courses.component';
+import { TestimonialComponent } from './template/testimonial/testimonial.component';
 
 
 @NgModule({
@@ -64,6 +65,7 @@ import { AllCoursesComponent } from './dashboard/all-courses/all-courses.compone
     CourseSliderComponent,
     GalleryComponent,
     AllCoursesComponent,
+    TestimonialComponent,
   ],
   imports: [
     BrowserModule,

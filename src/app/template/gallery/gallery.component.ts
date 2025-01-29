@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class GalleryComponent {
 
+  lightboxVisible = false;
+  lightboxImage: string = '';
+
+  openLightbox(imageSrc: string): void {
+    this.lightboxImage = imageSrc;
+    this.lightboxVisible = true;
+  }
+
+  closeLightbox(): void {
+    this.lightboxVisible = false;
+  }
+
 }
