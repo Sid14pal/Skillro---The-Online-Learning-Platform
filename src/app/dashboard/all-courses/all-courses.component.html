@@ -20,7 +20,7 @@
            <div class="col-sm-6">
              <ol class="breadcrumb pt-0 pe-0 float-start float-sm-end">
                <li class="breadcrumb-item"><a routerLink="/dashboard" class="default-color text-light">Dashboard</a></li>
-               <li class="breadcrumb-item active ps-0 text-light">All Student</li>
+               <li class="breadcrumb-item active ps-0 text-light">All Courses</li>
              </ol>
            </div>
          </div>
@@ -35,7 +35,7 @@
                          <div class="short-panel mb-5 border-bottom">
                            <div class="d-flex justify-content-between">
                              <h6 class="mb-0"> All Course Lists</h6>
-                            <!--  <button class="btn btn-success h6" routerLink="/add-student"><small>+ Add New Student</small></button> -->
+                             <button class="btn btn-success h6" routerLink="/add-courses"><small>+ Add New Course</small></button>
                            </div>
                          </div>
                            <table id="datatable" class="table table-dark table-hover dataTable p-0 mb-4 bg-table-none" role="grid" aria-describedby="datatable_info">
@@ -57,7 +57,7 @@
                                      <td>{{student.roll}}</td>
                                      <td>{{student.class}}</td>
                                      <td>
-                                       <a class="btn btn-xs sharp btn-danger" (click)="deleteStudent(student)" mat-raised-button><mat-icon>delete</mat-icon></a>
+                                      <a class="btn btn-xs sharp btn-danger" (click)="deleteStudent(student)" mat-raised-button><mat-icon>delete</mat-icon></a>
                                    </td>
                                   </tr>
                                </tbody>

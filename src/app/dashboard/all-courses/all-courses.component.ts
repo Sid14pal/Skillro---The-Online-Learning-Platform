@@ -65,7 +65,7 @@ export class AllCoursesComponent {
     }
   
     editStudent(studentId: string): void {
-      this.router.navigate(['/edit-student', studentId]);
+      this.router.navigate(['update-courses', studentId]);
     }
   
     getInitials(user: any): string {
