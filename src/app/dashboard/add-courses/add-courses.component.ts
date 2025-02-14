@@ -84,7 +84,7 @@ export class AddCoursesComponent {
 
   validateForm(): boolean {
     if (!this.studentObj.name) {
-      this.snackBar.open('Please Enter the name', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
+      this.snackBar.open('Please Enter the course name', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
       return false;
     }
     if (!this.studentObj.email) {

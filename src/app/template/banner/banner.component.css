@@ -1,8 +1,12 @@
 .banner{
-background: rgb(237,239,243);
-background: linear-gradient(180deg, rgba(237,239,243,1) 0%, rgba(239,228,217,1) 100%);
-border-radius: 40px;
+    background: rgb(254,224,221);
+    background: linear-gradient(131deg, rgba(254,224,221,1) 0%, rgba(216,235,255,1) 100%);
 margin-top: 24px;
+background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 84px;
+    padding-bottom: 90px;
 }
 
 .text-main{
@@ -22,7 +26,99 @@ margin-top: 24px;
     text-transform: uppercase;
 }
 
-.banner-img{
-    right: 35px;
-    top:  50px;
+.banner-content .form-inner {
+    padding: 12px;
+    background-color: #fff;
+    border-radius: 35px;
+    width: 100%;
+    border: 0;
+    max-width: 740px;
+}
+
+.banner-content .input-group {
+    background: #fff;
+    border-radius: 130px;
+    padding-left: 12px;
+}
+
+.banner-content .form-control {
+    background: #fff;
+    border-radius: 40px;
+    border: 0;
+    height: 44px;
+    color: #000;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.drop-detail {
+    width: 174px;
+    display: flex;
+    margin: 0px 17px;
+    border-radius: 50px !important;
+    border: 0;
+    height: 44px;
+}
+
+.banner-content .sub-btn {
+    background: #f66962;
+    border-radius: 50px !important;
+    font-weight: bold;
+    border: 1px solid #f66962;
+    margin: 0px;
+    font-size: 18px;
+    line-height: 9px;
+    /* padding: 10px 15px; */
+    color: #fff;
+    width: 44px;
+}
+
+.banner-content .select {
+    border-radius: 50px;
+    background-color: #ffdeda;
+    z-index: unset;
+}
+
+.trust-user p {
+    font-size: 20px;
+    color: #685f78;
+    font-weight: 500;
+    margin: 38px 0px 10px;
+}
+
+
+.rate-head h2 {
+    margin-right: 40px;
+    color: #000000;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.trust-rating .rating {
+    margin-bottom: 0;
+}
+.rating {
+    list-style: none;
+    margin: 0 0 7px;
+    padding: 0;
+    width: 100%;
+}
+
+.rating h2 {
+    color: #000000;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.rating {
+    color: #ffb931;
+    padding: 0px 9px;
+}
+
+.search_icon {
+    color: #f66962;
+    position: relative;
+    top: 11px;
 }

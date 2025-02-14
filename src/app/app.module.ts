@@ -33,11 +33,10 @@ import { HomeComponent } from './template/home/home.component';
 import { BenefitsComponent } from './template/benefits/benefits.component';
 import { ServicesComponent } from './template/services/services.component';
 import { CoursesComponent } from './template/courses/courses.component';
-import { RecentCoursesComponent } from './template/recent-courses/recent-courses.component';
-import { CourseSliderComponent } from './template/course-slider/course-slider.component';
 import { GalleryComponent } from './template/gallery/gallery.component';
 import { AllCoursesComponent } from './dashboard/all-courses/all-courses.component';
 import { TestimonialComponent } from './template/testimonial/testimonial.component';
+import { FeaturedCoursesComponent } from './template/featured-courses/featured-courses.component';
 
 
 @NgModule({
@@ -61,11 +60,10 @@ import { TestimonialComponent } from './template/testimonial/testimonial.compone
     BenefitsComponent,
     ServicesComponent,
     CoursesComponent,
-    RecentCoursesComponent,
-    CourseSliderComponent,
     GalleryComponent,
     AllCoursesComponent,
     TestimonialComponent,
+    FeaturedCoursesComponent,
   ],
   imports: [
     BrowserModule,
