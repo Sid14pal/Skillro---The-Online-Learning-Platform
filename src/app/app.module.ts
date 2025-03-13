@@ -37,6 +37,7 @@ import { GalleryComponent } from './template/gallery/gallery.component';
 import { AllCoursesComponent } from './dashboard/all-courses/all-courses.component';
 import { TestimonialComponent } from './template/testimonial/testimonial.component';
 import { FeaturedCoursesComponent } from './template/featured-courses/featured-courses.component';
+import { CourseDetailsComponent } from './template/course-details/course-details.component';
 
 
 @NgModule({
@@ -64,6 +65,7 @@ import { FeaturedCoursesComponent } from './template/featured-courses/featured-c
     AllCoursesComponent,
     TestimonialComponent,
     FeaturedCoursesComponent,
+    CourseDetailsComponent,
   ],
   imports: [
     BrowserModule,

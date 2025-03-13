@@ -13,6 +13,7 @@ import { AddCoursesComponent } from './dashboard/add-courses/add-courses.compone
 import { HomeComponent } from './template/home/home.component';
 import { CoursesComponent } from './template/courses/courses.component';
 import { AllCoursesComponent } from './dashboard/all-courses/all-courses.component';
+import { CourseDetailsComponent } from './template/course-details/course-details.component';
 
 const routes: Routes = [
 
@@ -29,6 +30,7 @@ const routes: Routes = [
   {path: 'add-courses', component : AddCoursesComponent},
   {path: 'courses', component : CoursesComponent},
   {path: 'all-courses', component : AllCoursesComponent},
+  {path: 'course-details', component : CourseDetailsComponent},
 
 ];
 

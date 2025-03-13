@@ -48,4 +48,15 @@ export class FeaturedCoursesComponent {
       });
     }
 
+    viewDetails(student: any) {
+      this.router.navigate(['/course-details'], 
+      {
+        queryParams: {
+          image: student.imageUrl,
+          name: student.name,
+          roll: student.roll
+        }
+      });
+    }
+
 }

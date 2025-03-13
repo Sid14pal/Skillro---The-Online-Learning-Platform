@@ -1,0 +1,180 @@
+.inner-banner {
+    padding: 45px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.inner-banner:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.76);
+}
+
+.instructor-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: space-between;
+    align-items: center;
+    border-bottom: 1px solid #c7c7c7;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+  }
+  .about-instructor {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 15px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .abt-instructor-img {
+    margin-right: 10px;
+  }
+  .abt-instructor-img img {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #e3e3e3;
+    border-radius: 50%;
+  }
+  .instructor-wrap .rating {
+    width: unset;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  .instructor-detail h6,
+  .instructor-detail h5 {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  .instructor-detail p {
+    font-size: 13px;
+    color: #22100d;
+    margin-bottom: 0;
+  }
+  .course-info {
+    border-bottom: 1px solid #c7c7c7;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+  }
+  .cou-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+  }
+  .cou-info p {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .instructor-sec ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .instructor-sec ul li {
+    font-size: 14px;
+  }
+
+  .inner-banner p, .inner-banner h5, .inner-banner h2, .inner-banner .average-rating {
+    color: #fff;
+}
+
+.inner-banner h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.inner-banner p {
+    font-size: 14px;
+}
+
+.sidebar-sec {
+  margin-top: -250px;
+}
+
+.vid-bg {
+    position: relative;
+    z-index: 1;
+}
+
+.course-sec .card {
+  border-radius: 10px;
+}
+
+.course-sec .card {
+  z-index: 2;
+}
+.card {
+  border: 1px solid #e9ecef;
+  margin-bottom: 1.875rem;
+  border-radius: 0;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.video-sec img {
+  width: 100%;
+}
+
+.video-details h2 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+  margin-top: 20px;
+}
+
+.btn-enroll {
+  background: #159f46;
+  border: 1px solid #159f46;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  padding: 13px 20px;
+}
+
+.btn-enroll:hover {
+    color: #fff;
+    background: #0c993e;
+}
+
+.btn-wish {
+  background: #ffffff;
+  border: 1px solid #f51207;
+  border-radius: 50px;
+  padding: 10px;
+  color: #f51207;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.btn-wish:hover {
+  background: #f51207;
+  color: #fff;
+}
+
+.mat-icon {
+  position: relative;
+  bottom: -3px;
+}
+
+.wishlist {
+  position: relative;
+  left: 5px;
+  bottom: 3px;
+}
