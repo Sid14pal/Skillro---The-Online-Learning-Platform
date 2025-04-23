@@ -1,11 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
+
+:root {
+    --fistudy-font: "Outfit", sans-serif;
+    --fistudy-font-two: "Roboto Serif", serif;
+    --fistudy-gray: #6B778B;
+    --fistudy-gray-rgb: 107, 119, 139;
+    --fistudy-base: #687EFF;
+    --fistudy-base-rgb: 104, 126, 255;
+    --fistudy-black: #052143;
+    --fistudy-black-rgb: 5, 33, 67;
+    --fistudy-primary: #F87A53;
+    --fistudy-primary-rgb: 248, 122, 83;
+    --fistudy-white: #ffffff;
+    --fistudy-white-rgb: 255, 255, 255;
+    --fistudy-bdr-color: #D1E3FB;
+    --fistudy-bdr-color-rgb: 209, 227, 251;
+}
 
 body{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Roboto Serif", serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fistudy-font);
+    color: var(--fistudy-black);
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 

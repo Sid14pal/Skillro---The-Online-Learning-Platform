@@ -30,14 +30,13 @@ import { AboutStudentComponent } from './dashboard/about-student/about-student.c
 import { AddCoursesComponent } from './dashboard/add-courses/add-courses.component';
 import { BannerComponent } from './template/banner/banner.component';
 import { HomeComponent } from './template/home/home.component';
-import { BenefitsComponent } from './template/benefits/benefits.component';
-import { ServicesComponent } from './template/services/services.component';
 import { CoursesComponent } from './template/courses/courses.component';
-import { GalleryComponent } from './template/gallery/gallery.component';
 import { AllCoursesComponent } from './dashboard/all-courses/all-courses.component';
-import { TestimonialComponent } from './template/testimonial/testimonial.component';
 import { FeaturedCoursesComponent } from './template/featured-courses/featured-courses.component';
 import { CourseDetailsComponent } from './template/course-details/course-details.component';
+import { TextSlideComponent } from './template/text-slide/text-slide.component';
+import { CategoriesComponent } from './template/categories/categories.component';
+import { AboutComponent } from './template/about/about.component';
 
 
 @NgModule({
@@ -58,14 +57,13 @@ import { CourseDetailsComponent } from './template/course-details/course-details
     AddCoursesComponent,
     BannerComponent,
     HomeComponent,
-    BenefitsComponent,
-    ServicesComponent,
     CoursesComponent,
-    GalleryComponent,
     AllCoursesComponent,
-    TestimonialComponent,
     FeaturedCoursesComponent,
     CourseDetailsComponent,
+    TextSlideComponent,
+    CategoriesComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

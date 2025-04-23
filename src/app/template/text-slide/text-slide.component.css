@@ -1,0 +1,46 @@
+.sliding-text-one {
+    position: relative;
+    display: block;
+    background-color: #425BFC;
+    padding: 16px 0 16px;
+    filter: drop-shadow(0px 11px 22px rgba(0, 0, 0, 0.12));
+    z-index: 4;
+}
+
+.sliding-text__title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: var(--fistudy-white);
+  font-size: 26px;
+  line-height: 42px;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: capitalize;
+  font-family: var(--fistudy-font);
+}
+
+.marquee {
+  font-size: 2vw;
+  height: 2.5vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee div {
+  display: block;
+  width: 200%;
+  position: absolute; 
+  overflow: hidden;
+  animation: marquee 40s linear infinite;
+}
+/* span with text */
+.marquee span {
+  float: left;
+  width: 50%;
+}
+/* keyframe */
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
