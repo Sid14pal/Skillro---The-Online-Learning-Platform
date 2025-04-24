@@ -21,9 +21,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ForgotPasswordComponent } from './dashboard/forgot-password/forgot-password.component';
 import { VarifyEmailComponent } from './dashboard/varify-email/varify-email.component';
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
-import { AllStudentsComponent } from './dashboard/all-students/all-students.component';
 import { DashboardSidebarComponent } from './dashboard/dashboard-sidebar/dashboard-sidebar.component';
-import { AddStudentsComponent } from './dashboard/add-students/add-students.component';
 import { EditStudentComponent } from './dashboard/edit-student/edit-student.component';
 import { DashboardHeaderComponent } from './dashboard/dashboard-header/dashboard-header.component';
 import { AboutStudentComponent } from './dashboard/about-student/about-student.component';
@@ -32,11 +30,12 @@ import { BannerComponent } from './template/banner/banner.component';
 import { HomeComponent } from './template/home/home.component';
 import { CoursesComponent } from './template/courses/courses.component';
 import { AllCoursesComponent } from './dashboard/all-courses/all-courses.component';
-import { FeaturedCoursesComponent } from './template/featured-courses/featured-courses.component';
 import { CourseDetailsComponent } from './template/course-details/course-details.component';
 import { TextSlideComponent } from './template/text-slide/text-slide.component';
 import { CategoriesComponent } from './template/categories/categories.component';
 import { AboutComponent } from './template/about/about.component';
+import { HelpCardComponent } from './template/help-card/help-card.component';
+import { PopularCoursesComponent } from './template/popular-courses/popular-courses.component';
 
 
 @NgModule({
@@ -48,9 +47,7 @@ import { AboutComponent } from './template/about/about.component';
     ForgotPasswordComponent,
     VarifyEmailComponent,
     DashboardComponent,
-    AllStudentsComponent,
     DashboardSidebarComponent,
-    AddStudentsComponent,
     EditStudentComponent,
     DashboardHeaderComponent,
     AboutStudentComponent,
@@ -59,11 +56,12 @@ import { AboutComponent } from './template/about/about.component';
     HomeComponent,
     CoursesComponent,
     AllCoursesComponent,
-    FeaturedCoursesComponent,
     CourseDetailsComponent,
     TextSlideComponent,
     CategoriesComponent,
     AboutComponent,
+    HelpCardComponent,
+    PopularCoursesComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,130 +1,114 @@
 <div class="wrapper">
 
-  <app-dashboard-header></app-dashboard-header>
-
-   <!--=================================
-   Main content -->
-
-   <div>
-
-     <app-dashboard-sidebar></app-dashboard-sidebar>
-
+    <app-dashboard-header></app-dashboard-header>
+  
      <!--=================================
-     wrapper -->
-     <div class="content-wrapper">
-       <div class="page-title">
-         <div class="row">
-           <div class="col-sm-6">
-             <h4 class="mb-0"> All Student</h4>
-           </div>
-           <div class="col-sm-6">
-             <ol class="breadcrumb pt-0 pe-0 float-start float-sm-end">
-               <li class="breadcrumb-item"><a routerLink="/dashboard" class="default-color text-light">Dashboard</a></li>
-               <li class="breadcrumb-item active ps-0 text-light">All Courses</li>
-             </ol>
+     Main content -->
+  
+     <div>
+  
+       <app-dashboard-sidebar></app-dashboard-sidebar>
+  
+       <!--=================================
+       wrapper -->
+       <div class="content-wrapper">
+         <div class="page-title">
+           <div class="row">
+             <div class="col-sm-6">
+               <h4 class="mb-0"> All Student</h4>
+             </div>
+             <div class="col-sm-6">
+               <ol class="breadcrumb pt-0 pe-0 float-start float-sm-end">
+                 <li class="breadcrumb-item"><a routerLink="/dashboard" class="default-color text-light">Dashboard</a></li>
+                 <li class="breadcrumb-item active ps-0 text-light">All Courses</li>
+               </ol>
+             </div>
            </div>
          </div>
-       </div>
-       <!-- widgets -->
-       <div class="row">
-           <ul ngbNav #nav="ngbNav"  class="nav-tabs">
-               <li [ngbNavItem]="1">
-                   <button ngbNavLink class="btn mb-3">List View</button>
-                   <ng-template ngbNavContent>
-                       <div class="card p-4">
-                         <div class="short-panel mb-5 border-bottom">
-                           <div class="d-flex justify-content-between">
-                             <h6 class="mb-0"> All Course Lists</h6>
-                             <button class="btn btn-success h6" routerLink="/add-courses"><small>+ Add New Course</small></button>
+         <!-- widgets -->
+         <div class="row">
+             <ul ngbNav #nav="ngbNav"  class="nav-tabs">
+                 <li [ngbNavItem]="1">
+                     <button ngbNavLink class="btn mb-3">List View</button>
+                     <ng-template ngbNavContent>
+                         <div class="card p-4">
+                           <div class="short-panel mb-5 border-bottom">
+                             <div class="d-flex justify-content-between">
+                               <h6 class="mb-0"> All Course Lists</h6>
+                               <button class="btn btn-success h6" routerLink="/add-courses"><small>+ Add New Course</small></button>
+                             </div>
                            </div>
+                             <table id="datatable" class="table table-dark table-hover dataTable p-0 mb-4 bg-table-none" role="grid" aria-describedby="datatable_info">
+                                 <thead>
+                                    <tr role="row">
+                                     <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 50.525px;">Image</th>
+                                       <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 197.525px;">Name</th>
+                                       <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 140.087px;">Category</th>
+                                       <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 142.962px;">Duration</th>
+                                       <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 71.025px;">Price</th>
+                                       <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 71.025px;">Action</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr role="row" class="odd" *ngFor="let student of studentsList">
+                                     <td><img class="rounded-circle student-img" [src]="student.imageUrl" width="35" src="" alt=""></td>
+                                       <td class="sorting_1">{{student.name}}</td>
+                                       <td>{{student.email}}</td>
+                                       <td>{{student.roll}}</td>
+                                       <td>{{student.class}}</td>
+                                       <td>
+                                        <a class="btn btn-xs sharp btn-danger" (click)="deleteStudent(student)" mat-raised-button><mat-icon>delete</mat-icon></a>
+                                     </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
                          </div>
-                           <table id="datatable" class="table table-dark table-hover dataTable p-0 mb-4 bg-table-none" role="grid" aria-describedby="datatable_info">
-                               <thead>
-                                  <tr role="row">
-                                   <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 50.525px;">Profile</th>
-                                     <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 197.525px;">Name</th>
-                                     <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 140.087px;">Email</th>
-                                     <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 142.962px;">Roll No</th>
-                                     <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 71.025px;">Class</th>
-                                     <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 71.025px;">Action</th>
-                                  </tr>
-                               </thead>
-                               <tbody>
-                                  <tr role="row" class="odd" *ngFor="let student of studentsList">
-                                   <td><img class="rounded-circle student-img" [src]="student.imageUrl" width="35" src="" alt=""></td>
-                                     <td class="sorting_1">{{student.name}}</td>
-                                     <td>{{student.email}}</td>
-                                     <td>{{student.roll}}</td>
-                                     <td>{{student.class}}</td>
-                                     <td>
-                                      <a class="btn btn-xs sharp btn-danger" (click)="deleteStudent(student)" mat-raised-button><mat-icon>delete</mat-icon></a>
-                                   </td>
-                                  </tr>
-                               </tbody>
-                            </table>
-                       </div>
-                   </ng-template>
-               </li>
-               <li [ngbNavItem]="2">
-                   <button ngbNavLink class="btn">Grid View</button>
-                   <ng-template ngbNavContent>
-                      <div class="row">
-                       <div class="col-md-4" *ngFor="let student of studentsList">
-                         <div class="card card-profile">
-                           <div class="card-header justify-content-end pb-0 border-0">
-                             <div ngbDropdown class="d-inline-block card-dropdown">
-                               <mat-icon id="dropdownBasic1" ngbDropdownToggle>more_horiz</mat-icon>
-                               <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                                 <button ngbDropdownItem class="text-light" (click)="editStudent(student.id)">Edit</button>
-                                 <button ngbDropdownItem class="text-danger" (click)="deleteStudent(student)">Remove</button>
-                               </div>
-                           </div>
-                           </div>
-                           <div class="card-body pt-2">
-                              <div class="text-center">
-                                 <div class="profile-photo">
-                                    <img [src]="student.imageUrl" width="100" height="100" class="img-fluid rounded-circle card-image" alt="">
+                     </ng-template>
+                 </li>
+                 <li [ngbNavItem]="2">
+                     <button ngbNavLink class="btn">Grid View</button>
+                     <ng-template ngbNavContent>
+                        <div class="row">
+                         <div class="col-md-4" *ngFor="let student of studentsList">
+                           <div class="card card-profile">
+                             <div class="card-header justify-content-end pb-0 border-0">
+                               <div ngbDropdown class="d-inline-block card-dropdown">
+                                 <mat-icon id="dropdownBasic1" ngbDropdownToggle>more_horiz</mat-icon>
+                                 <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                   <button ngbDropdownItem class="text-danger" (click)="deleteStudent(student)">Remove</button>
                                  </div>
-                                 <h5 class="mt-4 mb-1">{{student.name}}</h5>
-                                 <p class="text-muted mb-3">Class: {{student.class}}</p>
-                                 <ul class="list-group mb-3 list-group-flush">
-                                    <li class="list-group-item px-0 d-flex justify-content-between text-light">
-                                       <span class="mb-0">Gender :</span><strong>{{student.gender}}</strong>
+                             </div>
+                             </div>
+                             <div class="card-body pt-2">
+                                <div class="text-center">
+                                   <div class="profile-photo">
+                                      <img [src]="student.imageUrl" width="100" height="100" class="img-fluid rounded-circle card-image" alt="">
+                                   </div>
+                                   <h5 class="mt-4 mb-1">{{student.name}}</h5>
+                                   <p class="text-muted mb-3">Price: {{student.class}}</p>
+                                   <ul class="list-group mb-3 list-group-flush">
+                                      <li class="list-group-item px-0 d-flex justify-content-between text-light">
+                                         <span class="mb-0">Category:</span><strong>{{student.email}}</strong>
+                                      </li>
+                                      <li class="list-group-item px-0 d-flex justify-content-between text-light">
+                                       <span class="mb-0">Duration:</span><strong>{{student.roll}}</strong>
                                     </li>
-                                    <li class="list-group-item px-0 d-flex justify-content-between text-light">
-                                       <span class="mb-0">Phone No. :</span><strong>{{student.mobile}}</strong>
-                                    </li>
-                                    <li class="list-group-item px-0 d-flex justify-content-between text-light">
-                                       <span class="mb-0">Email:</span><strong>{{student.email}}</strong>
-                                    </li>
-                                    <li class="list-group-item px-0 d-flex justify-content-between text-light">
-                                     <span class="mb-0">Roll:</span><strong>{{student.roll}}</strong>
-                                  </li>
-                                  <li class="list-group-item px-0 d-flex justify-content-between text-light">
-                                   <span class="mb-0">Blood Group:</span><strong>{{student.bloodgroup}}</strong>
-                                </li>
-                                <li class="list-group-item px-0 d-flex justify-content-between text-light">
-                                 <span class="mb-0">Birthday:</span><strong>{{student.birthDay}}</strong>
-                              </li>
-                                    <li class="list-group-item px-0 d-flex justify-content-between text-light">
-                                       <span class="mb-0">Address:</span><strong>{{student.address}}</strong>
-                                    </li>
-                                 </ul>
-                              </div>
-                           </div>
+                                   </ul>
+                                </div>
+                             </div>
+                          </div>
+                         </div>
                         </div>
-                       </div>
-                      </div>
-                   </ng-template>
-               </li>
-           </ul>
-           
-           <div [ngbNavOutlet]="nav" class="mt-2"></div>
+                     </ng-template>
+                 </li>
+             </ul>
+             
+             <div [ngbNavOutlet]="nav" class="mt-2"></div>
+         </div>
        </div>
+       <!--=================================
+       wrapper -->
      </div>
      <!--=================================
-     wrapper -->
+     Main content -->
    </div>
-   <!--=================================
-   Main content -->
- </div>

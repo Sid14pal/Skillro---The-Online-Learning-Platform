@@ -88,15 +88,15 @@ export class AddCoursesComponent {
       return false;
     }
     if (!this.studentObj.email) {
-      this.snackBar.open('Please Enter the email', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
+      this.snackBar.open('Please Enter the Category', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
       return false;
     }
     if (!this.studentObj.roll) {
-      this.snackBar.open('Please Enter the Roll No', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
+      this.snackBar.open('Please Enter the Duration', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
       return false;
     }
     if (!this.studentObj.class) {
-      this.snackBar.open('Please Enter the class', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
+      this.snackBar.open('Please Enter the Price', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
       return false;
     }
     return true;

@@ -37,7 +37,7 @@
 /* span with text */
 .marquee span {
   float: left;
-  width: 50%;
+  width: 28%;
 }
 /* keyframe */
 @keyframes marquee {
