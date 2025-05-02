@@ -36,6 +36,10 @@ import { CategoriesComponent } from './template/categories/categories.component'
 import { AboutComponent } from './template/about/about.component';
 import { HelpCardComponent } from './template/help-card/help-card.component';
 import { PopularCoursesComponent } from './template/popular-courses/popular-courses.component';
+import { CounterComponent } from './template/counter/counter.component';
+import { NewsletterComponent } from './template/newsletter/newsletter.component';
+import { FooterComponent } from './template/footer/footer.component';
+import { CourseListComponent } from './template/course-list/course-list.component';
 
 
 @NgModule({
@@ -62,6 +66,10 @@ import { PopularCoursesComponent } from './template/popular-courses/popular-cour
     AboutComponent,
     HelpCardComponent,
     PopularCoursesComponent,
+    CounterComponent,
+    NewsletterComponent,
+    FooterComponent,
+    CourseListComponent,
   ],
   imports: [
     BrowserModule,

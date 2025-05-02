@@ -1,7 +1,7 @@
 .banner-one {
   position: relative;
   display: block;
-  padding: 58px 0 100px;
+  padding: 30px 0 54px;
   background-color: #f2f2ff;
   z-index: 5;
   }
@@ -61,7 +61,7 @@
   .banner-one__left {
     position: relative;
     display: block;
-    margin-top: 53px;
+    margin-top: 110px;
   }
   
   .banner-one__title-box {
@@ -80,10 +80,17 @@
   }
   
   .banner-one__title {
-    font-size: 70px;
-    line-height: 83px;
-    font-weight: 300;
+    font-size: 63px;
+    line-height: 56px;
+    font-weight: 600;
     text-transform: capitalize;
+  }
+
+  .banner-one__title span{
+    font-weight: 600;
+    color: var(--fistudy-base);
+    font-family: var(--fistudy-font-two);
+    font-style: italic;
   }
   
   .banner-one__title-clr-1 {
@@ -97,7 +104,7 @@
   
   .banner-one__text {
     line-height: 23px;
-    margin-top: 56px;
+    margin-top: 36px;
     margin-bottom: 40px;
     font-family: var(--fistudy-font);
     color: #646464;
@@ -628,5 +635,55 @@
   50% {
     transform: translateY(-15px);
   }
+}
+
+.profile-share {
+  display: flex;
+  align-items: center;
+}
+
+.profile-share a {
+  position: relative;
+  z-index: 1;
+}
+
+.profile-share a img {
+  max-width: 44px;
+  border-radius: 50%;
+  border: 3px solid var(--color-white);
+  transition: var(--transition);
+  box-shadow: var(--shadow-1);
+}
+
+.profile-share .more-author-text {
+  margin-left: 20px;
+  position: relative;
+  top: 10px;
+}
+
+.profile-share .more-author-text .total-join-students {
+  margin-bottom: 4px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.profile-share .more-author-text .subtitle {
+  font-size: 16px;
+  letter-spacing: -0.5px;
+}
+
+.section-title .subtitle {
+  font-size: 14px;
+  line-height: 15px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 15px;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  display: inline-block;
+  background: var(--fistudy-base);
 }
 

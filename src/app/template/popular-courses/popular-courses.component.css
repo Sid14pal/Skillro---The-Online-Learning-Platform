@@ -6,7 +6,7 @@
     background: -moz-linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(15, 100%, 98%, 1) 100%);
     background: -webkit-linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(15, 100%, 98%, 1) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#FFF9F7", GradientType=1 );
-    padding: 50px 0 49px;
+    padding: 80px 0 48px;
     z-index: 1;
 }
 .tp-section-3-subtitle {
@@ -76,7 +76,7 @@ a .course-pink {
     -ms-transition: all 0.3s 0s ease-out;
     -o-transition: all 0.3s 0s ease-out;
     transition: all 0.3s 0s ease-out;
-    background-color: #fff;
+    background-color: #f8f7ff;
 }
 .tp-course-tag span {
     display: inline-block;
