@@ -15,17 +15,18 @@
 
 .tp-category-banner-text span {
     color: #1a73e8;
-    font-size: 16px;
+    font-size: 15px;
     margin-bottom: 0;
     font-family: var(--fistudy-font);
 }
 
 .tp-category-banner-title {
     color: #031f42;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 500;
     line-height: 20px;
     margin-bottom: 0;
+    margin-top: 3px;
 }
 
 .thm-btn {

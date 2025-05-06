@@ -8,7 +8,6 @@ import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { AboutStudentComponent } from './dashboard/about-student/about-student.component';
 import { AddCoursesComponent } from './dashboard/add-courses/add-courses.component';
 import { HomeComponent } from './template/home/home.component';
-import { CoursesComponent } from './template/courses/courses.component';
 import { AllCoursesComponent } from './dashboard/all-courses/all-courses.component';
 import { CourseDetailsComponent } from './template/course-details/course-details.component';
 import { CourseListComponent } from './template/course-list/course-list.component';
@@ -23,7 +22,6 @@ const routes: Routes = [
   {path: 'dashboard', component : DashboardComponent},
   {path: 'about-student', component : AboutStudentComponent},
   {path: 'add-courses', component : AddCoursesComponent},
-  {path: 'courses', component : CoursesComponent},
   {path: 'all-courses', component : AllCoursesComponent},
   {path: 'course-details', component : CourseDetailsComponent},
   {path: 'course-list', component : CourseListComponent},

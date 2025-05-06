@@ -12,4 +12,6 @@ export class HeaderComponent {
     this.routeStatusService.hideHeader = true;
   }
 
+  public isCollapsed = true;
+
 }

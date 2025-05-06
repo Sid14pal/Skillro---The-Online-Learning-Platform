@@ -28,7 +28,6 @@ import { AboutStudentComponent } from './dashboard/about-student/about-student.c
 import { AddCoursesComponent } from './dashboard/add-courses/add-courses.component';
 import { BannerComponent } from './template/banner/banner.component';
 import { HomeComponent } from './template/home/home.component';
-import { CoursesComponent } from './template/courses/courses.component';
 import { AllCoursesComponent } from './dashboard/all-courses/all-courses.component';
 import { CourseDetailsComponent } from './template/course-details/course-details.component';
 import { TextSlideComponent } from './template/text-slide/text-slide.component';
@@ -40,6 +39,7 @@ import { CounterComponent } from './template/counter/counter.component';
 import { NewsletterComponent } from './template/newsletter/newsletter.component';
 import { FooterComponent } from './template/footer/footer.component';
 import { CourseListComponent } from './template/course-list/course-list.component';
+import { StudentChooseAreaComponent } from './template/student-choose-area/student-choose-area.component';
 
 
 @NgModule({
@@ -58,7 +58,6 @@ import { CourseListComponent } from './template/course-list/course-list.componen
     AddCoursesComponent,
     BannerComponent,
     HomeComponent,
-    CoursesComponent,
     AllCoursesComponent,
     CourseDetailsComponent,
     TextSlideComponent,
@@ -70,6 +69,7 @@ import { CourseListComponent } from './template/course-list/course-list.componen
     NewsletterComponent,
     FooterComponent,
     CourseListComponent,
+    StudentChooseAreaComponent,
   ],
   imports: [
     BrowserModule,

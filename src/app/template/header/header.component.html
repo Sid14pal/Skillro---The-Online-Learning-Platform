@@ -1,35 +1,44 @@
-<section class="ftco-section" *ngIf="!routeStatusService.hideHeader">
-   <div class="container">
-    <nav class="navbar navbar-expand-sm">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="javascript:void(0)">
-          <img class="logo" src="../assets/templates/logo.png">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="mynavbar">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link text-dark" href="javascript:void(0)">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark" href="javascript:void(0)">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark" routerLink="courses">Courses</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark" href="javascript:void(0)">Contact Us</a>
-            </li>
-          </ul>
-          <div class="d-flex">
-            <div class="d-flex align-items-center mx-3"><mat-icon>phone</mat-icon> <span class="nav-link">+1-202-555-0115</span></div>
-            <a href="#" class="btn btn-primary btn-pink">Get Started</a>
+<header class="header py-2" [ngStyle]="{'background-image': 'url(assets/templates/banner-one-bg-shape-1.png)'}">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="assets/templates/logo.png">
+      </a>
+
+      <!-- Toggler/collapsible Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" (click)="isCollapsed = !isCollapsed">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="navbarContent" [ngbCollapse]="isCollapsed">
+        <!-- Left side: Categories & Search -->
+        <div class="d-lg-flex align-items-center gap-3 me-auto">
+        </div>
+
+        <!-- Right side: Menu Links, Cart, Admin -->
+        <div class="d-lg-flex align-items-center gap-3">
+          <nav class="nav">
+            <a href="#" class="nav-link text-dark">Home</a>
+            <a href="#" class="nav-link text-dark">About Us</a>
+            <a href="#" class="nav-link text-dark">Courses</a>
+            <a href="#" class="nav-link text-dark">Blog</a>
+            <a href="#" class="nav-link text-dark">Contact Us</a>
+            <a href="#" class="nav-link">
+              <i class="material-icons">shopping_bag</i>
+              <span class="cart-badge">3</span>
+            </a>
+          </nav>
+
+          <div class="admin d-flex align-items-center">
+            <i class="material-icons account">person</i>
+              <span class="admin">Admin</span>
           </div>
+
+          <div class="about-one__btn-box"><a href="#" class="about-one__btn thm-btn"><span class="icon-angles-right"></span>Login Now</a></div>
         </div>
       </div>
     </nav>
-   </div>
-
-</section>
+  </div>
+</header>

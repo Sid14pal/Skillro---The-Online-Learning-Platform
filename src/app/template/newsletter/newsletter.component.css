@@ -1,14 +1,14 @@
 .newsletter-one {
     position: relative;
     display: block;
-    padding: 0 0 120px;
+    padding: 51px 0 48px;
     z-index: 1;
 }
 
 .newsletter-one__inner {
     position: relative;
     display: block;
-    background: linear-gradient(90deg, #FF4330 0%, #FF7163 100%);
+    background: #2467ec;
     border-radius: 40px;
     text-align: center;
     padding: 40px 40px 60px;

@@ -1,0 +1,89 @@
+.student-choose-area {
+    padding: 80px 0 48px;
+}
+
+.section-title h2 {
+    color: var(--fistudy-black);
+    font-size: 40px;
+    line-height: 1.2em;
+    font-weight: 600;
+    margin: 6px 0 0;
+    text-transform: capitalize;
+}
+
+.section-title img {
+    position: relative;
+    bottom: 59px;
+    right: -282px;
+    height: 18px;
+    width: 144px;
+}
+
+.down-mark-line {
+    position: relative;
+    display: inline-block;
+    color: var(--fistudy-base);
+    font-family: var(--fistudy-font-two);
+    font-style: italic;
+    z-index: 1;
+}
+
+.sitdent-choose-content {
+    margin-bottom: 20px;
+}
+
+.sitdent-choose-content p {
+    color: #575757;
+}
+
+.student-choose-list {
+    margin-bottom: 40px;
+}
+
+.student-choose-list li {
+    margin-bottom: 15px;
+    color: #141517;
+    list-style: none;
+    font-family: var(--fistudy-font-two);
+}
+
+.student-choose-list i {
+    margin-right: 10px;
+    color: #d0d9e9;
+    font-size: 20px;
+}
+
+.shap-01 {
+    position: absolute;
+    top: 170px;
+    left: 40%;
+    height: 130px;
+    width: 122px;
+    background: #FFB013;
+    border-radius: 8px;
+}
+
+.shap-02 {
+    position: absolute;
+    top: -8%;
+    left: 45%;
+    height: 151px;
+    width: 150px;
+    background: #2467EC;
+    border-radius: 8px;
+    z-index: -1;
+}
+
+.shap-03 {
+    position: absolute;
+    top: -7%;
+    left: -7%;
+    z-index: -1;
+}
+
+.shap-04 {
+    position: absolute;
+    bottom: -9%;
+    left: 33%;
+    z-index: -1;
+}

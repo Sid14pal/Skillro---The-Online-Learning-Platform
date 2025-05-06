@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
 
 :root {
     --fistudy-font: "Mona Sans", sans-serif;
-    --fistudy-font-two: "Outfit", sans-serif;
+    --fistudy-font-two: "Poppins", sans-serif;
     --fistudy-gray: #6B778B;
     --fistudy-gray-rgb: 107, 119, 139;
     --fistudy-base: #687EFF;
@@ -37,8 +37,59 @@ a {
     text-decoration: none;
 }
 
-p {
-    font-family: var( --fistudy-font-two);
+p{
+    font-family: var(--fistudy-font-two);
+}
+
+.thm-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none !important;
+    gap: 10px;
+    font-weight: 500;
+    color: var(--fistudy-white);
+    padding: 11px 25px 12px;
+    border-radius: 25px;
+    background-color: var(--fistudy-base);
+    z-index: 2;
+    text-align: center;
+    overflow: hidden;
+    font-family: var(--fistudy-font-two);
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    text-decoration: none;
+}
+
+.thm-btn::before {
+  content: "";
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  bottom: -20px;
+  right: -7px;
+  background-color: rgba(var(--fistudy-white-rgb), .30);
+  border-radius: 50%;
+  background-position: left center;
+  transition-timing-function: ease-in-out;
+  transition-property: all;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transform: scaleX(1);
+  transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 0.8s;
+  z-index: -1;
+}
+
+.thm-btn:hover::before {
+  background-color: rgba(var(--fistudy-black-rgb), 1);
+  width: 120%;
+  height: 200%;
+  transform: scaleX(1.0);
+  transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 2s;
 }
 
 

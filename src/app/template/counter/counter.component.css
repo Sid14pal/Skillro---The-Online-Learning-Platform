@@ -7,6 +7,10 @@
     margin-top: 70px;
 }
 
+.counter-one__list {
+    margin-bottom: 0px;
+}
+
 .counter-one__bg {
     position: absolute;
     top: 0;
