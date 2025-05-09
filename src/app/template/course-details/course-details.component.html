@@ -1,470 +1,422 @@
-<div class="inner-banner" [ngStyle]="{'background-image': 'url(../assets/templates/inner-banner.jpg)'}">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="instructor-wrap border-bottom-0 m-0">
-                    <div class="about-instructor align-items-center">
-                        <div class="abt-instructor-img">
-                            <a href="instructor-profile.html"><img [src]="course_image" alt="img" class="img-fluid"></a>
-                        </div>
-                        <div class="instructor-detail me-3">
-                            <h5><a href="instructor-profile.html">Nicole Brown</a></h5>
-                            <p>UX/UI Designer</p>
-                        </div>									
-                        <div class="rating mb-0">							
-                            <i class="fas fa-star filled"></i>
-                            <i class="fas fa-star filled"></i>
-                            <i class="fas fa-star filled"></i>
-                            <i class="fas fa-star filled"></i>
-                            <i class="fas fa-star"></i>
-                            <span class="d-inline-block average-rating"><span>4.5</span> (15)</span>
-                        </div>
-                    </div>
-                    <span class="web-badge mb-3">WEB DEVELPMENT</span>
-                </div>
-                <h2>The Complete Web Developer Course 2.0</h2>
-                <p>Learn Web Development by building 25 websites and mobile apps using HTML, CSS, Javascript, PHP, Python, MySQL &amp; more!</p>
-                <div class="course-info d-flex align-items-center border-bottom-0 m-0 p-0">
-                    <div class="cou-info">
-                        <img src="assets/img/icon/icon-01.svg" alt="Img">
-                        <p>12+ Lesson</p>
-                    </div>
-                    <div class="cou-info">
-                        <img src="assets/img/icon/timer-icon.svg" alt="Img">
-                        <p>9hr 30min</p>
-                    </div>
-                    <div class="cou-info">
-                        <img src="assets/img/icon/people.svg" alt="Img">
-                        <p>32 students enrolled</p>
-                    </div>
-                </div>							
-            </div>
-        </div>
+<section class="page-header">
+    <div class="page-header__bg" style="background-image: url(assets/templates/page-header-bg-shape.png);">
     </div>
-</div>
+    <div class="page-header__shape-4">
+       <img src="assets/templates/page-header-shape-4.png" alt="">
+    </div>
+    <div class="page-header__shape-5">
+       <img src="assets/templates/page-header-shape-5.png" alt="">
+    </div>
+    <div class="container">
+       <div class="page-header__inner">
+          <div class="page-header__img">
+             <img src="assets/templates/page-header-img-1.png" alt="">
+             <div class="page-header__shape-1">
+                <img src="assets/templates/page-header-shape-1.png" alt="">
+             </div>
+             <div class="page-header__shape-2">
+                <img src="assets/templates/page-header-shape-2.png" alt="">
+             </div>
+             <div class="page-header__shape-3">
+                <img src="assets/templates/page-header-shape-3.png" alt="">
+             </div>
+          </div>
+          <h2>Course Details</h2>
+          <div class="thm-breadcrumb__box">
+             <ul class="thm-breadcrumb list-unstyled">
+                <li><a href="#" routerLink="/">Home</a></li>
+                <li><span>//</span></li>
+                <li>Course Details</li>
+             </ul>
+          </div>
+       </div>
+    </div>
+ </section>
+ <section class="course-details">
+    <div class="container">
+       <div class="row">
+          <div class="col-xl-8 col-lg-7">
+             <div class="course-details__left">
+                <div class="course-details__img">
+                   <img src="assets/templates/course-details-img-1.jpg" alt="">
+                </div>
+                <div class="course-details__content">
+                   <div class="course-details__tag-box">
+                      <div class="course-details__tag-shape"></div>
+                      <span class="course-details__tag">Web Programming</span>
+                   </div>
+                   <h2 class="course-details__title">{{course_name}}</h2>
+                   <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs mb-4">
+                   <li [ngbNavItem]="1">
+                      <button ngbNavLink> Overview</button>
+                      <ng-template ngbNavContent>
+                         <h2 class="course-details__overview-title">Course Overview</h2>
+                         <p>
+                            Our courses are designed to deliver a rich and engaging learning experience. Whether you're just starting out or looking to sharpen your skills, each course offers step-by-step guidance to help you master the subject matter with confidence. From theory to hands-on practice, you’ll gain the knowledge you need to succeed.
+                         </p>
+                         <h2 class="course-details__overview-title">📚 Comprehensive Learning Experience</h2>
+                         <p>
+                            Each course combines video lessons, downloadable resources, quizzes, and real-world projects to ensure that you not only learn but retain and apply the concepts effectively. We focus on practical learning so that you can confidently use your skills in real-life scenarios.
+                         </p>
+                         <h2 class="course-details__overview-title">🧑‍🏫 Expert Instruction</h2>
+                         <p>
+                            All our courses are created and taught by experienced instructors who are passionate about teaching and have real-world expertise in their field. You’ll learn directly from industry professionals, gaining insights and tips that go beyond textbooks.
+                         </p>
+                         <h2 class="course-details__overview-title">🕒 Learn at Your Own Pace</h2>
+                         <p>
+                            Our platform is designed for flexibility. Learn anytime, anywhere, and on any device. Whether you have 10 minutes or 2 hours a day, you can move through the content at your own speed and revisit lessons whenever you need a refresher.
+                         </p>
+                      </ng-template>
+                   </li>
+                   <li [ngbNavItem]="2">
+                      <button ngbNavLink>Review</button>
+                      <ng-template ngbNavContent>
+                         <div class="course-details__ratting-and-review-box">
+                            <ul class="course-details__ratting-box list-unstyled">
+                               <li>
+                                  <div class="course-details__ratting-list">
+                                     <span class="icon-star"><i class="material-icons account">star</i></span>
+                                     <span class="icon-star"><i class="material-icons account">star</i></span>
+                                     <span class="icon-star"><i class="material-icons account">star</i></span>
+                                     <span class="icon-star"><i class="material-icons account">star</i></span>
+                                     <span class="icon-star"><i class="material-icons account">star</i></span>
+                                  </div>
+                                  <div class="progress-levels">
+                                     <!--Skill Box-->
+                                     <div class="progress-box">
+                                        <div class="inner count-box counted">
+                                           <div class="bar">
+                                              <div class="bar-innner">
+                                                 <div class="skill-percent">
+                                                    <span class="count-text" data-speed="3000" data-stop="90">90</span>
+                                                    <span class="percent">%</span>
+                                                 </div>
+                                                 <div class="bar-fill" data-percent="90">
+                                                 </div>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </li>
+                               <li>
+                                  <div class="course-details__ratting-list">
+                                     <span class="icon-star"><i class="material-icons account">star</i></span>
+                                     <span class="icon-star"><i class="material-icons account">star</i></span>
+                                     <span class="icon-star"><i class="material-icons account">star</i></span>
+                                     <span class="icon-star"><i class="material-icons account">star</i></span>
+                                     <span class="fill-white icon-star"><i class="material-icons account">star</i></span>
+                                  </div>
+                                  <div class="progress-levels">
+                                     <!--Skill Box-->
+                                     <div class="progress-box">
+                                        <div class="inner count-box counted">
+                                           <div class="bar">
+                                              <div class="bar-innner">
+                                                 <div class="skill-percent">
+                                                    <span class="count-text" data-speed="3000" data-stop="70">70</span>
+                                                    <span class="percent">%</span>
+                                                 </div>
+                                                 <div class="bar-fill" data-percent="70">
+                                                 </div>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </li>
+                               <li>
+                                  <div class="course-details__ratting-list">
+                                     <span class="icon-star"><i class="material-icons account">star</i></span>
+                                     <span class="icon-star"><i class="material-icons account">star</i></span>
+                                     <span class="icon-star"><i class="material-icons account">star</i></span>
+                                     <span class="fill-white icon-star"><i class="material-icons account">star</i></span>
+                                     <span class="fill-white icon-star"><i class="material-icons account">star</i></span>
+                                  </div>
+                                  <div class="progress-levels">
+                                     <!--Skill Box-->
+                                     <div class="progress-box">
+                                        <div class="inner count-box counted">
+                                           <div class="bar">
+                                              <div class="bar-innner">
+                                                 <div class="skill-percent">
+                                                    <span class="count-text" data-speed="3000" data-stop="60">60</span>
+                                                    <span class="percent">%</span>
+                                                 </div>
+                                                 <div class="bar-fill" data-percent="60">
+                                                 </div>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </li>
+                               <li>
+                                  <div class="course-details__ratting-list">
+                                     <span class="icon-star"><i class="material-icons account">star</i></span>
+                                     <span class="icon-star"><i class="material-icons account">star</i></span>
+                                     <span class="fill-white icon-star"><i class="material-icons account">star</i></span>
+                                     <span class="fill-white icon-star"><i class="material-icons account">star</i></span>
+                                     <span class="fill-white icon-star"><i class="material-icons account">star</i></span>
+                                  </div>
+                                  <div class="progress-levels">
+                                     <!--Skill Box-->
+                                     <div class="progress-box">
+                                        <div class="inner count-box counted">
+                                           <div class="bar">
+                                              <div class="bar-innner">
+                                                 <div class="skill-percent">
+                                                    <span class="count-text" data-speed="3000" data-stop="40">40</span>
+                                                    <span class="percent">%</span>
+                                                 </div>
+                                                 <div class="bar-fill" data-percent="40">
+                                                 </div>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </li>
+                               <li>
+                                  <div class="course-details__ratting-list">
+                                     <span class="icon-star"></span>
+                                     <span class="fill-white icon-star"><i class="material-icons account">star</i></span>
+                                     <span class="fill-white icon-star"><i class="material-icons account">star</i></span>
+                                     <span class="fill-white icon-star"><i class="material-icons account">star</i></span>
+                                     <span class="fill-white icon-star"><i class="material-icons account">star</i></span>
+                                     <span class="fill-white icon-star"><i class="material-icons account">star</i></span>
+                                  </div>
+                                  <div class="progress-levels">
+                                     <!--Skill Box-->
+                                     <div class="progress-box">
+                                        <div class="inner count-box counted">
+                                           <div class="bar">
+                                              <div class="bar-innner">
+                                                 <div class="skill-percent">
+                                                    <span class="count-text" data-speed="3000" data-stop="30">30</span>
+                                                    <span class="percent">%</span>
+                                                 </div>
+                                                 <div class="bar-fill" data-percent="30">
+                                                 </div>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </li>
+                            </ul>
+                            <div class="course-details__review-box">
+                               <div class="course-details__review-count">
+                                  <span class="odometer odometer-auto-theme" data-count="4.7">
+                                  4.7
+                                  </span>
+                               </div>
+                               <div class="course-details__review-content">
+                                  <p>127 Reviews</p>
+                                  <ul class="course-details__review-ratting list-unstyled">
+                                     <li>
+                                        <span class="icon-star"><i class="material-icons account">star</i></span>
+                                     </li>
+                                     <li>
+                                        <span class="icon-star"><i class="material-icons account">star</i></span>
+                                     </li>
+                                     <li>
+                                        <span class="icon-star"><i class="material-icons account">star</i></span>
+                                     </li>
+                                     <li>
+                                        <span class="icon-star"><i class="material-icons account">star</i></span>
+                                     </li>
+                                     <li>
+                                        <span class="icon-star"><i class="material-icons account">star</i></span>
+                                     </li>
+                                  </ul>
+                                  <div class="course-details__review-text">
+                                     <p><span class="icon-star"></span>Excellent</p>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="comment-one">
+                            <h2 class="comment-one__title">Total Reviews (165)</h2>
+                            <ul class="comment-one__single-list list-unstyled">
+                               <li>
+                                  <div class="comment-one__single">
+                                     <div class="comment-one__image-box">
+                                        <div class="comment-one__image">
+                                           <img src="https://laravel-fistudy.unicktheme.com/assets/images/blog/comment-1-1.jpg" alt="">
+                                        </div>
+                                     </div>
+                                     <div class="comment-one__content">
+                                        <div class="comment-one__name-box">
+                                           <h4>Alisa Manama <span>Product Designer</span>
+                                           </h4>
+                                        </div>
+                                        <p>This article really resonates with me! As a
+                                           working parent,
+                                           online
+                                           learning has been a game-changer. I’m able to
+                                           continue my
+                                           education
+                                           without sacrificing family time. I genuinely
+                                           believe that this
+                                           is
+                                           the
+                                           future of education.
+                                        </p>
+                                        <div class="comment-one__btn-box">
+                                           <a href="https://laravel-fistudy.unicktheme.com/blog-details" class="comment-one__btn">Reply</a>
+                                           <span>18 July, 2024</span>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </li>
+                               <li>
+                                  <div class="comment-one__single">
+                                     <div class="comment-one__image-box">
+                                        <div class="comment-one__image">
+                                           <img src="https://laravel-fistudy.unicktheme.com/assets/images/blog/comment-1-2.jpg" alt="">
+                                        </div>
+                                     </div>
+                                     <div class="comment-one__content">
+                                        <div class="comment-one__name-box">
+                                           <h4>Jordan Walk <span>By Author</span></h4>
+                                        </div>
+                                        <p>Absolutely! It’s amazing how online learning
+                                           adapts to our lives,
+                                           isn’t it? Being able to balance work, family,
+                                           and education is
+                                           such a huge advantage. Glad it’s working so well
+                                           for you!
+                                        </p>
+                                        <div class="comment-one__btn-box">
+                                           <a href="https://laravel-fistudy.unicktheme.com/blog-details" class="comment-one__btn">Reply</a>
+                                           <span>18 July, 2024</span>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </li>
+                            </ul>
+                            <ul class="comment-one__single-list comment-one__single-list-2 list-unstyled">
+                               <li>
+                                  <div class="comment-one__single">
+                                     <div class="comment-one__image-box">
+                                        <div class="comment-one__image">
+                                           <img src="https://laravel-fistudy.unicktheme.com/assets/images/blog/comment-1-3.jpg" alt="">
+                                        </div>
+                                     </div>
+                                     <div class="comment-one__content">
+                                        <div class="comment-one__name-box">
+                                           <h4>Lisa Oliva <span>Fashion Designer</span>
+                                           </h4>
+                                        </div>
+                                        <p>This article really resonates with me! As a
+                                           working parent,
+                                           online learning has been a game-changer. I’m
+                                           able to continue my
+                                           education without sacrificing family time. I
+                                           genuinely believe
+                                           that this is the future of education.
+                                        </p>
+                                        <div class="comment-one__btn-box">
+                                           <a href="https://laravel-fistudy.unicktheme.com/blog-details" class="comment-one__btn">Reply</a>
+                                           <span>18 July, 2024</span>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </li>
+                            </ul>
+                         </div>
+                         <div class="comment-form">
+                            <h2 class="comment-form__title">Submit Your Reviews</h2>
+                            <div class="comment-form__text-and-ratting">
+                               <p class="comment-form__text">Your Ratings </p>
+                            </div>
+                            <form action="assets/inc/sendemail.php" class="comment-form__form contact-form-validated" novalidate="novalidate">
+                               <div class="row">
+                                  <div class="col-xl-6 col-lg-6">
+                                     <div class="comment-form__input-box">
+                                        <input type="text" placeholder="Full Name" name="name">
+                                     </div>
+                                  </div>
+                                  <div class="col-xl-6 col-lg-6">
+                                     <div class="comment-form__input-box">
+                                        <input type="email" placeholder="Email Address" name="email">
+                                     </div>
+                                  </div>
+                               </div>
+                               <div class="row">
+                                  <div class="col-xl-12">
+                                     <div class="comment-form__input-box text-message-box">
+                                        <textarea name="message" placeholder="Write Review"></textarea>
+                                     </div>
+                                     <div class="comment-form__btn-box">
+                                        <button type="submit" class="comment-form__btn"><span class="icon-arrow-circle"></span>Submit
+                                        Review</button>
+                                     </div>
+                                  </div>
+                               </div>
+                            </form>
+                            <div class="result"></div>
+                         </div>
+                      </ng-template>
+                   </li>
+                   </ul>
+                   <div [ngbNavOutlet]="nav" class="mt-2"></div>
+                </div>
+             </div>
+          </div>
+          <div class="col-xl-4 col-lg-5">
+             <div class="course-details__right">
+                <div class="course-details__info-box">
+                   <div class="course-details__video-link">
+                      <div class="course-details__video-link-bg">
+                        <img src="{{course_image}}" class="img-fluid">
+                      </div>
+                      <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
+                         <div class="course-details__video-icon">
+                            <span class="icon-play"></span>
+                            <i class="ripple"></i>
+                         </div>
+                      </a>
+                   </div>
+                   <div class="course-details__doller-and-btn-box">
+                      <h2 class="course-details__doller">{{course_price | currency}}</h2>
+                   </div>
+                   <div class="d-flex align-items-center justify-content-between">
+                      <div class="about-one__btn-box"><a href="https://laravel-fistudy.unicktheme.com/about" class="about-one__btn thm-btn"><span class="icon-angles-right"></span>Purchase Now</a></div>
+                      <div class="cart-icon"><a><i class="material-icons">shopping_cart</i></a></div>
+                   </div>
+                   <div class="course-details__info-list">
+                      <h2 class="course-details__info-list-title">This Course Included</h2>
+                      <ul class="course-details__info-list-1 list-unstyled">
+                         <li>
+                            <p><i class="material-icons account">library_books</i>Lesson</p>
+                            <span>{{course_lesson}}</span>
+                         </li>
+                         <li>
+                            <p><i class="material-icons account">category</i>Category</p>
+                            <span>{{course_category}}</span>
+                         </li>
+                         <li>
+                            <p><i class="material-icons account">equalizer</i>Skill Level</p>
+                            <span>Advance</span>
+                         </li>
+                         <li>
+                            <p><i class="material-icons account">language</i>Language</p>
+                            <span>English, French</span>
+                         </li>
+                         <li>
+                            <p><i class="material-icons account">verified_user</i>Certificate</p>
+                            <span>After Completed </span>
+                         </li>
+                      </ul>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </section>
 
-<section class="page-content course-sec">
-    <div class="container">
-    
-        <div class="row">
-            <div class="col-lg-8">
-            
-                <!-- Overview -->
-                <div class="card overview-sec">
-                    <div class="card-body">
-                        <h5 class="subs-title">Overview</h5>
-                        <h6>Course Description</h6>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                        <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                        
-                        <h6>What you'll learn</h6>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <ul>
-                                    <li>Become a UX designer.</li>
-                                    <li>You will be able to add UX designer to your CV</li>
-                                    <li>Become a UI designer.</li>
-                                    <li>Build &amp; test a full website design.</li>
-                                    <li>Build &amp; test a full mobile app.</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <ul>
-                                    <li>Learn to design websites &amp; mobile phone apps.</li>
-                                    <li>You'll learn how to choose colors.</li>
-                                    <li>Prototype your designs with interactions.</li>
-                                    <li>Export production ready assets.</li>
-                                    <li>All the techniques used by UX professionals</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h6>Requirements</h6>
-                        <ul class="mb-0">
-                            <li>You will need a copy of Adobe XD 2019 or above. A free trial can be downloaded from Adobe.</li>
-                            <li>No previous design experience is needed.</li>
-                            <li class="mb-0">No previous Adobe XD skills are needed.</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /Overview -->
-                
-                <!-- Course Content -->
-                <div class="card content-sec">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <h5 class="subs-title">Course Content</h5>
-                            </div>
-                            <div class="col-sm-6 text-sm-end">
-                                <h6>92 Lectures 10:56:11</h6>
-                            </div>
-                        </div>
-                        <div class="course-card">
-                            <h6 class="cou-title">
-                                <a class="collapsed" data-bs-toggle="collapse" href="#collapseOne" aria-expanded="false">In which areas do you operate?</a>
-                            </h6>
-                            <div id="collapseOne" class="card-collapse collapse" style="">
-                                <ul>
-                                    <li>
-                                        <p><img src="assets/img/icon/play.svg" alt="Img" class="me-2">Lecture1.1 Introduction to the User Experience Course</p>
-                                        <div>
-                                            <a href="javascript:void(0);">Preview</a>
-                                            <span>02:53</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p><img src="assets/img/icon/play.svg" alt="Img" class="me-2">Lecture1.2 Exercise: Your first design challenge</p>
-                                        <div>
-                                            <a href="javascript:void(0);">Preview</a>
-                                            <span>02:53</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p><img src="assets/img/icon/play.svg" alt="Img" class="me-2">Lecture1.3 How to solve the previous exercise</p>
-                                        <div>
-                                            <a href="javascript:void(0);">Preview</a>
-                                            <span>02:53</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p><img src="assets/img/icon/play.svg" alt="Img" class="me-2">Lecture1.3 How to solve the previous exercise</p>
-                                        <div>
-                                            <a href="javascript:void(0);">Preview</a>
-                                            <span>02:53</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p><img src="assets/img/icon/play.svg" alt="Img" class="me-2">Lecture1.5 How to use text layers effectively</p>
-                                        <div>
-                                            <a href="javascript:void(0);">Preview</a>
-                                            <span>02:53</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="course-card">
-                            <h6 class="cou-title">
-                                <a class="collapsed" data-bs-toggle="collapse" href="#course2" aria-expanded="false">The Brief</a>
-                            </h6>
-                            <div id="course2" class="card-collapse collapse" style="">
-                                <ul>
-                                    <li>
-                                        <p><img src="assets/img/icon/play.svg" alt="Img" class="me-2">Lecture1.1 Introduction to the User Experience Course</p>
-                                        <div>
-                                            <a href="javascript:void(0);">Preview</a>
-                                            <span>02:53</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p><img src="assets/img/icon/play.svg" alt="Img" class="me-2">Lecture1.2 Exercise: Your first design challenge</p>
-                                        <div>
-                                            <a href="javascript:void(0);">Preview</a>
-                                            <span>02:53</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p><img src="assets/img/icon/play.svg" alt="Img" class="me-2">Lecture1.3 How to solve the previous exercise</p>
-                                        <div>
-                                            <a href="javascript:void(0);">Preview</a>
-                                            <span>02:53</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p><img src="assets/img/icon/play.svg" alt="Img" class="me-2">Lecture1.3 How to solve the previous exercise</p>
-                                        <div>
-                                            <a href="javascript:void(0);">Preview</a>
-                                            <span>02:53</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p><img src="assets/img/icon/play.svg" alt="Img" class="me-2">Lecture1.5 How to use text layers effectively</p>
-                                        <div>
-                                            <a href="javascript:void(0);">Preview</a>
-                                            <span>02:53</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="course-card">
-                            <h6 class="cou-title">
-                                <a class="collapsed" data-bs-toggle="collapse" href="#course3" aria-expanded="false">Wireframing Low Fidelity</a>
-                            </h6>
-                            <div id="course3" class="card-collapse collapse" style="">
-                                <ul>
-                                    <li>
-                                        <p><img src="assets/img/icon/play.svg" alt="Img" class="me-2">Lecture1.1 Introduction to the User Experience Course</p>
-                                        <div>
-                                            <a href="javascript:void(0);">Preview</a>
-                                            <span>02:53</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p><img src="assets/img/icon/play.svg" alt="Img" class="me-2">Lecture1.2 Exercise: Your first design challenge</p>
-                                        <div>
-                                            <a href="javascript:void(0);">Preview</a>
-                                            <span>02:53</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p><img src="assets/img/icon/play.svg" alt="Img" class="me-2">Lecture1.3 How to solve the previous exercise</p>
-                                        <div>
-                                            <a href="javascript:void(0);">Preview</a>
-                                            <span>02:53</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p><img src="assets/img/icon/play.svg" alt="Img" class="me-2">Lecture1.3 How to solve the previous exercise</p>
-                                        <div>
-                                            <a href="javascript:void(0);">Preview</a>
-                                            <span>02:53</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p><img src="assets/img/icon/play.svg" alt="Img" class="me-2">Lecture1.5 How to use text layers effectively</p>
-                                        <div>
-                                            <a href="javascript:void(0);">Preview</a>
-                                            <span>02:53</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="course-card">
-                            <h6 class="cou-title mb-0">
-                                <a class="collapsed" data-bs-toggle="collapse" href="#coursefour" aria-expanded="false">Type, Color &amp; Icon Introduction</a>
-                            </h6>
-                            <div id="coursefour" class="card-collapse collapse" style="">
-                                <ul>
-                                    <li>
-                                        <p><img src="assets/img/icon/play.svg" alt="Img" class="me-2">Lecture4.1 Introduction to the User Experience Course</p>
-                                        <div>
-                                            <a href="javascript:void(0);">Preview</a>
-                                            <span>02:53</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p><img src="assets/img/icon/play.svg" alt="Img" class="me-2">Lecture4.2 Exercise: Your first design challenge</p>
-                                        <div>
-                                            <a href="javascript:void(0);">Preview</a>
-                                            <span>02:53</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p><img src="assets/img/icon/play.svg" alt="Img" class="me-2">Lecture4.3 How to solve the previous exercise</p>
-                                        <div>
-                                            <a href="javascript:void(0);">Preview</a>
-                                            <span>02:53</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p><img src="assets/img/icon/play.svg" alt="Img" class="me-2">Lecture4.4 How to solve the previous exercise</p>
-                                        <div>
-                                            <a href="javascript:void(0);">Preview</a>
-                                            <span>02:53</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p><img src="assets/img/icon/play.svg" alt="Img" class="me-2">Lecture4.5 How to use text layers effectively</p>
-                                        <div>
-                                            <a href="javascript:void(0);">Preview</a>
-                                            <span>02:53</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /Course Content -->
-                
-                <!-- Instructor -->
-                <div class="card instructor-sec">
-                    <div class="card-body">
-                        <h5 class="subs-title">About the instructor</h5>
-                        <div class="instructor-wrap">
-                            <div class="about-instructor">
-                                <div class="abt-instructor-img">
-                                    <a href="instructor-profile.html"><img src="assets/img/user/user1.jpg" alt="img" class="img-fluid"></a>
-                                </div>
-                                <div class="instructor-detail">
-                                    <h5><a href="instructor-profile.html">Nicole Brown</a></h5>
-                                    <p>UX/UI Designer</p>
-                                </div>
-                            </div>
-                            <div class="rating">							
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star"></i>
-                                <span class="d-inline-block average-rating">4.5 Instructor Rating</span>
-                            </div>
-                        </div>
-                        <div class="course-info d-flex align-items-center">
-                            <div class="cou-info">
-                                <img src="assets/img/icon/play.svg" alt="Img">
-                                <p>5 Courses</p>
-                            </div>
-                            <div class="cou-info">
-                                <img src="assets/img/icon/icon-01.svg" alt="Img">
-                                <p>12+ Lesson</p>
-                            </div>
-                            <div class="cou-info">
-                                <img src="assets/img/icon/icon-02.svg" alt="Img">
-                                <p>9hr 30min</p>
-                            </div>
-                            <div class="cou-info">
-                                <img src="assets/img/icon/people.svg" alt="Img">
-                                <p>270,866 students enrolled</p>
-                            </div>
-                        </div>
-                        <p>UI/UX Designer, with 7+ Years Experience. Guarantee of High Quality Work.</p>
-                        <p>Skills: Web Design, UI Design, UX/UI Design, Mobile Design, User Interface Design, Sketch, Photoshop, GUI, Html, Css, Grid Systems, Typography, Minimal, Template, English, Bootstrap, Responsive Web Design, Pixel Perfect, Graphic Design, Corporate, Creative, Flat, Luxury and much more.</p>
-                        
-                        
-                        <p>Available for:</p>
-                        <ul>
-                            <li>1. Full Time Office Work</li>
-                            <li>2. Remote Work</li>
-                            <li>3. Freelance</li>
-                            <li>4. Contract</li>
-                            <li>5. Worldwide</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /Instructor -->
-                
-                <!-- Reviews -->
-                <div class="card review-sec">
-                    <div class="card-body">
-                        <h5 class="subs-title">Reviews</h5>
-                        <div class="instructor-wrap">
-                            <div class="about-instructor">
-                                <div class="abt-instructor-img">
-                                    <a href="instructor-profile.html"><img src="assets/img/user/user1.jpg" alt="img" class="img-fluid"></a>
-                                </div>
-                                <div class="instructor-detail">
-                                    <h5><a href="instructor-profile.html">Nicole Brown</a></h5>
-                                    <p>UX/UI Designer</p>
-                                </div>
-                            </div>
-                            <div class="rating">							
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star"></i>
-                                <span class="d-inline-block average-rating">4.5 Instructor Rating</span>
-                            </div>
-                        </div>
-                        <p class="rev-info">“ This is the second Photoshop course I have completed with Cristian. Worth every penny and recommend it highly. To get the most out of this course, its best to to take the Beginner to Advanced course first. The sound and video quality is of a good standard. Thank you Cristian. “</p>
-                        <a href="javascript:void(0);" class="btn btn-reply"><i class="feather-corner-up-left"></i> Reply</a>
-                    </div>
-                </div>
-                <!-- /Reviews -->
-                
-                <!-- Comment -->
-                <div class="card comment-sec">
-                    <div class="card-body">
-                        <h5 class="subs-title">Post A comment</h5>
-                        <form>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="input-block">
-                                        <input type="text" class="form-control" placeholder="Full Name">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="input-block">
-                                        <input type="email" class="form-control" placeholder="Email">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="input-block">
-                                <input type="email" class="form-control" placeholder="Subject">
-                            </div>
-                            <div class="input-block">
-                                <textarea rows="4" class="form-control" placeholder="Your Comments"></textarea>
-                            </div>
-                            <div class="submit-section">
-                                <button class="btn submit-btn" type="submit">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <!-- /Comment -->
-                
-            </div>	
-            
-            <div class="col-lg-4">
-                <div class="sidebar-sec">
-                
-                    <!-- Video -->
-                    <div class="video-sec vid-bg">
-                        <div class="card">
-                            <div class="card-body">
-                                <a href="https://www.youtube.com/embed/1trvO6dqQUI" class="video-thumbnail" data-fancybox="">
-                                    <div class="play-icon">
-                                        <i class="fa-solid fa-play"></i>
-                                    </div>
-                                    <img class="" [src]="course_image" alt="Img">
-                                </a>
-                                <div class="video-details">
-                                    <div class="course-fee">
-                                    <h2>{{course_name}}</h2>
-                                    <p>$86.99</p>
-                                    </div>
-                                    <div class="row gx-2">
-                                        <div class="col-md-6">
-                                            <a href="#" class="btn btn-wish w-100"><mat-icon>favorite</mat-icon> <span class="wishlist">Add to Wishlist</span></a>
-                                        </div>
-                                    </div>
-                                    <a href="#" class="btn btn-enroll w-100">Checkout Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /Video -->
-                    
-                    <!-- Include -->
-                    <div class="card include-sec">
-                        <div class="card-body">
-                            <div class="cat-title">
-                                <h4>Includes</h4>
-                            </div>
-                            <ul>
-                                <li><img src="assets/img/icon/import.svg" class="me-2" alt="Img"> 11 hours on-demand video</li>
-                                <li><img src="assets/img/icon/play.svg" class="me-2" alt="Img"> 69 downloadable resources</li>
-                                <li><img src="assets/img/icon/key.svg" class="me-2" alt="Img"> Full lifetime access</li>
-                                <li><img src="assets/img/icon/mobile.svg" class="me-2" alt="Img"> Access on mobile and TV</li>
-                                <li><img src="assets/img/icon/cloud.svg" class="me-2" alt="Img"> Assignments</li>
-                                <li><img src="assets/img/icon/teacher.svg" class="me-2" alt="Img"> Certificate of Completion</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- /Include -->
-                    
-                    <!-- Features -->
-                    <div class="card feature-sec">
-                        <div class="card-body">
-                            <div class="cat-title">
-                                <h4>Includes</h4>
-                            </div>
-                            <ul>
-                                <li><img src="assets/img/icon/users.svg" class="me-2" alt="Img"> Enrolled: <span>32 students</span></li>
-                                <li><img src="assets/img/icon/timer.svg" class="me-2" alt="Img"> Duration: <span>20 hours</span></li>
-                                <li><img src="assets/img/icon/chapter.svg" class="me-2" alt="Img"> Chapters: <span>15</span></li>
-                                <li><img src="assets/img/icon/video.svg" class="me-2" alt="Img"> Video:<span> 12 hours</span></li>
-                                <li><img src="assets/img/icon/chart.svg" class="me-2" alt="Img"> Level: <span>Beginner</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- /Features -->
-                    
-                </div>
-            </div>
-        </div>	
-    </div>
-</section>
+ <app-newsletter></app-newsletter>
+ <app-footer></app-footer>

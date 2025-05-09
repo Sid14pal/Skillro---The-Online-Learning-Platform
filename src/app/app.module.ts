@@ -40,6 +40,15 @@ import { NewsletterComponent } from './template/newsletter/newsletter.component'
 import { FooterComponent } from './template/footer/footer.component';
 import { CourseListComponent } from './template/course-list/course-list.component';
 import { StudentChooseAreaComponent } from './template/student-choose-area/student-choose-area.component';
+import { AboutUsComponent } from './template/about-us/about-us.component';
+import { CoursesComponent } from './template/courses/courses.component';
+import { BlogComponent } from './template/blog/blog.component';
+import { ContactUsComponent } from './template/contact-us/contact-us.component';
+import { StudentDashboardComponent } from './dashboard/student-dashboard/student-dashboard.component';
+import { StudentDashboardBannerComponent } from './dashboard/student-dashboard-banner/student-dashboard-banner.component';
+import { StudentDashboardSidebarComponent } from './dashboard/student-dashboard-sidebar/student-dashboard-sidebar.component';
+import { EnrolledCoursesComponent } from './dashboard/enrolled-courses/enrolled-courses.component';
+import { StudentOrderHistoryComponent } from './dashboard/student-order-history/student-order-history.component';
 
 
 @NgModule({
@@ -70,6 +79,15 @@ import { StudentChooseAreaComponent } from './template/student-choose-area/stude
     FooterComponent,
     CourseListComponent,
     StudentChooseAreaComponent,
+    AboutUsComponent,
+    CoursesComponent,
+    BlogComponent,
+    ContactUsComponent,
+    StudentDashboardComponent,
+    StudentDashboardBannerComponent,
+    StudentDashboardSidebarComponent,
+    EnrolledCoursesComponent,
+    StudentOrderHistoryComponent,
   ],
   imports: [
     BrowserModule,

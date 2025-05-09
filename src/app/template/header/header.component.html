@@ -2,7 +2,7 @@
   <div class="container">
     <nav class="navbar navbar-expand-lg">
       <!-- Logo -->
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" routerLink="/">
         <img src="assets/templates/logo.png">
       </a>
 
@@ -20,23 +20,23 @@
         <!-- Right side: Menu Links, Cart, Admin -->
         <div class="d-lg-flex align-items-center gap-3">
           <nav class="nav">
-            <a href="#" class="nav-link text-dark">Home</a>
-            <a href="#" class="nav-link text-dark">About Us</a>
-            <a href="#" class="nav-link text-dark">Courses</a>
-            <a href="#" class="nav-link text-dark">Blog</a>
-            <a href="#" class="nav-link text-dark">Contact Us</a>
+            <a href="#" class="nav-link text-dark" routerLink="/">Home</a>
+            <a href="#" class="nav-link text-dark" routerLink="/about-us">About Us</a>
+            <a href="#" class="nav-link text-dark" routerLink="/courses">Courses</a>
+            <a href="#" class="nav-link text-dark" routerLink="/blog">Blog</a>
+            <a href="#" class="nav-link text-dark" routerLink="/contact-us">Contact Us</a>
             <a href="#" class="nav-link">
               <i class="material-icons">shopping_bag</i>
               <span class="cart-badge">3</span>
             </a>
           </nav>
 
-          <div class="admin d-flex align-items-center">
+          <div class="admin d-flex align-items-center cursor-pointer" routerLink="/admin_login">
             <i class="material-icons account">person</i>
               <span class="admin">Admin</span>
           </div>
 
-          <div class="about-one__btn-box"><a href="#" class="about-one__btn thm-btn"><span class="icon-angles-right"></span>Login Now</a></div>
+          <div class="about-one__btn-box"><a href="#" routerLink="/login" class="about-one__btn thm-btn"><span class="icon-angles-right"></span>Login Now</a></div>
         </div>
       </div>
     </nav>

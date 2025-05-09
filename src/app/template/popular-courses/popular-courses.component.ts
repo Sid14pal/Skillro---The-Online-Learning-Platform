@@ -52,7 +52,9 @@ export class PopularCoursesComponent {
           queryParams: {
             image: student.imageUrl,
             name: student.name,
-            roll: student.roll
+            price: student.class,
+            lesson: student.roll,
+            category: student.email
           }
         });
       }

@@ -10,7 +10,7 @@
     color: #4f5158;
     align-items: center;
     gap: 4px;
-    font-size: 15px;
+    font-size: 16px;
     font-style: normal;
     letter-spacing: 0.2px;
     line-height: 120%;
@@ -46,6 +46,6 @@
     font-family: var(--fistudy-font-two);
     color: #4f5158;
     gap: 4px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
 }

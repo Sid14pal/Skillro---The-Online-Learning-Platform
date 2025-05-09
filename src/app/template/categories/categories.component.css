@@ -316,13 +316,13 @@
     position: relative;
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
 }
 
 .category-one__social-media-list li {
     position: relative;
     display: block;
-    top: 28px;
+    top: 30px;
 }
 
 .category-one__social-media-list li h3 {
