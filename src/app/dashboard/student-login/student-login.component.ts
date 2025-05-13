@@ -18,9 +18,7 @@ export class StudentLoginComponent {
   studentLogin() {
     if(this.user == 'minakshi@gmail.com' && this.password == '1234') {
       this.router.navigate(['/student-dashboard'])
-    } else {
-      
-    }
+    } 
   }
 
 }
