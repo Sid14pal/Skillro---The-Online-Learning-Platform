@@ -33,10 +33,9 @@ export class LoginComponent implements OnInit {
   openSnackBar(message: string, action: string = 'Close', duration: number = 3000) {
     this.snackBar.open(message, action, {
       duration: duration,
-      verticalPosition: 'top', // 'top' | 'bottom'
-      horizontalPosition: 'center', // 'start' | 'center' | 'end' | 'left' | 'right'
-      panelClass: ['danger'] // CSS class to apply to the snackbar container
-      // other options as needed
+      verticalPosition: 'top',
+      horizontalPosition: 'center', 
+      panelClass: ['danger'] 
     });
   }
 
@@ -69,7 +68,7 @@ export class LoginComponent implements OnInit {
 
   sendOTP() {
     try {
-      const formattedNumber = '+91' + this.phoneNumber.replace(/[^\d]/g, ''); // Manually format phone number
+      const formattedNumber = '+91' + this.phoneNumber.replace(/[^\d]/g, '');
       
       this.auth.sendPhoneNumberOTP(formattedNumber)
         .then((verificationId: string) => {
@@ -88,13 +87,10 @@ export class LoginComponent implements OnInit {
     this.auth.verifyPhoneNumberOTP(this.verificationId, this.otp)
       .then(() => {
         this.openSnackBar('OTP Verified Successfully');
-        // Proceed with login or other actions upon successful verification
       })
       .catch((error) => {
         this.openSnackBar('Failed to verify OTP: ' + error.message);
       });
   }
-
-
 
 }

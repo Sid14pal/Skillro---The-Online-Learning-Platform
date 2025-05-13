@@ -18,10 +18,12 @@ import { ContactUsComponent } from './template/contact-us/contact-us.component';
 import { StudentDashboardComponent } from './dashboard/student-dashboard/student-dashboard.component';
 import { EnrolledCoursesComponent } from './dashboard/enrolled-courses/enrolled-courses.component';
 import { StudentOrderHistoryComponent } from './dashboard/student-order-history/student-order-history.component';
+import { StudentLoginComponent } from './dashboard/student-login/student-login.component';
 
 const routes: Routes = [
 
   {path: '', component : HomeComponent},
+  {path: 'student-login', component : StudentLoginComponent},
   {path: 'register', component : RegisterComponent},
   {path: 'login', component : LoginComponent},
   {path: 'forgot-password', component : ForgotPasswordComponent},

@@ -33,19 +33,6 @@
     opacity: .10;
 }
 
-.category-one__shape-2 {
-    position: absolute;
-    top: 0;
-    left: 530px;
-    animation: leftRight 4s ease-in-out infinite;
-    z-index: -1;
-}
-
-.category-one__shape-2 img {
-    width: auto;
-    opacity: .10;
-}
-
 .category-one__shape-3 {
     position: absolute;
     bottom: -135px;

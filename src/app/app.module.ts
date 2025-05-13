@@ -49,6 +49,7 @@ import { StudentDashboardBannerComponent } from './dashboard/student-dashboard-b
 import { StudentDashboardSidebarComponent } from './dashboard/student-dashboard-sidebar/student-dashboard-sidebar.component';
 import { EnrolledCoursesComponent } from './dashboard/enrolled-courses/enrolled-courses.component';
 import { StudentOrderHistoryComponent } from './dashboard/student-order-history/student-order-history.component';
+import { StudentLoginComponent } from './dashboard/student-login/student-login.component';
 
 
 @NgModule({
@@ -88,6 +89,7 @@ import { StudentOrderHistoryComponent } from './dashboard/student-order-history/
     StudentDashboardSidebarComponent,
     EnrolledCoursesComponent,
     StudentOrderHistoryComponent,
+    StudentLoginComponent,
   ],
   imports: [
     BrowserModule,

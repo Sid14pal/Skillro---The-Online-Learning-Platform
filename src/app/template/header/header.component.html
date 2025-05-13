@@ -20,23 +20,25 @@
         <!-- Right side: Menu Links, Cart, Admin -->
         <div class="d-lg-flex align-items-center gap-3">
           <nav class="nav">
-            <a href="#" class="nav-link text-dark" routerLink="/">Home</a>
-            <a href="#" class="nav-link text-dark" routerLink="/about-us">About Us</a>
-            <a href="#" class="nav-link text-dark" routerLink="/courses">Courses</a>
-            <a href="#" class="nav-link text-dark" routerLink="/blog">Blog</a>
-            <a href="#" class="nav-link text-dark" routerLink="/contact-us">Contact Us</a>
+            <a href="#" class="nav-link text-dark underline-hover" routerLink="/">Home</a>
+            <a href="#" class="nav-link text-dark underline-hover" routerLink="/about-us">About Us</a>
+            <a href="#" class="nav-link text-dark underline-hover" routerLink="/courses">Courses</a>
+            <a href="#" class="nav-link text-dark underline-hover" routerLink="/blog">Blog</a>
+            <a href="#" class="nav-link text-dark underline-hover" routerLink="/contact-us">Contact Us</a>
             <a href="#" class="nav-link">
               <i class="material-icons">shopping_bag</i>
               <span class="cart-badge">3</span>
             </a>
           </nav>
 
-          <div class="admin d-flex align-items-center cursor-pointer" routerLink="/admin_login">
+          <div class="admin ">
+           <a class="d-flex align-items-center cursor-pointer" routerLink="/login">
             <i class="material-icons account">person</i>
-              <span class="admin">Admin</span>
+            <span class="admin">Admin</span>
+           </a>
           </div>
 
-          <div class="about-one__btn-box"><a href="#" routerLink="/login" class="about-one__btn thm-btn"><span class="icon-angles-right"></span>Login Now</a></div>
+          <div class="about-one__btn-box"><a href="#" routerLink="/student-login" class="about-one__btn thm-btn"><span class="icon-angles-right"></span>Student Login</a></div>
         </div>
       </div>
     </nav>
