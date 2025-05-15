@@ -50,6 +50,7 @@ import { StudentDashboardSidebarComponent } from './dashboard/student-dashboard-
 import { EnrolledCoursesComponent } from './dashboard/enrolled-courses/enrolled-courses.component';
 import { StudentOrderHistoryComponent } from './dashboard/student-order-history/student-order-history.component';
 import { StudentLoginComponent } from './dashboard/student-login/student-login.component';
+import { StudentDashboardHeaderComponent } from './dashboard/student-dashboard-header/student-dashboard-header.component';
 
 
 @NgModule({
@@ -90,6 +91,7 @@ import { StudentLoginComponent } from './dashboard/student-login/student-login.c
     EnrolledCoursesComponent,
     StudentOrderHistoryComponent,
     StudentLoginComponent,
+    StudentDashboardHeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -98,7 +100,7 @@ import { StudentLoginComponent } from './dashboard/student-login/student-login.c
     NgbModule,
     AngularFireModule.initializeApp(environment.firebase),
     MatSnackBarModule,
-    MatIconModule
+    MatIconModule,
   ],
   providers: [
     provideClientHydration(),

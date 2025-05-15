@@ -687,3 +687,11 @@
   background: var(--fistudy-base);
 }
 
+.search-results {
+    position: absolute;
+    z-index: 9999;
+    background: #fff;
+    width: 100%;
+    padding: 2em;
+}
+

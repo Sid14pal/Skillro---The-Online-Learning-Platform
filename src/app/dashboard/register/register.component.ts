@@ -15,7 +15,7 @@ password: string = '';
 name: string = '';
 
   constructor(private auth : AuthService, private snackBar: MatSnackBar, private routeStatusService: RouteStatusService){
-    this.routeStatusService.hideHeader = true;
+    this.routeStatusService.hideHeader = false;
   }
 
   ngOnInit(): void {

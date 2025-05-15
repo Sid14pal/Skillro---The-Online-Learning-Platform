@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { RouteStatusService } from '../../services/route-status.service';
 
 @Component({
   selector: 'app-student-login',
@@ -8,17 +10,43 @@ import { Router } from '@angular/router';
 })
 export class StudentLoginComponent {
 
-  constructor (private router: Router) {}
+  constructor (private router: Router, private snackBar: MatSnackBar, private routeStatusService: RouteStatusService) {
+    this.routeStatusService.hideHeader = false;
+  }
 
   user : string = '';
-  password:string = ''
+  password:string = '';
 
 
 
   studentLogin() {
-    if(this.user == 'minakshi@gmail.com' && this.password == '1234') {
-      this.router.navigate(['/student-dashboard'])
-    } 
+
+    if(this.user == '') {
+      this.openSnackBar('Please Enter Your Email');
+      return;
+    }
+
+    if(this.password == '') {
+      this.openSnackBar('Please Enter Your Password');
+      return;
+    }
+   
+    if(this.user == 'thomas@gmail.com' && this.password == '1234') {
+      this.router.navigate(['/student-dashboard']);
+      sessionStorage.setItem('isLoggedIn', 'true');
+      sessionStorage.setItem('userDetails', this.user);
+    } else {
+       this.openSnackBar('Invalid Input');
+    }
+  }
+
+    openSnackBar(message: string, action: string = 'Close', duration: number = 3000) {
+    this.snackBar.open(message, action, {
+      duration: duration,
+      verticalPosition: 'top',
+      horizontalPosition: 'center', 
+      panelClass: ['danger'] 
+    });
   }
 
 }

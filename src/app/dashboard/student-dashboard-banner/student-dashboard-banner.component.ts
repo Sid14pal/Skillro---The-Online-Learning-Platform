@@ -1,5 +1,6 @@
+import { isPlatformBrowser } from '@angular/common';
 import { Component } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
+import { Inject, PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'app-student-dashboard-banner',
@@ -8,35 +9,16 @@ import { AuthService } from '../../services/auth.service';
 })
 export class StudentDashboardBannerComponent {
 
-  user: any = {};
-  userInitials: string | undefined;
+   getData: any;
 
-    constructor(private auth:AuthService){
+   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  ngOnInit(): void  {
+    if (isPlatformBrowser(this.platformId)) {
+    const data = sessionStorage.getItem('userDetails');
+    this.getData = data?.split('@')[0];
+    this.getData = this.getData.charAt(0).toUpperCase() + this.getData.slice(1).toLowerCase();
     }
-
-
-  ngOnInit(): void {
-    this.auth.getCurrentUser().subscribe(user => {
-      if (user) {
-        this.user = user;
-        this.userInitials = this.getInitials(user);
-        console.log('User data:', this.user);
-      }
-    });
-  }
-
-
-  getInitials(user: any): string {
-    if (user.displayName) {
-      const names = user.displayName.split(' ');
-      const initials = names.map((name: string) => name.charAt(0)).join('');
-      return initials.toUpperCase();
-    } else if (user.email) {
-      const emailParts = user.email.split('@')[0].split('.');
-      const initials = emailParts.map((part: string) => part.charAt(0)).join('');
-      return initials.toUpperCase();
-    }
-    return '';
   }
 
 }

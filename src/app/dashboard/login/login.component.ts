@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
     private snackBar: MatSnackBar,
     private routeStatusService: RouteStatusService
   ) {
-    this.routeStatusService.hideHeader = true;
+    this.routeStatusService.hideHeader = false;
   }
 
   ngOnInit(): void {

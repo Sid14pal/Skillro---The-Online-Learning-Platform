@@ -111,12 +111,13 @@
             <div class="col-xl-12">
                 <div class="banner-one__category-search-box">
                     <div class="banner-one__category-search-inner">
-                        <form class="banner-one__category-form">
-                            <div class="banner-one__category-input">
-                                <input type="search" placeholder="What do you want to learn?">
-                            </div>
-                            <button type="submit" class="banner-one__category-btn">Search</button>
-                        </form>
+                        <form class="banner-one__category-form" (submit)="onSearch($event)">
+  <div class="banner-one__category-input">
+    <input type="search" placeholder="What do you want to learn?" [(ngModel)]="searchTerm" name="searchTerm" (input)="filterStudents()">
+  </div>
+  <button type="submit" class="banner-one__category-btn">Search</button>
+</form>
+
                     </div>
                     <div class="banner-one__tags">
                         <a href="#" routerLink="/courses">Accounting</a>
@@ -125,6 +126,14 @@
                         <a href="#" routerLink="/courses">Marketing</a>
                         <a href="#" routerLink="/courses">Meditation</a>
                     </div>
+                </div>
+                <div class="searhResult banner-one__category-search-box">
+                    <div *ngIf="filteredStudents.length > 1 && searchTerm" class="search-results mt-4">
+  <div *ngFor="let student of filteredStudents" class="result-card mb-2">
+    <h5>{{ student.name }}</h5>
+  </div>
+</div>
+
                 </div>
             </div>
         </div>

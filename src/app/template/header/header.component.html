@@ -1,4 +1,4 @@
-<header class="header py-2" [ngStyle]="{'background-image': 'url(assets/templates/banner-one-bg-shape-1.png)'}">
+<header class="header py-2" [ngStyle]="{'background-image': 'url(assets/templates/banner-one-bg-shape-1.png)'}" *ngIf="!routeStatusService.hideHeader">
   <div class="container">
     <nav class="navbar navbar-expand-lg">
       <!-- Logo -->
