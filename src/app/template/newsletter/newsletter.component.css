@@ -1,15 +1,7 @@
 .newsletter-one {
     position: relative;
     display: block;
-    padding: 51px 0 48px;
-    z-index: 1;
-}
-
-.newsletter-one__inner {
-    position: relative;
-    display: block;
-    background: #2467ec;
-    border-radius: 40px;
+    background: #687eff;
     text-align: center;
     padding: 40px 40px 60px;
     overflow: hidden;
@@ -77,7 +69,6 @@
     text-transform: math-auto;
     margin-top: 18px;
     margin-bottom: 44px;
-    font-family: var(--fistudy-font);
 }
 
 .newsletter-one__contact-form {
@@ -106,7 +97,6 @@
     background-color: var(--fistudy-white);
     border: 3px solid var(--fistudy-bdr-color);
     border-radius: 40px;
-    font-family: var(--fistudy-font);
 }
 
 .newsletter-one__contact-form .thm-btn {

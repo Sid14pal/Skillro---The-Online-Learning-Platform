@@ -51,6 +51,8 @@ import { EnrolledCoursesComponent } from './dashboard/enrolled-courses/enrolled-
 import { StudentOrderHistoryComponent } from './dashboard/student-order-history/student-order-history.component';
 import { StudentLoginComponent } from './dashboard/student-login/student-login.component';
 import { StudentDashboardHeaderComponent } from './dashboard/student-dashboard-header/student-dashboard-header.component';
+import { CardsComponent } from './template/cards/cards.component';
+import { LatestBlogComponent } from './template/latest-blog/latest-blog.component';
 
 
 @NgModule({
@@ -92,6 +94,8 @@ import { StudentDashboardHeaderComponent } from './dashboard/student-dashboard-h
     StudentOrderHistoryComponent,
     StudentLoginComponent,
     StudentDashboardHeaderComponent,
+    CardsComponent,
+    LatestBlogComponent,
   ],
   imports: [
     BrowserModule,

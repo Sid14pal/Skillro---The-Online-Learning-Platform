@@ -1,5 +1,6 @@
 .student-choose-area {
-    padding: 80px 0 48px;
+    padding: 90px 0 55px;
+    background: -webkit-linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(15, 100%, 98%, 1) 100%);
 }
 
 .section-title h2 {

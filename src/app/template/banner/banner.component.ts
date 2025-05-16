@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StudentService } from '../../services/student.service';
 import { Student } from '../../datatype';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-banner',
@@ -12,7 +13,7 @@ export class BannerComponent implements OnInit {
   filteredStudents: Student[] = [];
   searchTerm: string = '';
 
-  constructor(private studentService: StudentService) {}
+  constructor(private studentService: StudentService, private router: Router,) {}
 
   ngOnInit() {
     this.studentService.getAllStudents().subscribe((res: any) => {
@@ -35,4 +36,17 @@ export class BannerComponent implements OnInit {
     event.preventDefault();
     this.filterStudents();
   }
+
+   viewDetails(student: any) {
+        this.router.navigate(['/course-details'], 
+        {
+          queryParams: {
+            image: student.imageUrl,
+            name: student.name,
+            price: student.class,
+            lesson: student.roll,
+            category: student.email
+          }
+        });
+      }
 }

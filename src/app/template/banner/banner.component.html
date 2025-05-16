@@ -14,13 +14,13 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-xl-6">
+            <div class="col-xl-6 wow animate__animated animate__fadeInUp">
                 <div class="banner-one__left">
                     <div class="banner-one__title-box">
                         <div class="section-title text-start">
                             <span class="subtitle bg-primary-opacity">EDUCATION FOR EVERYONE</span>
                         </div>
-                        <h2 class="banner-one__title">Advance Your <br><span>Career.</span>
+                        <h2 class="banner-one__title">Find Your <span>perfect</span> courses & improve your skills
                         </h2>
                         <p class="mb-4 mt-4">Gain real-world skills with flexible online courses designed to help you grow. Learn at your own pace and take the next step in your career today.</p>
                     </div>
@@ -30,7 +30,7 @@
                             <a href="#" class="avatar" data-tooltip="Mark" tabindex="0"><img src="assets/templates/client-05.png" alt="education"></a>
                             <a href="#" class="avatar" data-tooltip="Jordan" tabindex="0"><img src="assets/templates/client-06.png" alt="education"></a>
                             <div class="more-author-text">
-                                <h5 class="total-join-students">Join Over 3000+ Students</h5>
+                                <h5 class="total-join-students">Join Over 2000+ Students</h5>
                                 <p class="subtitle">Have a new ideas every week.</p>
                             </div>
                         </div>
@@ -66,16 +66,8 @@
                                     <img src="assets/templates/banner-one-udemy-review-img.jpg" alt="">
                                 </div>
                                 <div class="banner-one__udemy-review-logo">
-                                    <img src="assets/templates/banner-one-udemy-review-logo.png" alt="">
-                                </div>
-                                <div class="banner-one__udemy-review-client-info">
-                                    <p class="banner-one__udemy-review-client-name">Alisa Olivia/</p>
-                                    <div class="banner-one__udemy-review-star">
-                                        <span class="icon-star"></span>
-                                        <span class="icon-star"></span>
-                                        <span class="icon-star"></span>
-                                        <span class="icon-star"></span>
-                                    </div>
+                                   <p class="count-text">900+</p>
+                                   <p class="banner-one__student-trained-text">Courses & Videos</p>
                                 </div>
                             </div>
                             <div class="banner-one__student-trained bounce-left">
@@ -96,8 +88,7 @@
                                 </ul>
                                 <div class="banner-one__student-trained-count-box">
                                     <div class="banner-one__student-trained-count-box-inner count-box counted">
-                                        <p class="count-text" data-stop="2000" data-speed="3000">2000</p>
-                                        <span>+</span>
+                                        <p class="count-text">2000+</p>
                                     </div>
                                     <p class="banner-one__student-trained-text">Success Student</p>
                                 </div>
@@ -115,7 +106,7 @@
   <div class="banner-one__category-input">
     <input type="search" placeholder="What do you want to learn?" [(ngModel)]="searchTerm" name="searchTerm" (input)="filterStudents()">
   </div>
-  <button type="submit" class="banner-one__category-btn">Search</button>
+  <button type="submit" class="banner-one__category-btn"><i class="material-icons">search</i></button>
 </form>
 
                     </div>
@@ -128,9 +119,12 @@
                     </div>
                 </div>
                 <div class="searhResult banner-one__category-search-box">
-                    <div *ngIf="filteredStudents.length > 1 && searchTerm" class="search-results mt-4">
+                    <div *ngIf="filteredStudents.length > 0 && searchTerm" class="search-results mt-4">
   <div *ngFor="let student of filteredStudents" class="result-card mb-2">
-    <h5>{{ student.name }}</h5>
+    <a class="d-flex align-items-center cursor-pointer" (click)="viewDetails(student)">
+        <img [src]="student.imageUrl" alt="not found" class="img-fluid search_img">
+    <p>{{ student.name }} <br> {{student.class | currency}}</p>
+    </a>
   </div>
 </div>
 

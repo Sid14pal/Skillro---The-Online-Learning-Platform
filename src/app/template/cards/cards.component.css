@@ -1,0 +1,46 @@
+.tp-banner-sm-2-wrap {
+    background-color: #E2EFE4;
+    border-radius: 20px;
+    padding: 43px 0 52px 51px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.tp-banner-sm-2-title {
+    color: #1E1E2F;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 31px;
+    font-family: var(--fistudy-font-two);
+}
+
+.tp-banner-sm-2-title span {
+    font-weight: 600;
+    display: inline-block;
+    position: relative;
+}
+
+.tp-banner-sm-2-shape-1 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    -webkit-transition: all 0.3s 0s ease-out;
+    -moz-transition: all 0.3s 0s ease-out;
+    -ms-transition: all 0.3s 0s ease-out;
+    -o-transition: all 0.3s 0s ease-out;
+    transition: all 0.3s 0s ease-out;
+    z-index: -1;
+}
+
+.tp-banner-sm-2-wrap:hover .tp-banner-sm-2-shape-1 {
+    transform: scale(1.08);
+}
+
+.tp-banner-sm-2-wrap.tp-banner-sm-2-bg-2 {
+    background-color: #FFF3F4;
+}
+
+.orange {
+    background-color: var(--fistudy-primary);
+}
