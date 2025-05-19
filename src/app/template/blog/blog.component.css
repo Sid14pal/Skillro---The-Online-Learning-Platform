@@ -1,0 +1,225 @@
+.blog {
+    width: 100%;
+    min-height: 700px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-header__inner{
+    position: relative;
+    display: block;
+    padding: 64px 0 55px;
+    z-index: 1;
+}
+
+.banner-one__title {
+    color: #031F42;
+    font-size: 56px;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: -1.12px;
+}
+
+.banner {
+    width: 100%;
+    min-height: 700px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+}
+
+.tp-blog-stories-banner-title {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1.14;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.tp-blog-stories-user-thumb img {
+    width: 45px;
+    height: 45px !important;
+    margin-right: 12px;
+    border-radius: 100% !important;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.tp-blog-stories-user-content h6 {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.tp-blog-stories-user-content span {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+.blog-two {
+    position: relative;
+    display: block;
+    padding: 120px 0 120px;
+    z-index: 1;
+}
+
+.blog-two__single {
+    position: relative;
+    display: block;
+    margin-bottom: 23px;
+}
+
+.blog-two__img {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.blog-two__img:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(var(--fistudy-black-rgb), 1);
+    opacity: 0;
+    transition: background-color 0.5s ease;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+.blog-two__single:hover .blog-two__img:before {
+    opacity: .50;
+}
+
+
+.blog-two__img img {
+    width: 100%;
+    border-radius: 20px;
+    transform: scale3d(1, 1, 1);
+    transition: transform 1s ease-in-out;
+}
+
+.blog-two__single:hover .blog-two__img img {
+    transform: scale(1.05) rotate(0deg);
+}
+
+.blog-two__date {
+position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: var(--fistudy-base);
+    padding: 11px 19px 0px;
+    border-top: 2px solid var(--fistudy-white);
+    border-right: 2px solid var(--fistudy-white);
+    border-top-right-radius: 20px;
+    z-index: 3;
+}
+
+.blog-two__date span {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: var(--fistudy-white);
+}
+
+.blog-two__date p {
+    font-size: 16px;
+    color: var(--fistudy-white);
+    line-height: 16px;
+    font-weight: 500;
+}
+
+.blog-two__content {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+}
+
+.blog-two__meta-box {
+    position: relative;
+    display: block;
+    border: 1px solid var(--fistudy-bdr-color);
+    padding: 14px 15px 14px;
+    border-radius: 12px;
+}
+
+.blog-two__meta {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-two__meta li {
+    position: relative;
+    display: block;
+}
+
+.blog-two__meta li+li {
+    margin-left: 30px;
+}
+
+.blog-two__meta li a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    color: var(--fistudy-black);
+    font-family: var(--fistudy-font-two);
+    font-style: italic;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.blog-two__meta li a:hover {
+    color: var(--fistudy-base);
+}
+
+.blog-two__meta li a span {
+    position: relative;
+    font-size: 13px;
+    margin-right: 6px;
+    color: #FFC224;
+}
+
+.blog-two__meta li:nth-child(2) a span {
+    color: var(--fistudy-primary);
+}
+
+.blog-two__meta li:nth-child(3) a span {
+    color: var(--fistudy-base);
+}
+
+.blog-two__title {
+    font-size: 20px;
+    line-height: 32px;
+    margin-top: 13px;
+    margin-bottom: 11px;
+}
+
+.blog-two__title a {
+    color: var(--fistudy-black);
+}
+
+.blog-two__title a:hover {
+    color: var(--fistudy-base);
+}

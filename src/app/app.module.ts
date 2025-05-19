@@ -53,6 +53,8 @@ import { StudentLoginComponent } from './dashboard/student-login/student-login.c
 import { StudentDashboardHeaderComponent } from './dashboard/student-dashboard-header/student-dashboard-header.component';
 import { CardsComponent } from './template/cards/cards.component';
 import { LatestBlogComponent } from './template/latest-blog/latest-blog.component';
+import { BehindTheScenesComponent } from './template/behind-the-scenes/behind-the-scenes.component';
+import { WhyOurStudentsComponent } from './template/why-our-students/why-our-students.component';
 
 
 @NgModule({
@@ -96,6 +98,8 @@ import { LatestBlogComponent } from './template/latest-blog/latest-blog.componen
     StudentDashboardHeaderComponent,
     CardsComponent,
     LatestBlogComponent,
+    BehindTheScenesComponent,
+    WhyOurStudentsComponent,
   ],
   imports: [
     BrowserModule,
