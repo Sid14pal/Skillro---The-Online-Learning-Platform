@@ -6,10 +6,14 @@
     background-size: cover;
 }
 
+.blogs {
+    padding: 85px 0 10px;
+}
+
 .page-header__inner{
     position: relative;
     display: block;
-    padding: 64px 0 55px;
+    padding: 45px 0 38px;
     z-index: 1;
 }
 
@@ -23,8 +27,8 @@
 
 .banner {
     width: 100%;
-    min-height: 700px;
-    background-position: center center;
+    min-height: 400px;
+    background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50px;
@@ -37,6 +41,7 @@
     letter-spacing: -2px;
     margin-bottom: 30px;
     color: #fff;
+    margin-top: 90px;
 }
 
 .tp-blog-stories-user-thumb img {
@@ -115,22 +120,6 @@
     transform: scale(1.05) rotate(0deg);
 }
 
-.blog-two__date {
-position: absolute;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    background-color: var(--fistudy-base);
-    padding: 11px 19px 0px;
-    border-top: 2px solid var(--fistudy-white);
-    border-right: 2px solid var(--fistudy-white);
-    border-top-right-radius: 20px;
-    z-index: 3;
-}
-
 .blog-two__date span {
     position: relative;
     display: flex;
@@ -140,10 +129,20 @@ position: absolute;
 }
 
 .blog-two__date p {
+    width: 24%;
     font-size: 16px;
-    color: var(--fistudy-white);
+    color: #000000;
     line-height: 16px;
     font-weight: 500;
+    font-size: 14px;
+    font-weight: 600;
+    background: #ffc224;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -o-border-radius: 6px;
+    -ms-border-radius: 6px;
+    border-radius: 11px;
+    padding: 6px;
 }
 
 .blog-two__content {
@@ -210,7 +209,7 @@ position: absolute;
 }
 
 .blog-two__title {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 32px;
     margin-top: 13px;
     margin-bottom: 11px;

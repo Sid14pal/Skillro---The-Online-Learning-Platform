@@ -19,6 +19,8 @@ import { StudentDashboardComponent } from './dashboard/student-dashboard/student
 import { EnrolledCoursesComponent } from './dashboard/enrolled-courses/enrolled-courses.component';
 import { StudentOrderHistoryComponent } from './dashboard/student-order-history/student-order-history.component';
 import { StudentLoginComponent } from './dashboard/student-login/student-login.component';
+import { BlogDetailsComponent } from './template/blog-details/blog-details.component';
+import { CartComponent } from './template/cart/cart.component';
 
 const routes: Routes = [
 
@@ -40,6 +42,8 @@ const routes: Routes = [
   {path: 'about-us', component : AboutUsComponent},
   {path: 'courses', component : CoursesComponent},
   {path: 'blog', component : BlogComponent},
+  {path: 'blog-details', component : BlogDetailsComponent},
+  {path: 'cart', component : CartComponent},
   {path: 'contact-us', component : ContactUsComponent},
 
 ];

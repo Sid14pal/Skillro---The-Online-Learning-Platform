@@ -55,6 +55,9 @@ import { CardsComponent } from './template/cards/cards.component';
 import { LatestBlogComponent } from './template/latest-blog/latest-blog.component';
 import { BehindTheScenesComponent } from './template/behind-the-scenes/behind-the-scenes.component';
 import { WhyOurStudentsComponent } from './template/why-our-students/why-our-students.component';
+import { BlogDetailsComponent } from './template/blog-details/blog-details.component';
+import { CartComponent } from './template/cart/cart.component';
+import { CheckoutComponent } from './template/checkout/checkout.component';
 
 
 @NgModule({
@@ -100,6 +103,9 @@ import { WhyOurStudentsComponent } from './template/why-our-students/why-our-stu
     LatestBlogComponent,
     BehindTheScenesComponent,
     WhyOurStudentsComponent,
+    BlogDetailsComponent,
+    CartComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,

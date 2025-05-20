@@ -1,68 +1,43 @@
 <section class="event__area-four">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="event__content-wrap">
-                            <div class="section__title mb-20">
-                                <span class="sub-title">Our Blogs</span>
-                                <h2 class="title">Insights & Ideas Dive into Our Latest Blog Post</h2>
-                            </div>
-                            <p>Online education has rapidly become a preferred method of learning across the globe. It offers flexibility, accessibility, and a wide range of subjects at your fingertips.</p>
-                            <div class="blog">
-                                <img src="assets/templates/blog.jpg" class="img-fluid blog-img">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="event__item-wrap-three">
-                            <div class="event__item-four shine__animate-item">
-                                <div class="event__thumb-four">
-                                    <a href="events-details.html" class="shine__animate-link"><img src="assets/templates/h4_event_thumb01.jpg" alt="img"></a>
-                                </div>
-                                <div class="event__content-three event__content-four">
-                                    <span class="event__date event__date-two">28 June, 2024</span>
-                                    <h2 class="title"><a href="events-details.html">Unlocking the Future of Education: How LMS Transforms Learning</a></h2>
-                                    <div class="event__meta-two">
-                                        <ul class="list-wrap">
-                                            <li><i class="material-icons">location_on</i>United States</li>
-                                            <li><i class="material-icons">schedule</i>9:30 am - 11:30 am</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="event__item-four shine__animate-item">
-                                <div class="event__thumb-four">
-                                    <a href="events-details.html" class="shine__animate-link"><img src="assets/templates/h4_event_thumb02.jpg" alt="img"></a>
-                                </div>
-                                <div class="event__content-three event__content-four">
-                                    <span class="event__date event__date-two"><i class="flaticon-calendar"></i>28 June, 2024</span>
-                                    <h2 class="title"><a href="events-details.html">Key Features and Considerations for Educational Institutions</a></h2>
-                                    <div class="event__meta-two">
-                                        <ul class="list-wrap">
-                                            <li><i class="material-icons">location_on</i>United States</li>
-                                            <li><i class="material-icons">schedule</i>9:30 am - 11:30 am</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="event__item-four shine__animate-item">
-                                <div class="event__thumb-four">
-                                    <a href="events-details.html" class="shine__animate-link"><img src="assets/templates/h4_event_thumb03.jpg" alt="img"></a>
-                                </div>
-                                <div class="event__content-three event__content-four">
-                                    <span class="event__date event__date-two"><i class="flaticon-calendar"></i>28 June, 2024</span>
-                                    <h2 class="title"><a href="events-details.html">Leveraging LMS for Workforce Development</a></h2>
-                                    <div class="event__meta-two">
-                                        <ul class="list-wrap">
-                                            <li><i class="material-icons">location_on</i>United States</li>
-                                            <li><i class="material-icons">schedule</i>9:30 am - 11:30 am</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tp-category-banner-btn"><a routerlink="/blog" class="thm-btn">View Recent Blogs</a></div>
-                        </div>
-                    </div>
-                </div>
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-6">
+            <div class="event__content-wrap">
+               <div class="section__title mb-20">
+                  <span class="sub-title">Our Blogs</span>
+                  <h2 class="title">Insights & Ideas Dive into Our Latest Blog Post</h2>
+               </div>
+               <p>Online education has rapidly become a preferred method of learning across the globe. It offers flexibility, accessibility, and a wide range of subjects at your fingertips.</p>
+               <div class="blog">
+                  <img src="assets/templates/blog.jpg" class="img-fluid blog-img">
+               </div>
             </div>
-        </section>
+         </div>
+         <div class="col-lg-6 mt-5">
+            <div class="event__item-wrap-three">
+               <div class="event__item-four shine__animate-item" *ngFor="let blog of blogs | slice:0:3">
+                  <div class="event__thumb-four">
+                     <a (click)="viewBlogs(blog)" [ngStyle]="{'cursor': 'pointer'}" class="shine__animate-link">
+                        <div class="image-overlay-container">
+                           <img src="{{blog.image}}" alt="img" />
+                           <div class="image-overlay"></div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="event__content-three event__content-four">
+                     <span class="event__date event__date-two">{{blog.date}}</span>
+                     <h2 class="title"><a href="events-details.html">{{blog.title}}</a></h2>
+                     <div class="event__meta-two">
+                        <ul class="list-wrap">
+                           <li><i class="material-icons">location_on</i>United States</li>
+                           <li><i class="material-icons">schedule</i>9:30 am - 11:30 am</li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="tp-category-banner-btn"><a routerlink="/blog" class="thm-btn">View Recent Blogs</a></div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

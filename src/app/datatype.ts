@@ -20,3 +20,10 @@ export interface courses {
     courseClass: string;
     imageUrl?: string;
 }
+
+export interface Blog {
+  id: number;
+  title: string;
+  content: string;
+  image: string;
+}

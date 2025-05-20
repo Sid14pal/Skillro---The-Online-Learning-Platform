@@ -1,0 +1,155 @@
+<div class="blog"
+   style="background-image: url(assets/templates/blog-stories-bg.png);">
+   <div class="container">
+      <div class="row">
+         <div class="page-header__inner">
+            <h2 class="banner-one__title mb-2">Blog Details</h2>
+            <p>Discover articles and tutorials to help you build better.</p>
+         </div>
+      </div>
+      <div class="row">
+         <div class="banner" style="background-image: url('assets/templates/image3.png');">
+            <h3 class="tp-blog-stories-banner-title mx-3">
+               <a>The Importance of Intrinsic... </a>
+            </h3>
+            <div class="tp-blog-stories-banner-user d-flex align-items-center mx-4">
+               <div class="tp-blog-stories-user-thumb">
+                  <img decoding="async" src="assets/templates/leadership-thumb-7.jpg" alt="img-blog">
+               </div>
+               <div class="tp-blog-stories-user-content">
+                  <h6>
+                     Salim Rana										
+                  </h6>
+                  <span>
+                  August 11, 2024</span>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="row blogs">
+                <div class="col-xl-8 col-lg-7">
+                    <div class="blog-details__left" *ngIf="blog">
+                        <div class="blog-details__img-box">
+                            <div class="blog-details__img">
+                                <img src="{{blog.image}}" alt="">
+                            </div>
+                        </div>
+                        <div class="blog-details__content">
+                            <h3 class="blog-details__title-1">{{ blog.title }}</h3>
+                            <div class="blog-details__client-and-meta">
+                                <ul class="blog-details__client-meta list-unstyled">
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-calendar"></span>
+                                        </div>
+                                        <p>{{blog.date}}</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="blog-details__text-1">The digital era has radically transformed nearly
+                                every industry, and education is no exception. What began as an alternative to
+                                traditional classroom settings has now solidified into an essential component of
+                                modern education. The flexibility, accessibility, and evolving technology of
+                                online learning make it more than just a trend; it’s a pivotal shift that’s here
+                                to stay. In this post, we’ll explore the reasons why online learning has not
+                                only become a staple of modern education but also why it holds the key to the
+                                future.</p>
+                            <h4 class="blog-details__title-2">Flexibility and Accessibility</h4>
+                            <p class="blog-details__text-2">One of the most significant advantages of online
+                                learning is the flexibility it offers. Students are no longer bound by
+                                geographic location or rigid schedules. Online courses allow learners to access
+                                materials at their own pace and fit study time into their busy lives. </p>
+                            <p class="blog-details__text-3">With online learning, education is accessible from
+                                anywhere with an internet connection. This accessibility helps bridge the gap
+                                for students in remote areas, making education more inclusive and far-reaching
+                                than ever before. </p>
+                            <div class="blog-details__points-box">
+                                <h4 class="blog-details__points-title">A Personalized Learning Experience</h4>
+                                <ul class="blog-details__points list-unstyled">
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-angles-right"></span>
+                                        </div>
+                                        <p>Online learning platforms have evolved to offer a highly personalized
+                                            experience tailored to each student's needs. </p>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-angles-right"></span>
+                                        </div>
+                                        <p>Universities, colleges, and independent platforms offer courses in fields
+                                            ranging from AI and data science to psychology, art history, and
+                                            business.</p>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-angles-right"></span>
+                                        </div>
+                                        <p>For instance, some students benefit from visual aids, while others learn
+                                            best through hands-on activities or text-based resources.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="blog-details__quote-box">
+                                <p class="blog-details__quote-text">Education in the modern world transcends
+                                    classrooms and rigid schedules; it is a lifelong journey accessible to anyone,
+                                    anywhere, with a drive to learn and grow. </p>
+                                <div class="blog-details__client-box-2">
+                                    <div class="blog-details__client-img-2">
+                                        <img src="assets/templates/blog-details-client-img-2.jpg" alt="">
+                                    </div>
+                                    <div class="blog-details__client-content-2">
+                                        <p>Web Designer</p>
+                                        <h4>Johnson Taylor</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-5">
+                    <div class="sidebar">
+                        <div class="sidebar__single sidebar__category">
+                            <div class="sidebar__title-box">
+                                <div class="sidebar__title-icon">
+                                    <img src="assests/templates/sidebar-title-icon.png" alt="">
+                                </div>
+                                <h3 class="sidebar__title">Category </h3>
+                            </div>
+                            <ul class="sidebar__category-list list-unstyled">
+                                <li>
+                                    <a href="#">Digital Marketing <i class="material-icons">arrow_forward</i></a>
+                                </li>
+                                <li>
+                                    <a href="#">Health &amp; Fitness <i class="material-icons">arrow_forward</i></a>
+                                </li>
+                                <li class="active">
+                                    <a href="#">Programming &amp; Tech <i class="material-icons">arrow_forward</i></a>
+                                </li>
+                                <li>
+                                    <a href="#">Product Design <i class="material-icons">arrow_forward</i></a>
+                                </li>
+                                <li>
+                                    <a href="#">Online Chef <i class="material-icons">arrow_forward</i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sidebar__single sidebar__newsletter">
+                            <div class="sidebar__title-box">
+                                <div class="sidebar__title-icon">
+                                    <img src="assets/templates/sidebar-title-icon.png" alt="">
+                                </div>
+                                <h3 class="sidebar__title">Newsletter </h3>
+                            </div>
+                            <p class="sidebar__newsletter-text">Subscribe our newsletter to get every update </p>
+                            <form action="#" class="sidebar__newsletter-form">
+                                <input type="search" placeholder="Search Blogs">
+                                <button type="submit">Subscribe<i class="icon-circle-left"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+   </div>
+</div>
+<app-footer></app-footer>

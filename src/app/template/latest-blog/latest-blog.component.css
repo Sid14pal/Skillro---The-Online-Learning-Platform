@@ -27,7 +27,7 @@
     font-weight: 700;
 }
 .section__title .title {
-    font-size: 36px;
+    font-size: 33px;
     line-height: 1.33;
     margin: 0 0;
     letter-spacing: -0.75px;
@@ -104,6 +104,39 @@
     position: relative;
     top: 3px;
 }
+
+.image-overlay-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-overlay-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 2;
+}
+
+.image-overlay-container:hover img {
+  transform: scale(1.1); /* Zoom effect */
+}
+
+.image-overlay-container:hover .image-overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
 
 .blog-img {
     height: 500px;
