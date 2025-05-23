@@ -26,7 +26,7 @@
                   </div>
                   <div class="event__content-three event__content-four">
                      <span class="event__date event__date-two">{{blog.date}}</span>
-                     <h2 class="title"><a href="events-details.html">{{blog.title}}</a></h2>
+                     <h2 class="title"><a (click)="viewBlogs(blog)" [ngStyle]="{'cursor': 'pointer'}">{{blog.title}}</a></h2>
                      <div class="event__meta-two">
                         <ul class="list-wrap">
                            <li><i class="material-icons">location_on</i>United States</li>
