@@ -6,6 +6,33 @@
     z-index: 1;
 }
 
+.section-title-two__title {
+    color: var(--fistudy-black);
+    font-size: 28px;
+    line-height: 56px;
+    font-weight: 600;
+    margin: 18px 0 22px;
+    text-transform: capitalize;
+}
+
+.section-title-two__title span {
+    position: relative;
+    display: inline-block;
+    color: var(--fistudy-white);
+    font-size: 30px;
+    line-height: 30px;
+    padding: 6px 10px 6px;
+    border-radius: 21px;
+    background-color: var(--fistudy-base);
+}
+
+
+::ng-deep .success{
+      --mdc-snackbar-container-color: green;
+      --mdc-snackbar-supporting-text-color: white;
+      --mat-snack-bar-button-color: #fff;
+  }
+
 .page-header__bg {
     position: absolute;
     top: 0;
@@ -232,13 +259,14 @@
 }
 
 .cart-table thead th {
-    color: var(--fistudy-black);
-    font-size: 20px;
+color: var(--fistudy-black);
+    font-size: 18px;
     line-height: 30px;
     font-weight: 700;
     padding: 0;
     border: none;
     padding-bottom: 22px;
+    font-family: var(--fistudy-font);
 }
 
 .cart-table thead th:last-child {
@@ -254,15 +282,16 @@
 }
 
 .cart-table tbody td {
-    font-size: 18px;
+    font-size: 16px;
     color: var(--fistudy-gray);
     vertical-align: middle;
     border-top: 1px solid var(--fistudy-bdr-color);
     border-bottom: 1px solid var(--fistudy-bdr-color);
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     padding-left: 0;
     padding-right: 0;
+    font-family: var(--fistudy-font-two);
 }
 
 .cart-table tbody td:last-child {
@@ -291,9 +320,10 @@
 
 .cart-table h3 {
     color: var(--fistudy-black);
-    font-size: 19px;
+    font-size: 16px;
     font-weight: 400;
     margin: 0;
+    font-family: var(--fistudy-font-two);
 }
 
 .cart-table h3 a {
@@ -428,11 +458,12 @@
 .cart-total li span:first-child {
     display: block;
     color: var(--fistudy-black);
-    font-size: 20px;
+    font-size: 18px;
     margin-right: 80px;
     font-weight: 700;
     width: 140px;
     text-align: right;
+    font-family: var(--fistudy-font);
 }
 
 .cart-total li:nth-child(2) span:first-child {

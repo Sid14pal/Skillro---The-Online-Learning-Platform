@@ -21,6 +21,7 @@ import { StudentOrderHistoryComponent } from './dashboard/student-order-history/
 import { StudentLoginComponent } from './dashboard/student-login/student-login.component';
 import { BlogDetailsComponent } from './template/blog-details/blog-details.component';
 import { CartComponent } from './template/cart/cart.component';
+import { CheckoutComponent } from './template/checkout/checkout.component';
 
 const routes: Routes = [
 
@@ -45,6 +46,7 @@ const routes: Routes = [
   {path: 'blog-details', component : BlogDetailsComponent},
   {path: 'cart', component : CartComponent},
   {path: 'contact-us', component : ContactUsComponent},
+  {path: 'checkout', component : CheckoutComponent},
 
 ];
 

@@ -19,6 +19,12 @@
   z-index: -1;
 }
 
+::ng-deep .success{
+      --mdc-snackbar-container-color: green;
+      --mdc-snackbar-supporting-text-color: white;
+      --mat-snack-bar-button-color: #fff;
+  }
+
 .page-header__social {
   position: absolute;
   display: flex;
