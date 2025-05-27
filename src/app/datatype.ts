@@ -27,3 +27,21 @@ export interface Blog {
   content: string;
   image: string;
 }
+
+export interface checkout {
+  firstName: string;
+  lastName: string;
+  companyName: string;
+  country: string;
+  address: string;
+  city: string;
+  state: string;
+  zip: string;
+  phone: string;
+  email: string;
+  paymentCard: string;
+  cardNumber: string;
+  month: string;
+  year: string;
+  cvv: string
+}

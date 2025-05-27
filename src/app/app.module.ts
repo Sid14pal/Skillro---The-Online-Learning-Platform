@@ -58,6 +58,7 @@ import { WhyOurStudentsComponent } from './template/why-our-students/why-our-stu
 import { BlogDetailsComponent } from './template/blog-details/blog-details.component';
 import { CartComponent } from './template/cart/cart.component';
 import { CheckoutComponent } from './template/checkout/checkout.component';
+import { ThankyouComponent } from './template/thankyou/thankyou.component';
 
 
 @NgModule({
@@ -106,6 +107,7 @@ import { CheckoutComponent } from './template/checkout/checkout.component';
     BlogDetailsComponent,
     CartComponent,
     CheckoutComponent,
+    ThankyouComponent,
   ],
   imports: [
     BrowserModule,
