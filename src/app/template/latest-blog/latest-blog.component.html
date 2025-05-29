@@ -1,7 +1,7 @@
 <section class="event__area-four">
    <div class="container">
       <div class="row">
-         <div class="col-lg-6">
+         <div class="col-lg-6" data-aos="fade-left" data-aos-duration=2000>
             <div class="event__content-wrap">
                <div class="section__title mb-20">
                   <span class="sub-title">Our Blogs</span>
@@ -14,7 +14,7 @@
                </div>
             </div>
          </div>
-         <div class="col-lg-6 mt-5">
+         <div class="col-lg-6 mt-5" data-aos="fade-right">
             <div class="event__item-wrap-three">
                <div class="event__item-four shine__animate-item" *ngFor="let blog of blogs | slice:0:3">
                   <div class="event__thumb-four">
@@ -37,7 +37,7 @@
                      </div>
                   </div>
                </div>
-               <div class="tp-category-banner-btn"><a routerlink="/blog" class="thm-btn">View Recent Blogs</a></div>
+               <div class="tp-category-banner-btn"><a routerlink="/blog" class="thm-btn cursor-pointer">View Recent Blogs</a></div>
             </div>
          </div>
       </div>

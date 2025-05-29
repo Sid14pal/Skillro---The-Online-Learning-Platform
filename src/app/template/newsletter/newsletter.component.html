@@ -1,16 +1,27 @@
-<section class="newsletter-one mt-5">
-    <div class="container">
-        <div class="newsletter-one__inner">
-            <div class="newsletter-one__bg-shape" style="background-image: url('assets/templates/newsletter-one-bg-shape.png');"></div>
-            <h2 class="newsletter-one__title">Subscribe Our Newsletter</h2>
-            <p class="newsletter-one__text">Explore a diverse selection of courses all in one platform,<br>
-                designed to cater to various learning</p>
-            <form class="newsletter-one__contact-form">
-                <div class="newsletter-one__contact-input-box">
-                    <input type="email" placeholder="Enter email address" name="subscribeMail" [(ngModel)]="subscribeMail">
-                    <button type="submit" class="thm-btn" (click)="subscribe()"><span class="icon-angles-right"></span>Subscribe</button>
+<section class="newsletter__area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4">
+                        <div class="newsletter__img-wrap">
+                            <img src="assets/templates/newsletter_img.png" alt="img">
+                            <img src="assets/templates/newsletter_shape01.png" alt="img" data-aos="fade-up" data-aos-delay="400" class="aos-init aos-animate">
+                            <img src="assets/templates/newsletter_shape02.png" alt="img" class="alltuchtopdown">
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="newsletter__content">
+                            <h2 class="title">Want to stay <span>informed</span> about <br> new <span>courses &amp; study?</span></h2>
+                            <div class="newsletter__form">
+                                <form action="#">
+                                    <input type="email" placeholder="Type your e-mail" name="subscribeMail" [(ngModel)]="subscribeMail">
+                                    <button type="submit" class="thm-btn" (click)="subscribe()">Subscribe Now</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </form>
-        </div>
-    </div>
-</section>
+            </div>
+            <div class="newsletter__shape">
+                <img src="assets/templates/newsletter_shape03.png" alt="img" data-aos="fade-left" data-aos-delay="400" class="aos-init aos-animate">
+            </div>
+        </section>

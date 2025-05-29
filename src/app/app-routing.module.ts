@@ -5,8 +5,6 @@ import { LoginComponent } from './dashboard/login/login.component';
 import { ForgotPasswordComponent } from './dashboard/forgot-password/forgot-password.component';
 import { VarifyEmailComponent } from './dashboard/varify-email/varify-email.component';
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
-import { AboutStudentComponent } from './dashboard/about-student/about-student.component';
-import { AddCoursesComponent } from './dashboard/add-courses/add-courses.component';
 import { HomeComponent } from './template/home/home.component';
 import { AllCoursesComponent } from './dashboard/all-courses/all-courses.component';
 import { CourseDetailsComponent } from './template/course-details/course-details.component';
@@ -18,11 +16,11 @@ import { ContactUsComponent } from './template/contact-us/contact-us.component';
 import { StudentDashboardComponent } from './dashboard/student-dashboard/student-dashboard.component';
 import { EnrolledCoursesComponent } from './dashboard/enrolled-courses/enrolled-courses.component';
 import { StudentOrderHistoryComponent } from './dashboard/student-order-history/student-order-history.component';
-import { StudentLoginComponent } from './dashboard/student-login/student-login.component';
 import { BlogDetailsComponent } from './template/blog-details/blog-details.component';
 import { CartComponent } from './template/cart/cart.component';
 import { CheckoutComponent } from './template/checkout/checkout.component';
 import { ThankyouComponent } from './template/thankyou/thankyou.component';
+import { StudentLoginComponent } from './dashboard/student-login/student-login.component';
 
 const routes: Routes = [
 
@@ -36,8 +34,6 @@ const routes: Routes = [
   {path: 'student-dashboard', component : StudentDashboardComponent},
   {path: 'enrolled-courses', component : EnrolledCoursesComponent},
   {path: 'student-order-history', component : StudentOrderHistoryComponent},
-  {path: 'about-student', component : AboutStudentComponent},
-  {path: 'add-courses', component : AddCoursesComponent},
   {path: 'all-courses', component : AllCoursesComponent},
   {path: 'course-details', component : CourseDetailsComponent},
   {path: 'course-list', component : CourseListComponent},

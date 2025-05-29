@@ -85,7 +85,7 @@
                     <ul class="cart-total list-unstyled">
                         <li>
                             <span>Total</span>
-                            <span class="cart-total-amount">${{ getTotalPrice().toFixed(2) }}</span>
+                            <span class="cart-total-amount">{{ getTotalPrice().toFixed(2) | currency }}</span>
                         </li>
                     </ul>
                     <div class="cart-page__buttons">

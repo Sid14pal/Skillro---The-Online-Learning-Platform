@@ -4,21 +4,7 @@
 </div>
     <div class="receipt-header">
       <h1>Order Receipt</h1>
-      <p class="order-meta">Order #123456 | Placed on May 27, 2025</p>
-    </div>
-
-    <div class="section-title">Customer Details</div>
-    <div class="customer-info">
-      <strong>Name:</strong> John Doe<br>
-      <strong>Email:</strong> john<br>
-      <strong>Phone:</strong> (123) 456-7890
-    </div>
-
-    <div class="section-title">Shipping Address</div>
-    <div class="shipping-info">
-      123 Elm Street<br>
-      Springfield, IL 62704<br>
-      United States
+      <p class="order-meta">Order #{{orderId}}</p>
     </div>
 
     <div class="section-title">Order Details</div>
@@ -32,25 +18,17 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Glow Facial Cream</td>
+        <tr *ngFor="let item of cartItems">
+          <td>{{item.name}}</td>
           <td>1</td>
-          <td>$25.00</td>
-          <td>$25.00</td>
-        </tr>
-        <tr>
-          <td>MakeUp Eraser</td>
-          <td>2</td>
-          <td>$12.00</td>
-          <td>$24.00</td>
+          <td>{{item.price | currency}}</td>
+          <td>{{item.price | currency}}</td>
         </tr>
       </tbody>
     </table>
 
     <div class="total-section">
-      <p>Subtotal: $49.00</p>
-      <p>Shipping: $5.00</p>
-      <p class="grand-total">Total: $54.00</p>
+      <p class="grand-total">Total: {{ getTotalPrice().toFixed(2) | currency }}</p>
     </div>
 
     <div class="footer-note">

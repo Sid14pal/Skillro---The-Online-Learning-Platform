@@ -3,11 +3,12 @@ import { AuthService } from '../../services/auth.service';
 import { RouteStatusService } from '../../services/route-status.service';
 import { StudentService } from '../../services/student.service';
 import { Student } from '../../datatype';
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.css'
+  styleUrl: './dashboard.component.css',
 })
 export class DashboardComponent implements OnInit{
 
@@ -33,25 +34,12 @@ export class DashboardComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.getAllStudents();
     this.auth.getCurrentUser().subscribe(user => {
       if (user) {
         this.user = user;
         this.userInitials = this.getInitials(user);
         console.log('User data:', this.user);
       }
-    });
-  }
-
-  getAllStudents() {
-    this.data.getAllStudents().subscribe(res => {
-      this.studentsList = res.map((e: any) => {
-        const data = e.payload.doc.data();
-        data.id = e.payload.doc.id;
-        return data;
-      });
-    }, err => {
-      alert('Error while fetching student data');
     });
   }
 

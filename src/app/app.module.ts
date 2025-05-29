@@ -24,8 +24,6 @@ import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { DashboardSidebarComponent } from './dashboard/dashboard-sidebar/dashboard-sidebar.component';
 import { EditStudentComponent } from './dashboard/edit-student/edit-student.component';
 import { DashboardHeaderComponent } from './dashboard/dashboard-header/dashboard-header.component';
-import { AboutStudentComponent } from './dashboard/about-student/about-student.component';
-import { AddCoursesComponent } from './dashboard/add-courses/add-courses.component';
 import { BannerComponent } from './template/banner/banner.component';
 import { HomeComponent } from './template/home/home.component';
 import { AllCoursesComponent } from './dashboard/all-courses/all-courses.component';
@@ -49,7 +47,6 @@ import { StudentDashboardBannerComponent } from './dashboard/student-dashboard-b
 import { StudentDashboardSidebarComponent } from './dashboard/student-dashboard-sidebar/student-dashboard-sidebar.component';
 import { EnrolledCoursesComponent } from './dashboard/enrolled-courses/enrolled-courses.component';
 import { StudentOrderHistoryComponent } from './dashboard/student-order-history/student-order-history.component';
-import { StudentLoginComponent } from './dashboard/student-login/student-login.component';
 import { StudentDashboardHeaderComponent } from './dashboard/student-dashboard-header/student-dashboard-header.component';
 import { CardsComponent } from './template/cards/cards.component';
 import { LatestBlogComponent } from './template/latest-blog/latest-blog.component';
@@ -59,6 +56,9 @@ import { BlogDetailsComponent } from './template/blog-details/blog-details.compo
 import { CartComponent } from './template/cart/cart.component';
 import { CheckoutComponent } from './template/checkout/checkout.component';
 import { ThankyouComponent } from './template/thankyou/thankyou.component';
+import { AdminLoginComponent } from './dashboard/admin-login/admin-login.component';
+import { StudentLoginComponent } from './dashboard/student-login/student-login.component';
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 
 
 @NgModule({
@@ -73,8 +73,6 @@ import { ThankyouComponent } from './template/thankyou/thankyou.component';
     DashboardSidebarComponent,
     EditStudentComponent,
     DashboardHeaderComponent,
-    AboutStudentComponent,
-    AddCoursesComponent,
     BannerComponent,
     HomeComponent,
     AllCoursesComponent,
@@ -98,7 +96,6 @@ import { ThankyouComponent } from './template/thankyou/thankyou.component';
     StudentDashboardSidebarComponent,
     EnrolledCoursesComponent,
     StudentOrderHistoryComponent,
-    StudentLoginComponent,
     StudentDashboardHeaderComponent,
     CardsComponent,
     LatestBlogComponent,
@@ -108,6 +105,8 @@ import { ThankyouComponent } from './template/thankyou/thankyou.component';
     CartComponent,
     CheckoutComponent,
     ThankyouComponent,
+    AdminLoginComponent,
+    StudentLoginComponent
   ],
   imports: [
     BrowserModule,
@@ -117,6 +116,8 @@ import { ThankyouComponent } from './template/thankyou/thankyou.component';
     AngularFireModule.initializeApp(environment.firebase),
     MatSnackBarModule,
     MatIconModule,
+    CanvasJSAngularChartsModule
+    
   ],
   providers: [
     provideClientHydration(),
