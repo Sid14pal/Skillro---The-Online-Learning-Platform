@@ -21,12 +21,14 @@ import { CartComponent } from './template/cart/cart.component';
 import { CheckoutComponent } from './template/checkout/checkout.component';
 import { ThankyouComponent } from './template/thankyou/thankyou.component';
 import { StudentLoginComponent } from './dashboard/student-login/student-login.component';
+import { OrdersComponent } from './dashboard/orders/orders.component';
 
 const routes: Routes = [
 
   {path: '', component : HomeComponent},
   {path: 'student-login', component : StudentLoginComponent},
   {path: 'register', component : RegisterComponent},
+  {path: 'orders', component : OrdersComponent},
   {path: 'login', component : LoginComponent},
   {path: 'forgot-password', component : ForgotPasswordComponent},
   {path: 'varify-email', component : VarifyEmailComponent},

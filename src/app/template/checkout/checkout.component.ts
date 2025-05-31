@@ -33,7 +33,7 @@ export class CheckoutComponent {
     cardNumber: '',
     month: '',
     year: '',
-    cvv: '',
+    cvv: ''
   }
 
   resetForm() {
@@ -52,7 +52,7 @@ export class CheckoutComponent {
     cardNumber: '',
     month: '',
     year: '',
-    cvv: '',
+    cvv: ''
     };
   }
 
@@ -93,6 +93,7 @@ export class CheckoutComponent {
   submitCheckout() {
     const checkoutUserDetails = {
       orderInfo: this.checkoutData,
+      cartInfo: this.cartItems,
     }
 
     if(!this.validateForm()) {

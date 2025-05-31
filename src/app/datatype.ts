@@ -43,5 +43,5 @@ export interface checkout {
   cardNumber: string;
   month: string;
   year: string;
-  cvv: string
+  cvv: string;
 }

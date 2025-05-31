@@ -59,6 +59,7 @@ import { ThankyouComponent } from './template/thankyou/thankyou.component';
 import { AdminLoginComponent } from './dashboard/admin-login/admin-login.component';
 import { StudentLoginComponent } from './dashboard/student-login/student-login.component';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+import { OrdersComponent } from './dashboard/orders/orders.component';
 
 
 @NgModule({
@@ -106,7 +107,8 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
     CheckoutComponent,
     ThankyouComponent,
     AdminLoginComponent,
-    StudentLoginComponent
+    StudentLoginComponent,
+    OrdersComponent
   ],
   imports: [
     BrowserModule,
