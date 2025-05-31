@@ -15,6 +15,7 @@ export class CheckoutComponent {
   cartItems: any[] = [];
   countries: string[] = [];
   states: string[] = [];
+  today: string = '';
 
   selectedCountry: string = '';
 
@@ -33,7 +34,8 @@ export class CheckoutComponent {
     cardNumber: '',
     month: '',
     year: '',
-    cvv: ''
+    cvv: '',
+    date: '',
   }
 
   resetForm() {
@@ -52,7 +54,8 @@ export class CheckoutComponent {
     cardNumber: '',
     month: '',
     year: '',
-    cvv: ''
+    cvv: '',
+    date: '',
     };
   }
 
@@ -70,6 +73,10 @@ export class CheckoutComponent {
     this.countryService.getCountries().subscribe((res: any) => {
     this.countries = res.data.map((item: any) => item.name).sort();
     });
+
+    const now = new Date();
+    this.today = now.toISOString().substring(10 , 0)
+    this.checkoutData.date = this.today;
   }
 
     onCountryChange(country: string): void {
@@ -105,6 +112,7 @@ export class CheckoutComponent {
         this.router.navigate(['/thankyou']);
         this.openSnackBar('Your order has been submitted successfully');
         this.resetForm();
+        console.log(checkoutUserDetails)
       })
   }
 

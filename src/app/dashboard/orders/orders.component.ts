@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-orders',
@@ -9,8 +10,10 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 export class OrdersComponent implements OnInit{
 
   orderDetails : any[] = [];
+  selectedOrder: any;
+  email: any = 'siddharthapaul440@gmail.com';
 
-  constructor(private firestore: AngularFirestore) {}
+  constructor(private firestore: AngularFirestore, config: NgbModalConfig, private modalService: NgbModal,) {}
 
 
   ngOnInit(): void {
@@ -34,5 +37,11 @@ export class OrdersComponent implements OnInit{
       console.error('Error fetching orders:', error);
     });
   }
+
+open(content: TemplateRef<any>, item: any) {
+  this.selectedOrder = item;
+  this.modalService.open(content, { size: 'xl', windowClass: 'custom-modal-xl' });
+}
+
 
 }

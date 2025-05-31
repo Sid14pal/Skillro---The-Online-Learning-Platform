@@ -44,4 +44,5 @@ export interface checkout {
   month: string;
   year: string;
   cvv: string;
+  date: string;
 }

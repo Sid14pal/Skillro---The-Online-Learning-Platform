@@ -60,6 +60,7 @@ import { AdminLoginComponent } from './dashboard/admin-login/admin-login.compone
 import { StudentLoginComponent } from './dashboard/student-login/student-login.component';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { OrdersComponent } from './dashboard/orders/orders.component';
+import { DashboardFooterComponent } from './dashboard/dashboard-footer/dashboard-footer.component';
 
 
 @NgModule({
@@ -108,7 +109,8 @@ import { OrdersComponent } from './dashboard/orders/orders.component';
     ThankyouComponent,
     AdminLoginComponent,
     StudentLoginComponent,
-    OrdersComponent
+    OrdersComponent,
+    DashboardFooterComponent
   ],
   imports: [
     BrowserModule,

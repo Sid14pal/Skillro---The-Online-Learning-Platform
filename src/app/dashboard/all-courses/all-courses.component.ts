@@ -93,7 +93,7 @@ export class AllCoursesComponent {
       this.auth.logout();
     }
 
-    	open(content: any) {
+  open(content: any) {
 		this.modalService.open(content);
 	}
 
