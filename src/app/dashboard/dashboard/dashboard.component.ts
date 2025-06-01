@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { RouteStatusService } from '../../services/route-status.service';
 import { StudentService } from '../../services/student.service';
-import { Student } from '../../datatype';
-import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
-
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -12,22 +9,10 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 })
 export class DashboardComponent implements OnInit{
 
-  studentsList: Student[] = [];
-  studentObj: Student = {
-    id: '',
-    name: '',
-    email: '',
-    roll: '',
-    class: '',
-    mobile: '',
-    bloodgroup: '',
-    address: '',
-    gender: '',
-    birthDay: '',
-  };
-
   user: any;
   userInitials: string | undefined;
+  allowedEmails: string[] = ['siddharthapaul440@gmail.com' , 'siddhartha.paul@codeclouds.in'];
+  hasAccess = false;
 
   constructor(private auth:AuthService, private routeStatusService: RouteStatusService, private data: StudentService){
     this.routeStatusService.hideHeader = true;
@@ -38,7 +23,7 @@ export class DashboardComponent implements OnInit{
       if (user) {
         this.user = user;
         this.userInitials = this.getInitials(user);
-        console.log('User data:', this.user);
+        this.hasAccess = this.allowedEmails.includes(user.email ?? '');
       }
     });
   }

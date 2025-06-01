@@ -1,20 +1,30 @@
  <!-- Left Sidebar start-->
  <div class="side-menu-fixed">
-    <div class="scrollbar side-menu-bg">
-      <ul class="nav navbar-nav side-menu" id="sidebarnav">
-        <li>
-          <a class="cursor-pointer" routerLink="/dashboard"><mat-icon>home</mat-icon><span class="right-nav-text">Dashboard</span> </a>
-        </li>
+   <div class="scrollbar side-menu-bg">
+     <ul class="nav navbar-nav side-menu" id="sidebarnav">
+       <li>
+         <a class="cursor-pointer" routerLink="/dashboard">
+           <mat-icon>home</mat-icon><span class="right-nav-text">Dashboard</span>
+         </a>
+       </li>
 
-        <li>
-          <div class="d-inline-block w-100 cursor-pointer">
-            <a id="dropdownBasic1"  routerLink="/all-courses"> <mat-icon>book</mat-icon> <span class="right-nav-text">All Courses</span>  </a>
-            </div>
-        </li>
-        <li>
-          <a class="cursor-pointer" routerLink="/orders"><mat-icon>local_shipping</mat-icon><span class="right-nav-text"> Orders</span> </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <!-- Left Sidebar End-->
+       <li>
+         <div class="d-inline-block w-100 cursor-pointer" ngbDropdown>
+           <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+            <mat-icon>book</mat-icon> <span class="right-nav-text"> Courses</span>
+           </button>
+           <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+             <button ngbDropdownItem routerLink="/all-courses">All Courses</button>
+             <button ngbDropdownItem >Add New Course</button>
+           </div>
+         </div>
+       </li>
+       <li>
+         <a class="cursor-pointer" routerLink="/orders">
+           <mat-icon>local_shipping</mat-icon><span class="right-nav-text">All Orders</span>
+         </a>
+       </li>
+     </ul>
+   </div>
+ </div>
+ <!-- Left Sidebar End-->

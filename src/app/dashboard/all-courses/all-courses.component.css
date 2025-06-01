@@ -1724,7 +1724,7 @@
   .nav-link {
     display: block;
     padding: 0.5rem 1rem;
-    color: #ffffff !important;
+    color: #000 !important;
     text-decoration: none;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
   }
@@ -2133,9 +2133,9 @@
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #212130;
+    background-color: #ffffff;
     background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.125);
+    border: 1px solid rgba(148, 148, 148, 0.125);
     border-radius: 0.25rem;
   }
   .card > hr {
@@ -20593,7 +20593,6 @@
     margin: 0; }
   
   h1, h2, h3, h4, h5, h6 {
-    color: #fff;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 0.5rem; }
@@ -22265,7 +22264,7 @@
   
   .content-wrapper {
     padding-left: 260px;
-    background: #17171E;
+    background: #fff;
     position: relative;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -24360,7 +24359,7 @@
 }
 
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
+    color: #ffffff !important;
   background-color: #6a73fa;
   font-size: 14px;
 }
@@ -24400,7 +24399,7 @@
 }
 
 .dataTable {
-  --bs-table-bg: #212130;
+  --bs-table-bg: transparent;
 }
 
 .list-group-item {

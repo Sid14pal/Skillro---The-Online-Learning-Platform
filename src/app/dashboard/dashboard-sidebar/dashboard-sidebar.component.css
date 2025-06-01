@@ -1742,7 +1742,8 @@
     padding: 0.25rem 1rem;
     clear: both;
     font-weight: 400;
-    color: #212529;
+    color: #adaeb3;
+    font-size: 14px;
     text-align: inherit;
     text-decoration: none;
     white-space: nowrap;
@@ -24821,10 +24822,9 @@
     padding: 0.5rem 0;
     margin: 0;
     font-size: 1rem;
-    /* color: #ffffff; */
     text-align: left;
     list-style: none;
-    background-color: #17171e;
+    background-color: #282a39;
     background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 0.25rem;
@@ -24835,5 +24835,34 @@
   background-color: #ffaa16;
 }
 
+#dropdownBasic1 {
+    font-size: 14px;
+    border: none;
+    color: #bfc0c4;
+    margin-left: 6px;
+    width: 100%;
+    text-align: left;
+}
 
+.btn-outline-primary[_ngcontent-ng-c3911965872]:hover {
+    color: #fff;
+    background: none;
+    border-color: #0d6efd;
+}
+
+.btn-outline-primary.dropdown-toggle.show {
+    color: #fff;
+    background: none;
+    border-color: #0d6efd;
+}
+
+.btn-outline-primary[_ngcontent-ng-c1557629653]:hover {
+    background: rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.2);
+}
   

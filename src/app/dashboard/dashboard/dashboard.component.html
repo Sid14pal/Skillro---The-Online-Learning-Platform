@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="wrapper" *ngIf="hasAccess; else noAccess">
 
    <app-dashboard-header></app-dashboard-header>
 
@@ -137,3 +137,89 @@
     <!--=================================
     Main content -->
   </div>
+
+  <ng-template #noAccess>
+
+<div class="container-star screen">
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-1"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+  <div class="star-2"></div>
+</div>
+<div class="container container-bird">
+ 
+  <div class="container-title">
+    <div class="title">
+      <div class="number">4</div>
+      <div class="moon">
+        <div class="face">
+          <div class="mouth"></div>
+          <div class="eyes">
+            <div class="eye-left"></div>
+            <div class="eye-right"></div>
+          </div>
+        </div>
+      </div>
+      <div class="number">3</div>
+    </div>
+    <div class="subtitle">Oops. Looks like you took a wrong turn.</div>
+    <button type="button" routerLink="/login">Go Back</button>
+  </div>
+</div>
+</ng-template>
