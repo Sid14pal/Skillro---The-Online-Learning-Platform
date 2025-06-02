@@ -22,7 +22,6 @@ import { ForgotPasswordComponent } from './dashboard/forgot-password/forgot-pass
 import { VarifyEmailComponent } from './dashboard/varify-email/varify-email.component';
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { DashboardSidebarComponent } from './dashboard/dashboard-sidebar/dashboard-sidebar.component';
-import { EditStudentComponent } from './dashboard/edit-student/edit-student.component';
 import { DashboardHeaderComponent } from './dashboard/dashboard-header/dashboard-header.component';
 import { BannerComponent } from './template/banner/banner.component';
 import { HomeComponent } from './template/home/home.component';
@@ -61,6 +60,7 @@ import { StudentLoginComponent } from './dashboard/student-login/student-login.c
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { OrdersComponent } from './dashboard/orders/orders.component';
 import { DashboardFooterComponent } from './dashboard/dashboard-footer/dashboard-footer.component';
+import { AddCoursesComponent } from './dashboard/add-courses/add-courses.component';
 
 
 @NgModule({
@@ -73,7 +73,6 @@ import { DashboardFooterComponent } from './dashboard/dashboard-footer/dashboard
     VarifyEmailComponent,
     DashboardComponent,
     DashboardSidebarComponent,
-    EditStudentComponent,
     DashboardHeaderComponent,
     BannerComponent,
     HomeComponent,
@@ -110,7 +109,8 @@ import { DashboardFooterComponent } from './dashboard/dashboard-footer/dashboard
     AdminLoginComponent,
     StudentLoginComponent,
     OrdersComponent,
-    DashboardFooterComponent
+    DashboardFooterComponent,
+    AddCoursesComponent,
   ],
   imports: [
     BrowserModule,

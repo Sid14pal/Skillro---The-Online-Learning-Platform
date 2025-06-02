@@ -43,9 +43,9 @@ export class BannerComponent implements OnInit {
           queryParams: {
             image: student.imageUrl,
             name: student.name,
-            price: student.class,
-            lesson: student.roll,
-            category: student.email
+            price: student.price,
+            lesson: student.duration,
+            category: student.category
           }
         });
       }

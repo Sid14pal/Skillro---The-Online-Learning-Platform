@@ -1,15 +1,11 @@
 export interface Student {
     id: string;
     name : string;
-    email : string;
-    roll : string;
-    class: string;
-    mobile: string;
-    bloodgroup: string;
-    address: string;
-    gender: string;
-    birthDay: string;
+    category : string;
+    duration : string;
+    price: string;
     imageUrl?: string;
+    videoUrl?: string;  
 }
 
 export interface courses {

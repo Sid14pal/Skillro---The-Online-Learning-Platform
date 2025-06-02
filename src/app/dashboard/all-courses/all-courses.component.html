@@ -35,7 +35,7 @@
                            <div class="short-panel mb-5 border-bottom">
                              <div class="d-flex justify-content-between">
                                <h6 class="mb-0"> All Course Lists</h6>
-                               <button class="btn btn-success h6" (click)="open(content)"><small>+ Add New Course</small></button>
+                               <button class="btn btn-success h6" routerLink="/add-courses"><small>+ Add New Course</small></button>
                              </div>
                            </div>
                              <table id="datatable" class="table table-light table-hover dataTable p-0 mb-4 bg-table-none" role="grid" aria-describedby="datatable_info">
@@ -53,9 +53,9 @@
                                     <tr role="row" class="odd" *ngFor="let student of studentsList">
                                      <td><img class="rounded-circle student-img" [src]="student.imageUrl" width="35" src="" alt=""></td>
                                        <td class="sorting_1">{{student.name}}</td>
-                                       <td>{{student.email}}</td>
-                                       <td>{{student.roll}}</td>
-                                       <td>{{student.class}}</td>
+                                       <td>{{student.category}}</td>
+                                       <td>{{student.duration}}</td>
+                                       <td>{{student.price}}</td>
                                        <td>
                                         <a class="btn btn-xs sharp btn-danger" (click)="deleteStudent(student)" mat-raised-button><mat-icon>delete</mat-icon></a>
                                      </td>
@@ -85,13 +85,13 @@
                                       <img [src]="student.imageUrl" width="100" height="100" class="img-fluid rounded-circle card-image" alt="">
                                    </div>
                                    <h5 class="mt-4 mb-1">{{student.name}}</h5>
-                                   <p class="text-muted mb-3">Price: {{student.class}}</p>
+                                   <p class="text-muted mb-3">Price: {{student.price}}</p>
                                    <ul class="list-group mb-3 list-group-flush">
-                                      <li class="list-group-item px-0 d-flex justify-content-between text-light">
-                                         <span class="mb-0">Category:</span><strong>{{student.email}}</strong>
+                                      <li class="list-group-item px-0 d-flex justify-content-between text-dark">
+                                         <span class="mb-0">Category:</span>{{student.category}}
                                       </li>
-                                      <li class="list-group-item px-0 d-flex justify-content-between text-light">
-                                       <span class="mb-0">Duration:</span><strong>{{student.roll}}</strong>
+                                      <li class="list-group-item px-0 d-flex justify-content-between text-dark">
+                                       <span class="mb-0">Duration:</span>{{student.duration}}
                                     </li>
                                    </ul>
                                 </div>
@@ -112,56 +112,3 @@
      <!--=================================
      Main content -->
    </div>
-   <ng-template #content let-c="close" let-d="dismiss">
-	<div class="modal-header">
-		<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
-	</div>
-	<div class="modal-body">
-		      <div class="row">
-        <div class="card card-statistics mb-30">
-          <div class="card-body">
-            <h5 class="card-title">Basic Info</h5>
-            <form>
-              <div class="row">
-                <div class="col-sm-12 mb-3">
-                  <label class="form-label" for="inputEmail4">Course Name</label>
-                  <input type="text" class="form-control mb-3" placeholder="Course Name" name="name" [(ngModel)]="studentObj.name">
-                </div>
-              </div>
-              <div class="row">
-                <div class="mb-3 col-md-6">
-                  <label class="form-label" for="inputEmail4">Course Category</label>
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="Course Category" name="email" [(ngModel)]="studentObj.email">
-                </div>
-                <div class="mb-3 col-md-6">
-                  <label class="form-label" for="inputRoll">Duration</label>
-                  <input type="text" class="form-control" id="inputRoll" placeholder="Duration" name="roll" [(ngModel)]="studentObj.roll">
-                </div>
-              </div>
-              <div class="row">
-                <div class="mb-3 col-md-6">
-                  <label class="form-label" for="inputClass">Price</label>
-                  <input type="text" class="form-control" id="inputClass" placeholder="Price" name="class" [(ngModel)]="studentObj.class">
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label class="form-label" for="inputImage">Choose Image</label>
-                 <span class="d-flex">
-                  <input type="file" class="form-control" id="inputImage" name="file" (change)="onFileSelected($event)">
-                 </span>
-                </div>
-              </div>
-              <button class="submitbutton" (click)="addStudent()" type="submit">
-                <div class="main-bar">
-                  <div class="bar" *ngIf="isLoading"></div>
-                </div>
-                <span *ngIf="isLoading">Loading</span>
-                <span *ngIf="!isLoading">Submit</span>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-	</div>
-</ng-template>

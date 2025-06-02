@@ -2129,6 +2129,7 @@
   
   .card {
     position: relative;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     min-width: 0;
@@ -24402,12 +24403,8 @@
   --bs-table-bg: transparent;
 }
 
-.list-group-item {
-  background-color: #212130;
-}
-
 .card-dropdown .mat-icon{
-  color: #fff;
+  color: #000;
 }
 
 .card-dropdown button{

@@ -123,7 +123,7 @@
   <div *ngFor="let student of filteredStudents" class="result-card mb-2">
     <a class="d-flex align-items-center cursor-pointer" (click)="viewDetails(student)">
         <img [src]="student.imageUrl" alt="not found" class="img-fluid search_img">
-    <p>{{ student.name }} <br> {{student.class | currency}}</p>
+    <p>{{ student.name }} <br> {{student.price | currency}}</p>
     </a>
   </div>
 </div>
