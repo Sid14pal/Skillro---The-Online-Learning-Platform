@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { AngularFireStorage, AngularFireUploadTask } from '@angular/fire/compat/storage';
 import {  Student } from '../datatype';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StudentService {
+  storage: any;
 
   constructor(private afs: AngularFirestore, private fireStorage: AngularFireStorage) { }
 
@@ -41,5 +43,13 @@ export class StudentService {
     const fileRef = this.fireStorage.ref(path);
     await this.fireStorage.upload(path, file);
     return fileRef.getDownloadURL().toPromise();
+  }
+
+  uploadVideo(file: File, filePath: string): AngularFireUploadTask {
+    return this.fireStorage.upload(filePath, file);  // ✅ fixed here
+  }
+
+  getDownloadUrl(filePath: string): Observable<string> {
+    return this.fireStorage.ref(filePath).getDownloadURL();  // ✅ fixed here
   }
 }

@@ -10,6 +10,7 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { getDatabase, provideDatabase } from '@angular/fire/database';
 import { getMessaging, provideMessaging } from '@angular/fire/messaging';
 import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RegisterComponent } from './dashboard/register/register.component';
 import { LoginComponent } from './dashboard/login/login.component';
@@ -61,6 +62,7 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { OrdersComponent } from './dashboard/orders/orders.component';
 import { DashboardFooterComponent } from './dashboard/dashboard-footer/dashboard-footer.component';
 import { AddCoursesComponent } from './dashboard/add-courses/add-courses.component';
+import { VideoComponent } from './dashboard/video/video.component';
 
 
 @NgModule({
@@ -111,6 +113,7 @@ import { AddCoursesComponent } from './dashboard/add-courses/add-courses.compone
     OrdersComponent,
     DashboardFooterComponent,
     AddCoursesComponent,
+    VideoComponent,
   ],
   imports: [
     BrowserModule,
@@ -118,6 +121,7 @@ import { AddCoursesComponent } from './dashboard/add-courses/add-courses.compone
     FormsModule,
     NgbModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireStorageModule,
     MatSnackBarModule,
     MatIconModule,
     CanvasJSAngularChartsModule

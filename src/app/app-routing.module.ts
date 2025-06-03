@@ -23,6 +23,7 @@ import { ThankyouComponent } from './template/thankyou/thankyou.component';
 import { StudentLoginComponent } from './dashboard/student-login/student-login.component';
 import { OrdersComponent } from './dashboard/orders/orders.component';
 import { AddCoursesComponent } from './dashboard/add-courses/add-courses.component';
+import { VideoComponent } from './dashboard/video/video.component';
 
 const routes: Routes = [
 
@@ -49,6 +50,7 @@ const routes: Routes = [
   {path: 'checkout', component : CheckoutComponent},
   {path: 'thankyou', component : ThankyouComponent},
   {path: 'add-courses', component : AddCoursesComponent},
+  {path: 'video', component : VideoComponent},
 
 ];
 

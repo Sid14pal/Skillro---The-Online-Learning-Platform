@@ -5,7 +5,11 @@ export interface Student {
     duration : string;
     price: string;
     imageUrl?: string;
-    videoUrl?: string;  
+    videoUrl?: string;   // ✅ Add this
+    courseContents?: {
+    name: string;
+    description: string;
+  }[]; 
 }
 
 export interface courses {
