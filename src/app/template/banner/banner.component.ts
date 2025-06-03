@@ -45,7 +45,9 @@ export class BannerComponent implements OnInit {
             name: student.name,
             price: student.price,
             lesson: student.duration,
-            category: student.category
+            category: student.category,
+            contents: JSON.stringify(student.courseContents),
+            video: student.videoUrl
           }
         });
       }

@@ -1,419 +1,132 @@
-<section class="page-header">
-    <div class="page-header__bg" style="background-image: url(assets/templates/page-header-bg-shape.png);">
-    </div>
-    <div class="page-header__shape-4">
-       <img src="assets/templates/page-header-shape-4.png" alt="">
-    </div>
-    <div class="page-header__shape-5">
-       <img src="assets/templates/page-header-shape-5.png" alt="">
-    </div>
-    <div class="container">
-       <div class="page-header__inner">
-          <div class="page-header__img">
-             <img src="assets/templates/page-header-img-1.png" alt="">
-             <div class="page-header__shape-1">
-                <img src="assets/templates/page-header-shape-1.png" alt="">
-             </div>
-             <div class="page-header__shape-2">
-                <img src="assets/templates/page-header-shape-2.png" alt="">
-             </div>
-             <div class="page-header__shape-3">
-                <img src="assets/templates/page-header-shape-3.png" alt="">
-             </div>
-          </div>
-          <h2>Course Details</h2>
-          <div class="thm-breadcrumb__box">
-             <ul class="thm-breadcrumb list-unstyled">
-                <li><a href="#" routerLink="/">Home</a></li>
-                <li><span>//</span></li>
-                <li>Course Details</li>
-             </ul>
-          </div>
-       </div>
-    </div>
- </section>
- <section class="course-details">
-    <div class="container">
-       <div class="row">
-          <div class="col-xl-8 col-lg-7">
-             <div class="course-details__left">
-                <div class="course-details__img">
-                   <img src="assets/templates/course-details-img-1.jpg" alt="">
-                </div>
-                <div class="course-details__content">
-                   <div class="course-details__tag-box">
-                      <div class="course-details__tag-shape"></div>
-                      <span class="course-details__tag">Web Programming</span>
-                   </div>
-                   <h2 class="course-details__title">{{course_name}}</h2>
-                   <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs mb-4">
-                   <li [ngbNavItem]="1">
-                      <button ngbNavLink> Overview</button>
-                      <ng-template ngbNavContent>
-                         <h2 class="course-details__overview-title">Course Overview</h2>
-                         <p>
-                            Our courses are designed to deliver a rich and engaging learning experience. Whether you're just starting out or looking to sharpen your skills, each course offers step-by-step guidance to help you master the subject matter with confidence. From theory to hands-on practice, you’ll gain the knowledge you need to succeed.
-                         </p>
-                         <h2 class="course-details__overview-title">📚 Comprehensive Learning Experience</h2>
+   <section class="page-header">
+      <div class="page-header__bg" style="background-image: url(assets/templates/page-header-bg-shape.png);">
+      </div>
+      <div class="page-header__shape-4">
+         <img src="assets/templates/page-header-shape-4.png" alt="">
+      </div>
+      <div class="page-header__shape-5">
+         <img src="assets/templates/page-header-shape-5.png" alt="">
+      </div>
+      <div class="container">
+         <div class="page-header__inner">
+            <div class="page-header__img">
+               <img src="assets/templates/page-header-img-1.png" alt="">
+               <div class="page-header__shape-1">
+                  <img src="assets/templates/page-header-shape-1.png" alt="">
+               </div>
+               <div class="page-header__shape-2">
+                  <img src="assets/templates/page-header-shape-2.png" alt="">
+               </div>
+               <div class="page-header__shape-3">
+                  <img src="assets/templates/page-header-shape-3.png" alt="">
+               </div>
+            </div>
+            <h2>Course Details</h2>
+            <div class="thm-breadcrumb__box">
+               <ul class="thm-breadcrumb list-unstyled">
+                  <li><a href="#" routerLink="/">Home</a></li>
+                  <li><span>//</span></li>
+                  <li>Course Details</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="course-details">
+      <div class="container">
+         <div class="row">
+            <div class="col-xl-8 col-lg-7">
+               <div class="course-details__left">
+                  <div class="course-details__img">
+                     <img src="{{course_image}}" alt="">
+                  </div>
+                  <div class="course-details__content">
+                     <div class="course-details__tag-box">
+                        <div class="course-details__tag-shape"></div>
+                        <span class="course-details__tag">Web Programming</span>
+                     </div>
+                     <h2 class="course-details__title">{{course_name}}</h2>
+                     <h2 class="course-details__overview-title">Course Overview</h2>
+                     <p>
+                        Our courses are designed to deliver a rich and engaging learning experience. Whether you're just
+                        starting out or looking to sharpen your skills, each course offers step-by-step guidance to help
+                        you master the subject matter with confidence. From theory to hands-on practice, you’ll gain the
+                        knowledge you need to succeed.
+                     </p>
+                       <h2 class="course-details__overview-title">Comprehensive Learning Experience</h2>
                          <p>
                             Each course combines video lessons, downloadable resources, quizzes, and real-world projects to ensure that you not only learn but retain and apply the concepts effectively. We focus on practical learning so that you can confidently use your skills in real-life scenarios.
                          </p>
-                         <h2 class="course-details__overview-title">🧑‍🏫 Expert Instruction</h2>
+                         <h2 class="course-details__overview-title">Expert Instruction</h2>
                          <p>
                             All our courses are created and taught by experienced instructors who are passionate about teaching and have real-world expertise in their field. You’ll learn directly from industry professionals, gaining insights and tips that go beyond textbooks.
                          </p>
-                         <h2 class="course-details__overview-title">🕒 Learn at Your Own Pace</h2>
-                         <p>
-                            Our platform is designed for flexibility. Learn anytime, anywhere, and on any device. Whether you have 10 minutes or 2 hours a day, you can move through the content at your own speed and revisit lessons whenever you need a refresher.
-                         </p>
-                      </ng-template>
-                   </li>
-                   <li [ngbNavItem]="2">
-                      <button ngbNavLink>Review</button>
-                      <ng-template ngbNavContent>
-                         <div class="course-details__ratting-and-review-box">
-                            <ul class="course-details__ratting-box list-unstyled">
-                               <li>
-                                  <div class="course-details__ratting-list">
-                                     <span class="icon-star"><i class="material-icons account">star</i></span>
-                                     <span class="icon-star"><i class="material-icons account">star</i></span>
-                                     <span class="icon-star"><i class="material-icons account">star</i></span>
-                                     <span class="icon-star"><i class="material-icons account">star</i></span>
-                                     <span class="icon-star"><i class="material-icons account">star</i></span>
-                                  </div>
-                                  <div class="progress-levels">
-                                     <!--Skill Box-->
-                                     <div class="progress-box">
-                                        <div class="inner count-box counted">
-                                           <div class="bar">
-                                              <div class="bar-innner">
-                                                 <div class="skill-percent">
-                                                    <span class="count-text" data-speed="3000" data-stop="90">90</span>
-                                                    <span class="percent">%</span>
-                                                 </div>
-                                                 <div class="bar-fill" data-percent="90">
-                                                 </div>
-                                              </div>
-                                           </div>
-                                        </div>
-                                     </div>
-                                  </div>
-                               </li>
-                               <li>
-                                  <div class="course-details__ratting-list">
-                                     <span class="icon-star"><i class="material-icons account">star</i></span>
-                                     <span class="icon-star"><i class="material-icons account">star</i></span>
-                                     <span class="icon-star"><i class="material-icons account">star</i></span>
-                                     <span class="icon-star"><i class="material-icons account">star</i></span>
-                                     <span class="fill-white icon-star"><i class="material-icons account">star</i></span>
-                                  </div>
-                                  <div class="progress-levels">
-                                     <!--Skill Box-->
-                                     <div class="progress-box">
-                                        <div class="inner count-box counted">
-                                           <div class="bar">
-                                              <div class="bar-innner">
-                                                 <div class="skill-percent">
-                                                    <span class="count-text" data-speed="3000" data-stop="70">70</span>
-                                                    <span class="percent">%</span>
-                                                 </div>
-                                                 <div class="bar-fill" data-percent="70">
-                                                 </div>
-                                              </div>
-                                           </div>
-                                        </div>
-                                     </div>
-                                  </div>
-                               </li>
-                               <li>
-                                  <div class="course-details__ratting-list">
-                                     <span class="icon-star"><i class="material-icons account">star</i></span>
-                                     <span class="icon-star"><i class="material-icons account">star</i></span>
-                                     <span class="icon-star"><i class="material-icons account">star</i></span>
-                                     <span class="fill-white icon-star"><i class="material-icons account">star</i></span>
-                                     <span class="fill-white icon-star"><i class="material-icons account">star</i></span>
-                                  </div>
-                                  <div class="progress-levels">
-                                     <!--Skill Box-->
-                                     <div class="progress-box">
-                                        <div class="inner count-box counted">
-                                           <div class="bar">
-                                              <div class="bar-innner">
-                                                 <div class="skill-percent">
-                                                    <span class="count-text" data-speed="3000" data-stop="60">60</span>
-                                                    <span class="percent">%</span>
-                                                 </div>
-                                                 <div class="bar-fill" data-percent="60">
-                                                 </div>
-                                              </div>
-                                           </div>
-                                        </div>
-                                     </div>
-                                  </div>
-                               </li>
-                               <li>
-                                  <div class="course-details__ratting-list">
-                                     <span class="icon-star"><i class="material-icons account">star</i></span>
-                                     <span class="icon-star"><i class="material-icons account">star</i></span>
-                                     <span class="fill-white icon-star"><i class="material-icons account">star</i></span>
-                                     <span class="fill-white icon-star"><i class="material-icons account">star</i></span>
-                                     <span class="fill-white icon-star"><i class="material-icons account">star</i></span>
-                                  </div>
-                                  <div class="progress-levels">
-                                     <!--Skill Box-->
-                                     <div class="progress-box">
-                                        <div class="inner count-box counted">
-                                           <div class="bar">
-                                              <div class="bar-innner">
-                                                 <div class="skill-percent">
-                                                    <span class="count-text" data-speed="3000" data-stop="40">40</span>
-                                                    <span class="percent">%</span>
-                                                 </div>
-                                                 <div class="bar-fill" data-percent="40">
-                                                 </div>
-                                              </div>
-                                           </div>
-                                        </div>
-                                     </div>
-                                  </div>
-                               </li>
-                               <li>
-                                  <div class="course-details__ratting-list">
-                                     <span class="icon-star"></span>
-                                     <span class="fill-white icon-star"><i class="material-icons account">star</i></span>
-                                     <span class="fill-white icon-star"><i class="material-icons account">star</i></span>
-                                     <span class="fill-white icon-star"><i class="material-icons account">star</i></span>
-                                     <span class="fill-white icon-star"><i class="material-icons account">star</i></span>
-                                     <span class="fill-white icon-star"><i class="material-icons account">star</i></span>
-                                  </div>
-                                  <div class="progress-levels">
-                                     <!--Skill Box-->
-                                     <div class="progress-box">
-                                        <div class="inner count-box counted">
-                                           <div class="bar">
-                                              <div class="bar-innner">
-                                                 <div class="skill-percent">
-                                                    <span class="count-text" data-speed="3000" data-stop="30">30</span>
-                                                    <span class="percent">%</span>
-                                                 </div>
-                                                 <div class="bar-fill" data-percent="30">
-                                                 </div>
-                                              </div>
-                                           </div>
-                                        </div>
-                                     </div>
-                                  </div>
-                               </li>
-                            </ul>
-                            <div class="course-details__review-box">
-                               <div class="course-details__review-count">
-                                  <span class="odometer odometer-auto-theme" data-count="4.7">
-                                  4.7
-                                  </span>
-                               </div>
-                               <div class="course-details__review-content">
-                                  <p>127 Reviews</p>
-                                  <ul class="course-details__review-ratting list-unstyled">
-                                     <li>
-                                        <span class="icon-star"><i class="material-icons account">star</i></span>
-                                     </li>
-                                     <li>
-                                        <span class="icon-star"><i class="material-icons account">star</i></span>
-                                     </li>
-                                     <li>
-                                        <span class="icon-star"><i class="material-icons account">star</i></span>
-                                     </li>
-                                     <li>
-                                        <span class="icon-star"><i class="material-icons account">star</i></span>
-                                     </li>
-                                     <li>
-                                        <span class="icon-star"><i class="material-icons account">star</i></span>
-                                     </li>
-                                  </ul>
-                                  <div class="course-details__review-text">
-                                     <p><span class="icon-star"></span>Excellent</p>
-                                  </div>
-                               </div>
-                            </div>
-                         </div>
-                         <div class="comment-one">
-                            <h2 class="comment-one__title">Total Reviews (165)</h2>
-                            <ul class="comment-one__single-list list-unstyled">
-                               <li>
-                                  <div class="comment-one__single">
-                                     <div class="comment-one__image-box">
-                                        <div class="comment-one__image">
-                                           <img src="assets/templates/comment-1-1.jpg" alt="">
-                                        </div>
-                                     </div>
-                                     <div class="comment-one__content">
-                                        <div class="comment-one__name-box">
-                                           <h4>Alisa Manama <span>Product Designer</span>
-                                           </h4>
-                                        </div>
-                                        <p>This article really resonates with me! As a
-                                           working parent,
-                                           online
-                                           learning has been a game-changer. I’m able to
-                                           continue my
-                                           education
-                                           without sacrificing family time. I genuinely
-                                           believe that this
-                                           is
-                                           the
-                                           future of education.
-                                        </p>
-                                        <div class="comment-one__btn-box">
-                                           <span>18 July, 2024</span>
-                                        </div>
-                                     </div>
-                                  </div>
-                               </li>
-                               <li>
-                                  <div class="comment-one__single">
-                                     <div class="comment-one__image-box">
-                                        <div class="comment-one__image">
-                                           <img src="assets/templates/comment-1-2.jpg" alt="">
-                                        </div>
-                                     </div>
-                                     <div class="comment-one__content">
-                                        <div class="comment-one__name-box">
-                                           <h4>Jordan Walk <span>By Author</span></h4>
-                                        </div>
-                                        <p>Absolutely! It’s amazing how online learning
-                                           adapts to our lives,
-                                           isn’t it? Being able to balance work, family,
-                                           and education is
-                                           such a huge advantage. Glad it’s working so well
-                                           for you!
-                                        </p>
-                                        <div class="comment-one__btn-box">
-                                           <span>18 July, 2024</span>
-                                        </div>
-                                     </div>
-                                  </div>
-                               </li>
-                            </ul>
-                            <ul class="comment-one__single-list comment-one__single-list-2 list-unstyled">
-                               <li>
-                                  <div class="comment-one__single">
-                                     <div class="comment-one__image-box">
-                                        <div class="comment-one__image">
-                                           <img src="assets/templates/comment-1-3.jpg" alt="">
-                                        </div>
-                                     </div>
-                                     <div class="comment-one__content">
-                                        <div class="comment-one__name-box">
-                                           <h4>Lisa Oliva <span>Fashion Designer</span>
-                                           </h4>
-                                        </div>
-                                        <p>This article really resonates with me! As a
-                                           working parent,
-                                           online learning has been a game-changer. I’m
-                                           able to continue my
-                                           education without sacrificing family time. I
-                                           genuinely believe
-                                           that this is the future of education.
-                                        </p>
-                                        <div class="comment-one__btn-box">
-                                           <span>18 July, 2024</span>
-                                        </div>
-                                     </div>
-                                  </div>
-                               </li>
-                            </ul>
-                         </div>
-                         <div class="comment-form">
-                            <h2 class="comment-form__title">Submit Your Reviews</h2>
-                            <div class="comment-form__text-and-ratting">
-                               <p class="comment-form__text">Your Ratings </p>
-                            </div>
-                            <form action="assets/inc/sendemail.php" class="comment-form__form contact-form-validated" novalidate="novalidate">
-                               <div class="row">
-                                  <div class="col-xl-6 col-lg-6">
-                                     <div class="comment-form__input-box">
-                                        <input type="text" placeholder="Full Name" name="name">
-                                     </div>
-                                  </div>
-                                  <div class="col-xl-6 col-lg-6">
-                                     <div class="comment-form__input-box">
-                                        <input type="email" placeholder="Email Address" name="email">
-                                     </div>
-                                  </div>
-                               </div>
-                               <div class="row">
-                                  <div class="col-xl-12">
-                                     <div class="comment-form__input-box text-message-box">
-                                        <textarea name="message" placeholder="Write Review"></textarea>
-                                     </div>
-                                     <div class="comment-form__btn-box">
-                                        <button type="submit" class="comment-form__btn"><span class="icon-arrow-circle"></span>Submit
-                                        Review</button>
-                                     </div>
-                                  </div>
-                               </div>
-                            </form>
-                            <div class="result"></div>
-                         </div>
-                      </ng-template>
-                   </li>
-                   </ul>
-                   <div [ngbNavOutlet]="nav" class="mt-2"></div>
-                </div>
-             </div>
-          </div>
-          <div class="col-xl-4 col-lg-5">
-             <div class="course-details__right">
-                <div class="course-details__info-box">
-                   <div class="course-details__video-link">
-                      <div class="course-details__video-link-bg">
-                        <img src="{{course_image}}" class="img-fluid">
-                      </div>
-                      <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
-                         <div class="course-details__video-icon">
-                            <span class="icon-play"></span>
-                          <i class="material-icons">play_circle</i>
-                         </div>
-                      </a>
-                   </div>
-                   <div class="course-details__doller-and-btn-box">
-                      <h2 class="course-details__doller">{{course_price | currency}}</h2>
-                   </div>
-                   <div class="d-flex align-items-center justify-content-between">
-                      <div class="about-one__btn-box"><a href="#" class="about-one__btn thm-btn"><span class="icon-angles-right"></span>Purchase Now</a></div>
-                      <div class="cart-icon cursor-pointer" (click)="addToCart()"><a><i class="material-icons">shopping_cart</i></a></div>
-                   </div>
-                   <div class="course-details__info-list">
-                      <h2 class="course-details__info-list-title">This Course Included</h2>
-                      <ul class="course-details__info-list-1 list-unstyled">
-                         <li>
-                            <p><i class="material-icons account">library_books</i>Lesson</p>
-                            <span>{{course_lesson}}</span>
-                         </li>
-                         <li>
-                            <p><i class="material-icons account">category</i>Category</p>
-                            <span>{{course_category}}</span>
-                         </li>
-                         <li>
-                            <p><i class="material-icons account">equalizer</i>Skill Level</p>
-                            <span>Advance</span>
-                         </li>
-                         <li>
-                            <p><i class="material-icons account">language</i>Language</p>
-                            <span>English, French</span>
-                         </li>
-                         <li>
-                            <p><i class="material-icons account">verified_user</i>Certificate</p>
-                            <span>After Completed </span>
-                         </li>
-                      </ul>
-                   </div>
-                </div>
-             </div>
-          </div>
-       </div>
-    </div>
- </section>
+                     <div ngbAccordion>
+      <div ngbAccordionItem *ngFor="let item of course_contents">
+         <h2 ngbAccordionHeader>
+            <button ngbAccordionButton>{{item.name}}</button>
+         </h2>
+         <div ngbAccordionCollapse>
+            <div ngbAccordionBody>
+               <ng-template>
+                 {{item.description}}
+               </ng-template>
+            </div>
+         </div>
+      </div>
+   </div>
+   
+                  </div>
+               </div>
+            </div>
+            <div class="col-xl-4 col-lg-5">
+               <div class="course-details__right">
+                  <div class="course-details__info-box">
+                     <div class="course-details__video-link">
+                        <div class="course-details__video-link-bg">
+                           <video [src]="course_video" controls width="100%" height="200" oncontextmenu="return false;"></video>
+                        </div>
+                     </div>
+                     <div class="course-details__doller-and-btn-box">
+                        <h2 class="course-details__doller">{{course_price | currency}}</h2>
+                     </div>
+                     <div class="d-flex align-items-center justify-content-between">
+                        <div class="about-one__btn-box"><a href="#" class="about-one__btn thm-btn"><span
+                                 class="icon-angles-right"></span>Purchase Now</a></div>
+                        <div class="cart-icon cursor-pointer" (click)="addToCart()"><a><i
+                                 class="material-icons">shopping_cart</i></a></div>
+                     </div>
+                     <div class="course-details__info-list">
+                        <h2 class="course-details__info-list-title">This Course Included</h2>
+                        <ul class="course-details__info-list-1 list-unstyled">
+                           <li>
+                              <p><i class="material-icons account">library_books</i>Lesson</p>
+                              <span>{{course_lesson}}</span>
+                           </li>
+                           <li>
+                              <p><i class="material-icons account">category</i>Category</p>
+                              <span>{{course_category}}</span>
+                           </li>
+                           <li>
+                              <p><i class="material-icons account">equalizer</i>Skill Level</p>
+                              <span>Advance</span>
+                           </li>
+                           <li>
+                              <p><i class="material-icons account">language</i>Language</p>
+                              <span>English, French</span>
+                           </li>
+                           <li>
+                              <p><i class="material-icons account">verified_user</i>Certificate</p>
+                              <span>After Completed </span>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
 
- <app-newsletter></app-newsletter>
- <app-footer></app-footer>
+   <app-newsletter></app-newsletter>
+   <app-footer></app-footer>

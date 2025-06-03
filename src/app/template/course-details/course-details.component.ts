@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
+import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-course-details',
   templateUrl: './course-details.component.html',
-  styleUrl: './course-details.component.css'
+  styleUrl: './course-details.component.css',
 })
 export class CourseDetailsComponent implements OnInit {
 
@@ -16,20 +17,30 @@ export class CourseDetailsComponent implements OnInit {
   course_lesson: string = '';
   course_category: string = '';
   data: string = '';
+  course_contents: any = [];
+  course_video: string = ''
 
-  constructor(private router: ActivatedRoute, private firestore: AngularFirestore,  private snackBar: MatSnackBar) {}
+  constructor(private router: ActivatedRoute, private firestore: AngularFirestore,  private snackBar: MatSnackBar, private bootstrap: NgbAccordionModule) {}
 
-  ngOnInit(): void {
-    this.router.queryParams.subscribe(params => {
-      this.course_image = params['image'];
-      this.course_name = params['name'];
-      this.course_price = params['price'];
-      this.course_lesson = params['lesson'];
-      this.course_category = params['category'];
-    });
-  }
+ngOnInit(): void {
+  this.router.queryParams.subscribe(params => {
+    this.course_image = params['image'];
+    this.course_name = params['name'];
+    this.course_price = params['price'];
+    this.course_lesson = params['lesson'];
+    this.course_category = params['category'];
+    this.course_video = params['video'];
 
-  active = 1;
+    const contents = params['contents'];
+    if (contents) {
+      try {
+        this.course_contents = JSON.parse(contents);
+      } catch (e) {
+        console.error('Failed to parse course contents:', e);
+      }
+    }
+  });
+}
 
   addToCart() {
     const cartItem = {

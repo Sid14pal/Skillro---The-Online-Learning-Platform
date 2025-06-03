@@ -18,6 +18,7 @@ export class CoursesComponent {
                 category: '',
                 duration: '',
                 price: '',
+                videoUrl: ''
               };
         
               user: any = {};
@@ -49,7 +50,9 @@ export class CoursesComponent {
               name: student.name,
               price: student.price,
               lesson: student.duration,
-              category: student.category
+              category: student.category,
+              contents: JSON.stringify(student.courseContents),
+              video: student.videoUrl
             }
           });
         }

@@ -775,12 +775,12 @@
 }
 
 .course-details__doller-and-btn-box {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 20px;
-  margin-bottom: 20px;
+     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 43px;
+    margin-bottom: 20px;
 }
 
 .course-details__doller {

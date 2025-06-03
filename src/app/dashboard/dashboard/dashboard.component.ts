@@ -11,7 +11,7 @@ export class DashboardComponent implements OnInit{
 
   user: any;
   userInitials: string | undefined;
-  allowedEmails: string[] = ['siddharthapaul440@gmail.com' , 'siddhartha.paul@codeclouds.in'];
+  allowedEmails: string[] = ['siddharthapaul440@gmail.com'];
   hasAccess = false;
 
   constructor(private auth:AuthService, private routeStatusService: RouteStatusService, private data: StudentService){
