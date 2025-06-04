@@ -25,6 +25,8 @@
       --mat-snack-bar-button-color: #fff;
   }
 
+
+
 .page-header__social {
   position: absolute;
   display: flex;
@@ -2230,3 +2232,5 @@
 .nav-tabs .nav-link {
   color: #000;
 }
+
+

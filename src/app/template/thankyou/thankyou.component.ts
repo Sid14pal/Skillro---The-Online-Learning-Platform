@@ -12,6 +12,9 @@ export class ThankyouComponent {
   cartItems: any[] = [];
   orderId: any = '';
 
+  signupPassword: string = '';
+showPassword: boolean = false;
+
   constructor(private firestore: AngularFirestore, private snackBar: MatSnackBar) {}
 
     ngOnInit(): void {

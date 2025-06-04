@@ -62,7 +62,6 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { OrdersComponent } from './dashboard/orders/orders.component';
 import { DashboardFooterComponent } from './dashboard/dashboard-footer/dashboard-footer.component';
 import { AddCoursesComponent } from './dashboard/add-courses/add-courses.component';
-import { VideoComponent } from './dashboard/video/video.component';
 
 
 @NgModule({
@@ -113,7 +112,6 @@ import { VideoComponent } from './dashboard/video/video.component';
     OrdersComponent,
     DashboardFooterComponent,
     AddCoursesComponent,
-    VideoComponent,
   ],
   imports: [
     BrowserModule,

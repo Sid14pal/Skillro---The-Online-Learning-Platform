@@ -66,13 +66,19 @@ ngOnInit(): void {
       addedAt: new Date()
     };
 
-    this.firestore.collection('cart').add(cartItem)
-      .then(() => {
-        this.openSnackBar('item Added Successfully');
-      })
-      .catch(error => {
-        console.error('Error adding to cart: ', error);
-      });
+  this.firestore.collection('cart', ref => ref.where('name', '==', cartItem.name)).get().subscribe(snapshot => {
+    if (snapshot.empty) {
+      this.firestore.collection('cart').add(cartItem)
+        .then(() => {
+          this.openSnackBar('Item added successfully');
+        })
+        .catch(error => {
+          console.error('Error adding to cart: ', error);
+        });
+    } else {
+      this.snackBar.open('Product is already added in cart', 'Close', { duration: 4000, panelClass: ['danger',], verticalPosition: 'top',});
+    }
+  });
   }
 
     openSnackBar(message: string, action: string = 'Close', duration: number = 56000) {

@@ -91,57 +91,238 @@
 
     .success-animation { margin: 28px auto;;}
 
+    /* Wrapper layout */
+.receipt-wrapper {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f7f9fb 60%, #ffffff 40%);
+}
+
+/* Left: Invoice */
+.invoice-section {
+  width: 60%;
+  padding: 40px;
+  background: url('https://www.transparenttextures.com/patterns/cream-dust.png') repeat;
+  border-right: 1px solid #e0e0e0;
+  overflow-y: auto;
+}
+
+.receipt-header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #28a745;
+}
+
+.order-meta {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.section-title {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.table {
+  background-color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.table thead th {
+  background-color: #343a40;
+  color: #fff;
+  padding: 12px;
+}
+
+.table tbody td {
+  padding: 12px;
+  font-size: 15px;
+}
+
+.grand-total {
+  font-size: 20px;
+  font-weight: 600;
+  color: #212529;
+}
+
+.footer-note {
+  font-size: 14px;
+  color: #888;
+  margin-top: 30px;
+}
+
+/* Checkmark animation */
+.success-animation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 .checkmark {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    display: block;
-    stroke-width: 2;
-    stroke: #4bb71b;
-    stroke-miterlimit: 10;
-    box-shadow: inset 0px 0px 0px #4bb71b;
-    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
-    position:relative;
-    top: 5px;
-    right: 5px;
-   margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  stroke: #28a745;
+  stroke-width: 3;
+  stroke-linecap: round;
+  animation: drawCheck 0.8s ease-in-out forwards;
 }
-.checkmark__circle {
-    stroke-dasharray: 166;
-    stroke-dashoffset: 166;
-    stroke-width: 2;
-    stroke-miterlimit: 10;
-    stroke: #4bb71b;
-    fill: #fff;
-    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
- 
+@keyframes drawCheck {
+  0% {
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 
-.checkmark__check {
-    transform-origin: 50% 50%;
-    stroke-dasharray: 48;
-    stroke-dashoffset: 48;
-    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+/* Right: Signup */
+.signup-section {
+  width: 40%;
+  padding: 60px 40px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.05);
 }
 
-@keyframes stroke {
-    100% {
-        stroke-dashoffset: 0;
-    }
+.signup-section h4 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
-@keyframes scale {
-    0%, 100% {
-        transform: none;
-    }
-
-    50% {
-        transform: scale3d(1.1, 1.1, 1);
-    }
+.signup-section p {
+  font-size: 14px;
+  color: #666;
 }
 
-@keyframes fill {
-    100% {
-        box-shadow: inset 0px 0px 0px 30px #4bb71b;
-    }
+.form-group {
+  position: relative;
 }
+
+.password-input {
+  padding: 10px 40px 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+.password-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #888;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 991px) {
+  .receipt-wrapper {
+    flex-direction: column;
+  }
+
+  .invoice-section,
+  .signup-section {
+    width: 100%;
+    padding: 30px;
+  }
+}
+
+.receipt-background {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  z-index: 0;
+}
+
+.receipt-background .overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+.z-1 {
+  position: relative;
+  z-index: 1;
+}
+
+.backdrop-blur {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.checkmark {
+  width: 64px;
+  height: 64px;
+  stroke: #28a745;
+  stroke-width: 3;
+  stroke-linecap: round;
+  animation: drawCheck 0.8s ease-in-out forwards;
+}
+@keyframes drawCheck {
+  0% {
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #888;
+}
+
+.receipt-wrapper {
+  background: linear-gradient(
+    135deg,
+    rgba(173, 216, 230, 0.6),  /* Light Blue */
+    rgba(255, 182, 193, 0.6)   /* Light Pink */
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+

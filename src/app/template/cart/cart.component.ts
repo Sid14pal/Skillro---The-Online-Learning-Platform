@@ -24,7 +24,7 @@ export class CartComponent {
   }
 
   removeFromCart(itemId: string) {
-    this.openSnackBar('item Deleted Successfully');
+    this.openSnackBar('tem Deleted Successfully');
     this.firestore.collection('cart').doc(itemId).delete()
   }
 
@@ -34,9 +34,23 @@ export class CartComponent {
 
   getTotalPrice(): number {
   return this.cartItems.reduce((sum, item) => {
-    const price = parseFloat(item.price); // Ensure it's a number
+    const price = parseFloat(item.price);
     return sum + (isNaN(price) ? 0 : price);
   }, 0);
+}
+
+addToCart(item: any) {
+  const itemId = item.id;
+
+  this.firestore.collection('cart', ref => ref.where('id', '==', itemId)).get().subscribe(snapshot => {
+    if (snapshot.empty) {
+      this.firestore.collection('cart').add(item).then(() => {
+        this.openSnackBar('Item added to cart');
+      });
+    } else {
+      this.openSnackBar('Item is already in cart', 'Close', 3000);
+    }
+  });
 }
 
 

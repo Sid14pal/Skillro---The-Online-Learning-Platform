@@ -1,37 +1,75 @@
-<div class="receipt-container">
-    <div class="success-animation">
-<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" /><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /></svg>
-</div>
-    <div class="receipt-header">
-      <h1>Order Receipt</h1>
-      <p class="order-meta">Order #{{orderId}}</p>
-    </div>
+<div class="receipt-background" style="background-image: url('assets/templates/thankyou.jpg');">
+  <div class="overlay"></div>
+  <div class="container py-5 position-relative z-1">
+    <div class="receipt-wrapper d-flex align-items-stretch shadow-lg rounded-4 overflow-hidden">
+      
+      <!-- Left: Invoice Section -->
+      <div class="invoice-section p-4 flex-grow-1">
+        <div class="text-center mb-4 success-animation">
+          <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+            <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+            <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+          </svg>
+        </div>
 
-    <div class="section-title">Order Details</div>
-    <table class="order-items">
-      <thead>
-        <tr>
-          <th>Item</th>
-          <th>Qty</th>
-          <th>Price</th>
-          <th>Subtotal</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let item of cartItems">
-          <td>{{item.name}}</td>
-          <td>1</td>
-          <td>{{item.price | currency}}</td>
-          <td>{{item.price | currency}}</td>
-        </tr>
-      </tbody>
-    </table>
+        <div class="receipt-header text-center mb-4">
+          <h1 class="text-success">Order Receipt</h1>
+          <p class="order-meta text-muted">Order #{{orderId}}</p>
+        </div>
 
-    <div class="total-section">
-      <p class="grand-total">Total: {{ getTotalPrice().toFixed(2) | currency }}</p>
-    </div>
+        <div class="section-title fw-bold mb-2">Order Details</div>
+        <table class="table table-striped order-items">
+          <thead class="table-dark">
+            <tr>
+              <th>Item</th>
+              <th>Qty</th>
+              <th>Price</th>
+              <th>Subtotal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of cartItems">
+              <td>{{ item.name }}</td>
+              <td>1</td>
+              <td>{{ item.price | currency }}</td>
+              <td>{{ item.price | currency }}</td>
+            </tr>
+          </tbody>
+        </table>
 
-    <div class="footer-note">
-      Thank you for shopping with us!
+        <div class="total-section text-end mt-3">
+          <p class="grand-total fs-5 fw-bold">Total: {{ getTotalPrice().toFixed(2) | currency }}</p>
+        </div>
+
+        <div class="footer-note text-center mt-4 text-muted">
+          Thank you for shopping with us!
+        </div>
+      </div>
+
+      <!-- Right: Signup Section -->
+      <div class="signup-section p-5 d-flex flex-column justify-content-center bg-white bg-opacity-75">
+        <h4 class="mb-3">Create Your Account</h4>
+        <p class="text-muted">Set a password to save your purchase history:</p>
+
+        <div class="form-group position-relative mb-3">
+          <label for="password" class="form-label">Choose Password</label>
+          <input
+            [type]="showPassword ? 'text' : 'password'"
+            id="password"
+            class="form-control password-input"
+            [(ngModel)]="signupPassword"
+            placeholder="Enter password"
+          />
+          <span
+            class="toggle-password"
+            (click)="showPassword = !showPassword"
+          >
+            {{ showPassword ? '🙈' : '👁️' }}
+          </span>
+        </div>
+
+        <button class="btn btn-primary w-100 mt-2">Create Account</button>
+      </div>
     </div>
   </div>
+</div>
