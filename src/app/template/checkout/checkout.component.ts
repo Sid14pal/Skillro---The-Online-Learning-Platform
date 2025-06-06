@@ -109,7 +109,7 @@ export class CheckoutComponent {
 
     this.firestore.collection('checkout').add(checkoutUserDetails)
       .then(() => {
-        this.router.navigate(['/thankyou']);
+        this.router.navigate(['/thankyou'], { queryParams: { email: this.checkoutData.email } });
         this.openSnackBar('Your order has been submitted successfully');
         this.resetForm();
         console.log(checkoutUserDetails)

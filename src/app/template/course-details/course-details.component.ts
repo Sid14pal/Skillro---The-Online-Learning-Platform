@@ -63,6 +63,7 @@ ngOnInit(): void {
       price: this.course_price,
       lesson: this.course_lesson,
       category: this.course_category,
+      video: this.course_video,
       addedAt: new Date()
     };
 

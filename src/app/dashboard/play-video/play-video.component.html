@@ -1,0 +1,47 @@
+<div class="wrapper">
+
+   <app-student-dashboard-header></app-student-dashboard-header>
+ 
+     <!--=================================
+     Main content -->
+ 
+     <div>
+ 
+      <app-student-dashboard-sidebar></app-student-dashboard-sidebar>
+ 
+       <!--=================================
+       wrapper -->
+       <div class="content-wrapper">
+
+        <app-student-dashboard-banner></app-student-dashboard-banner>
+        <div class="row mt-4">
+            <div class="col-lg-4 col-md-6" *ngIf="video">
+                <video
+  id="my-video"
+  class="video-js vjs-default-skin"
+  controls
+  preload="auto"
+  width="360"
+  height="200"
+  [attr.poster]=""
+  data-setup='{}'>
+  <source [attr.src]="video" type="video/mp4" />
+</video>
+             </div>
+        </div>
+        <footer class="bg-white p-4">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="text-center text-md-start">
+                  <p class="mb-0"> &copy; Copyright || Siddhartha Paul || All rights reserved 2025. </p>
+                </div>
+              </div>
+            </div>
+          </footer>
+       </div>
+       <!--=================================
+       wrapper -->
+     </div>
+     <!--=================================
+     Main content -->
+   </div>

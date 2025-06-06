@@ -13,7 +13,7 @@
         </div>
 
         <div class="receipt-header text-center mb-4">
-          <h1 class="text-success">Order Receipt</h1>
+          <h1>Order Receipt</h1>
           <p class="order-meta text-muted">Order #{{orderId}}</p>
         </div>
 
@@ -41,24 +41,25 @@
           <p class="grand-total fs-5 fw-bold">Total: {{ getTotalPrice().toFixed(2) | currency }}</p>
         </div>
 
-        <div class="footer-note text-center mt-4 text-muted">
+        <div class="footer-note text-center mt-4">
           Thank you for shopping with us!
         </div>
       </div>
 
       <!-- Right: Signup Section -->
-      <div class="signup-section p-5 d-flex flex-column justify-content-center bg-white bg-opacity-75">
+      <div class="signup-section p-5 d-flex flex-column justify-content-center">
         <h4 class="mb-3">Create Your Account</h4>
         <p class="text-muted">Set a password to save your purchase history:</p>
 
-        <div class="form-group position-relative mb-3">
+       <form [formGroup]="passwordForm" (ngSubmit)="createAccount()">
+         <div class="form-group position-relative mb-3">
           <label for="password" class="form-label">Choose Password</label>
           <input
             [type]="showPassword ? 'text' : 'password'"
             id="password"
             class="form-control password-input"
-            [(ngModel)]="signupPassword"
             placeholder="Enter password"
+            formControlName="password"
           />
           <span
             class="toggle-password"
@@ -68,8 +69,10 @@
           </span>
         </div>
 
-        <button class="btn btn-primary w-100 mt-2">Create Account</button>
+        <button class="about-one__btn thm-btn" type="submit" [disabled]="passwordForm.invalid">Create Account</button>
+       </form>
       </div>
     </div>
   </div>
 </div>
+<app-footer></app-footer>

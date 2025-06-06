@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms'
+import {FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -62,6 +62,7 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { OrdersComponent } from './dashboard/orders/orders.component';
 import { DashboardFooterComponent } from './dashboard/dashboard-footer/dashboard-footer.component';
 import { AddCoursesComponent } from './dashboard/add-courses/add-courses.component';
+import { PlayVideoComponent } from './dashboard/play-video/play-video.component';
 
 
 @NgModule({
@@ -112,6 +113,7 @@ import { AddCoursesComponent } from './dashboard/add-courses/add-courses.compone
     OrdersComponent,
     DashboardFooterComponent,
     AddCoursesComponent,
+    PlayVideoComponent,
   ],
   imports: [
     BrowserModule,
@@ -122,6 +124,7 @@ import { AddCoursesComponent } from './dashboard/add-courses/add-courses.compone
     AngularFireStorageModule,
     MatSnackBarModule,
     MatIconModule,
+    ReactiveFormsModule,
     CanvasJSAngularChartsModule
     
   ],
