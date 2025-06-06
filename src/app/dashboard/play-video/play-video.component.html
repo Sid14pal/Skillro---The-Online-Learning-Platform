@@ -15,18 +15,13 @@
 
         <app-student-dashboard-banner></app-student-dashboard-banner>
         <div class="row mt-4">
-            <div class="col-lg-4 col-md-6" *ngIf="video">
-                <video
-  id="my-video"
-  class="video-js vjs-default-skin"
-  controls
-  preload="auto"
-  width="360"
-  height="200"
-  [attr.poster]=""
-  data-setup='{}'>
-  <source [attr.src]="video" type="video/mp4" />
-</video>
+            <div class="col-lg-4 col-md-6">
+              <div>
+  <video width="100%" height="auto" controls>
+    <source [src]="videoUrl" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
              </div>
         </div>
         <footer class="bg-white p-4">

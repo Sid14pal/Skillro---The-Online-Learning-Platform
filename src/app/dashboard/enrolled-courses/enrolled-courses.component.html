@@ -14,8 +14,8 @@
        <div class="content-wrapper">
 
         <app-student-dashboard-banner></app-student-dashboard-banner>
-        <div class="row mt-4" *ngIf="cart.length > 0">
-            <div class="col-lg-4 col-md-6" *ngFor="let item of cart">
+        <div class="row mt-4" *ngIf="userCart.length > 0">
+            <div class="col-lg-4 col-md-6" *ngFor="let item of userCart">
                 <div class="tp-course-item p-relative fix mb-30">
                    <div class="tp-course-thumb">
                       <a><img class="course-pink" src={{item.image}} alt=""></a>
@@ -54,8 +54,8 @@
                          </div>
                       </div>
                    </div>
-                   <div class="tp-course-btn home-2" (click)="playVideo(student)">
-                       <a class="thm-btn">Watch Video</a>
+                   <div class="tp-course-btn home-2">
+                       <a class="thm-btn" (click)="playVideo(item.video)">Watch Video</a>
                    </div>
                 </div>
              </div>

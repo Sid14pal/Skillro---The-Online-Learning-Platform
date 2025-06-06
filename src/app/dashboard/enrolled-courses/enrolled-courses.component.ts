@@ -10,30 +10,26 @@ import { Router } from '@angular/router';
 })
 export class EnrolledCoursesComponent implements OnInit {
 
-  cart: any[] = [];
+userCart: any[] = [];
 student: any;
 
-  constructor(private auth: AngularFireAuth, private firestore: AngularFirestore, private router: Router ) {}
-  
+  constructor(private auth: AngularFireAuth, private firestore: AngularFirestore, private router: Router) { }
 
-    ngOnInit(): void {
+
+  ngOnInit(): void {
     this.auth.authState.subscribe(user => {
       if (user) {
         this.firestore.collection('userCarts').doc(user.uid).get().subscribe(doc => {
           const data = doc.data();
-          this.cart = (data as any)?.cart || [];
+          this.userCart = (data as any)?.cart || [];
         });
       }
     });
   }
 
-          playVideo(student: any) {
-          this.router.navigate(['/play-video'], 
-          {
-            queryParams: {
-              video: student.videoUrl
-            }
-          });
-        }
+  playVideo(video: string) {
+  console.log('Video URL:', video);
+  this.router.navigate(['/play-video'], { queryParams: { video: video } });
+}
 
 }
