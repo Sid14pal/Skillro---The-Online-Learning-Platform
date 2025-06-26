@@ -1,142 +1,139 @@
-   <section class="page-header">
-      <div class="page-header__bg" style="background-image: url(assets/templates/page-header-bg-shape.png);">
-      </div>
-      <div class="page-header__shape-4">
-         <img src="assets/templates/page-header-shape-4.png" alt="">
-      </div>
-      <div class="page-header__shape-5">
-         <img src="assets/templates/page-header-shape-5.png" alt="">
-      </div>
-      <div class="container">
-         <div class="page-header__inner">
-            <div class="page-header__img">
-               <img src="assets/templates/page-header-img-1.png" alt="">
-               <div class="page-header__shape-1">
-                  <img src="assets/templates/page-header-shape-1.png" alt="">
-               </div>
-               <div class="page-header__shape-2">
-                  <img src="assets/templates/page-header-shape-2.png" alt="">
-               </div>
-               <div class="page-header__shape-3">
-                  <img src="assets/templates/page-header-shape-3.png" alt="">
-               </div>
+<section class="page-header">
+   <div class="page-header__bg" style="background-image: url(assets/templates/page-header-bg-shape.png);">
+   </div>
+   <div class="page-header__shape-4">
+      <img src="assets/templates/page-header-shape-4.png" alt="">
+   </div>
+   <div class="page-header__shape-5">
+      <img src="assets/templates/page-header-shape-5.png" alt="">
+   </div>
+   <div class="container">
+      <div class="page-header__inner">
+         <div class="page-header__img">
+            <img src="assets/templates/page-header-img-1.png" alt="">
+            <div class="page-header__shape-1">
+               <img src="assets/templates/page-header-shape-1.png" alt="">
             </div>
-            <h2>Course Details</h2>
-            <div class="thm-breadcrumb__box">
-               <ul class="thm-breadcrumb list-unstyled">
-                  <li><a href="#" routerLink="/">Home</a></li>
-                  <li><span>//</span></li>
-                  <li>Course Details</li>
-               </ul>
+            <div class="page-header__shape-2">
+               <img src="assets/templates/page-header-shape-2.png" alt="">
+            </div>
+            <div class="page-header__shape-3">
+               <img src="assets/templates/page-header-shape-3.png" alt="">
             </div>
          </div>
+         <h2>Course Details</h2>
+         <div class="thm-breadcrumb__box">
+            <ul class="thm-breadcrumb list-unstyled">
+               <li><a href="#" routerLink="/">Home</a></li>
+               <li><span>//</span></li>
+               <li>Course Details</li>
+            </ul>
+         </div>
       </div>
-   </section>
-   <section class="course-details">
-      <div class="container">
-         <div class="row">
-            <div class="col-xl-8 col-lg-7">
-               <div class="course-details__left">
-                  <div class="course-details__img">
-                     <img src="{{course_image}}" alt="">
+   </div>
+</section>
+<section class="course-details">
+   <div class="container">
+      <div class="row">
+         <div class="col-xl-8 col-lg-7">
+            <div class="course-details__left">
+               <div class="course-details__img">
+                  <img src="{{course_image}}" alt="">
+               </div>
+               <div class="course-details__content">
+                  <div class="course-details__tag-box">
+                     <div class="course-details__tag-shape"></div>
+                     <span class="course-details__tag">Web Programming</span>
                   </div>
-                  <div class="course-details__content">
-                     <div class="course-details__tag-box">
-                        <div class="course-details__tag-shape"></div>
-                        <span class="course-details__tag">Web Programming</span>
+                  <h2 class="course-details__title">{{course_name}}</h2>
+                  <h2 class="course-details__overview-title">Course Overview</h2>
+                  <p>
+                     Our courses are designed to deliver a rich and engaging learning experience. Whether you're just
+                     starting out or looking to sharpen your skills, each course offers step-by-step guidance to help
+                     you master the subject matter with confidence. From theory to hands-on practice, you’ll gain the
+                     knowledge you need to succeed.
+                  </p>
+                  <h2 class="course-details__overview-title">Comprehensive Learning Experience</h2>
+                  <p>
+                     Each course combines video lessons, downloadable resources, quizzes, and real-world projects to
+                     ensure that you not only learn but retain and apply the concepts effectively. We focus on practical
+                     learning so that you can confidently use your skills in real-life scenarios.
+                  </p>
+                  <h2 class="course-details__overview-title">Expert Instruction</h2>
+                  <p>
+                     All our courses are created and taught by experienced instructors who are passionate about teaching
+                     and have real-world expertise in their field. You’ll learn directly from industry professionals,
+                     gaining insights and tips that go beyond textbooks.
+                  </p>
+                  <div ngbAccordion>
+                     <div ngbAccordionItem *ngFor="let item of course_contents">
+                        <h2 ngbAccordionHeader>
+                           <button ngbAccordionButton>{{item.name}}</button>
+                        </h2>
+                        <div ngbAccordionCollapse>
+                           <div ngbAccordionBody>
+                              <ng-template>
+                                 {{item.description}}
+                              </ng-template>
+                           </div>
+                        </div>
                      </div>
-                     <h2 class="course-details__title">{{course_name}}</h2>
-                     <h2 class="course-details__overview-title">Course Overview</h2>
-                     <p>
-                        Our courses are designed to deliver a rich and engaging learning experience. Whether you're just
-                        starting out or looking to sharpen your skills, each course offers step-by-step guidance to help
-                        you master the subject matter with confidence. From theory to hands-on practice, you’ll gain the
-                        knowledge you need to succeed.
-                     </p>
-                       <h2 class="course-details__overview-title">Comprehensive Learning Experience</h2>
-                         <p>
-                            Each course combines video lessons, downloadable resources, quizzes, and real-world projects to ensure that you not only learn but retain and apply the concepts effectively. We focus on practical learning so that you can confidently use your skills in real-life scenarios.
-                         </p>
-                         <h2 class="course-details__overview-title">Expert Instruction</h2>
-                         <p>
-                            All our courses are created and taught by experienced instructors who are passionate about teaching and have real-world expertise in their field. You’ll learn directly from industry professionals, gaining insights and tips that go beyond textbooks.
-                         </p>
-                     <div ngbAccordion>
-      <div ngbAccordionItem *ngFor="let item of course_contents">
-         <h2 ngbAccordionHeader>
-            <button ngbAccordionButton>{{item.name}}</button>
-         </h2>
-         <div ngbAccordionCollapse>
-            <div ngbAccordionBody>
-               <ng-template>
-                 {{item.description}}
-               </ng-template>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+         <div class="col-xl-4 col-lg-5">
+            <div class="course-details__right">
+               <div class="course-details__info-box">
+                  <div class="course-details__video-link">
+                     <div class="course-details__video-link-bg">
+                        <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="360"
+                           height="200" [attr.poster]="course_image" data-setup='{}'>
+                           <source [attr.src]="course_video" type="video/mp4" />
+                        </video>
+                     </div>
+                  </div>
+                  <div class="course-details__doller-and-btn-box">
+                     <h2 class="course-details__doller">{{course_price | currency}}</h2>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                     <div class="about-one__btn-box"><a href="#" class="about-one__btn thm-btn"><span
+                              class="icon-angles-right"></span>Purchase Now</a></div>
+                     <div class="cart-icon cursor-pointer" (click)="addToCart()"><a><i
+                              class="material-icons">shopping_cart</i></a></div>
+                  </div>
+                  <div class="course-details__info-list">
+                     <h2 class="course-details__info-list-title">This Course Included</h2>
+                     <ul class="course-details__info-list-1 list-unstyled">
+                        <li>
+                           <p><i class="material-icons account">library_books</i>Lesson</p>
+                           <span>{{course_lesson}}</span>
+                        </li>
+                        <li>
+                           <p><i class="material-icons account">category</i>Category</p>
+                           <span>{{course_category}}</span>
+                        </li>
+                        <li>
+                           <p><i class="material-icons account">equalizer</i>Skill Level</p>
+                           <span>Advance</span>
+                        </li>
+                        <li>
+                           <p><i class="material-icons account">language</i>Language</p>
+                           <span>English, French</span>
+                        </li>
+                        <li>
+                           <p><i class="material-icons account">verified_user</i>Certificate</p>
+                           <span>After Completed </span>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
             </div>
          </div>
       </div>
    </div>
-   
-                  </div>
-               </div>
-            </div>
-            <div class="col-xl-4 col-lg-5">
-               <div class="course-details__right">
-                  <div class="course-details__info-box">
-                     <div class="course-details__video-link">
-                        <div class="course-details__video-link-bg">
-                           <video
-  id="my-video"
-  class="video-js vjs-default-skin"
-  controls
-  preload="auto"
-  width="360"
-  height="200"
-  [attr.poster]="course_image"
-  data-setup='{}'>
-  <source [attr.src]="course_video" type="video/mp4" />
-</video>
-                        </div>
-                     </div>
-                     <div class="course-details__doller-and-btn-box">
-                        <h2 class="course-details__doller">{{course_price | currency}}</h2>
-                     </div>
-                     <div class="d-flex align-items-center justify-content-between">
-                        <div class="about-one__btn-box"><a href="#" class="about-one__btn thm-btn"><span
-                                 class="icon-angles-right"></span>Purchase Now</a></div>
-                        <div class="cart-icon cursor-pointer" (click)="addToCart()"><a><i
-                                 class="material-icons">shopping_cart</i></a></div>
-                     </div>
-                     <div class="course-details__info-list">
-                        <h2 class="course-details__info-list-title">This Course Included</h2>
-                        <ul class="course-details__info-list-1 list-unstyled">
-                           <li>
-                              <p><i class="material-icons account">library_books</i>Lesson</p>
-                              <span>{{course_lesson}}</span>
-                           </li>
-                           <li>
-                              <p><i class="material-icons account">category</i>Category</p>
-                              <span>{{course_category}}</span>
-                           </li>
-                           <li>
-                              <p><i class="material-icons account">equalizer</i>Skill Level</p>
-                              <span>Advance</span>
-                           </li>
-                           <li>
-                              <p><i class="material-icons account">language</i>Language</p>
-                              <span>English, French</span>
-                           </li>
-                           <li>
-                              <p><i class="material-icons account">verified_user</i>Certificate</p>
-                              <span>After Completed </span>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
+</section>
 
-   <app-newsletter></app-newsletter>
-   <app-footer></app-footer>
+<app-newsletter></app-newsletter>
+<app-footer></app-footer>

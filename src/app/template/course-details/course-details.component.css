@@ -217,7 +217,7 @@
 .course-details {
   position: relative;
   display: block;
-  padding: 120px 0 17px;
+  padding: 120px 0 90px;
   counter-reset: count;
   z-index: 1;
 }

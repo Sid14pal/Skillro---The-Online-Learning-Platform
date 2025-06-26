@@ -1,20 +1,26 @@
 .header {
-  box-shadow: 0px 1px 3px 0px rgba(35, 18, 4, 0.14);
   background-color: white;
+  position: relative;
+  z-index: 9999;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .nav-link {
   margin-bottom: -10px;
-    display: inline-block;
-    font-family: var(--fistudy-font-two);
-    color: #4f5158;
-    align-items: center;
-    gap: 4px;
-    font-size: 16px;
-    font-style: normal;
-    letter-spacing: 0.2px;
-    line-height: 120%;
-    font-weight: 500;
+  display: inline-block;
+  font-family: var(--fistudy-font-two);
+  color: #646464 !important;
+  align-items: center;
+  gap: 4px;
+  font-size: 16px;
+  font-style: normal;
+  letter-spacing: 0.2px;
+  line-height: 120%;
+  font-weight: 500;
+}
+
+.logo {
+  width: 120px;
 }
 
 .material-icons {
@@ -43,11 +49,11 @@
 }
 
 .admin {
-    font-family: var(--fistudy-font-two);
-    color: #4f5158;
-    gap: 4px;
-    font-size: 16px;
-    font-weight: 500;
+  font-family: var(--fistudy-font-two);
+  color: #4f5158;
+  gap: 4px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .underline-hover {

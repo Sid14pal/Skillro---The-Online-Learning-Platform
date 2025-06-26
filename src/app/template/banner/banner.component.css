@@ -5,6 +5,13 @@
   background-color: #f2f2ff;
   z-index: 5;
   }
+
+  .banner-bg {
+    width: 80% !important;
+    position: relative;
+    left: 36px;
+    margin-top: 50px;
+  }
   
   .banner-one__icon-1 {
     position: absolute;

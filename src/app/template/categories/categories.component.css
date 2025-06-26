@@ -3,7 +3,7 @@
     display: block;
     background: linear-gradient(180deg, #3C59FC 0%, #687EFF 100%);
     counter-reset: count;
-    padding: 84px 0 68px;
+    padding: 84px 0 0px;
     z-index: 1;
 }
 

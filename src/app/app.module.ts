@@ -63,6 +63,8 @@ import { OrdersComponent } from './dashboard/orders/orders.component';
 import { DashboardFooterComponent } from './dashboard/dashboard-footer/dashboard-footer.component';
 import { AddCoursesComponent } from './dashboard/add-courses/add-courses.component';
 import { PlayVideoComponent } from './dashboard/play-video/play-video.component';
+import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 
 @NgModule({
@@ -125,7 +127,8 @@ import { PlayVideoComponent } from './dashboard/play-video/play-video.component'
     MatSnackBarModule,
     MatIconModule,
     ReactiveFormsModule,
-    CanvasJSAngularChartsModule
+    CanvasJSAngularChartsModule,
+    NgbAccordionModule
     
   ],
   providers: [
