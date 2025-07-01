@@ -1,4 +1,4 @@
-import { Component, NgZone } from '@angular/core';
+import { Component, NgZone, EventEmitter, Output } from '@angular/core';
 import { StudentService } from '../../services/student.service';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
@@ -10,6 +10,17 @@ import { Student } from '../../datatype';
   styleUrl: './courses.component.css'
 })
 export class CoursesComponent {
+  
+    selectedView: 'grid' | 'list' = 'grid';
+
+  @Output() viewChanged = new EventEmitter<'grid' | 'list'>();
+
+  setView(view: 'grid' | 'list') {
+    this.selectedView = view;
+    this.viewChanged.emit(view);
+  }
+
+  pageTitle = 'All Courses';
 
    studentsList: Student[] = [];
               studentObj: Student = {

@@ -1,139 +1,229 @@
-<section class="page-header">
-   <div class="page-header__bg" style="background-image: url(assets/templates/page-header-bg-shape.png);">
-   </div>
-   <div class="page-header__shape-4">
-      <img src="assets/templates/page-header-shape-4.png" alt="">
-   </div>
-   <div class="page-header__shape-5">
-      <img src="assets/templates/page-header-shape-5.png" alt="">
-   </div>
-   <div class="container">
-      <div class="page-header__inner">
-         <div class="page-header__img">
-            <img src="assets/templates/page-header-img-1.png" alt="">
-            <div class="page-header__shape-1">
-               <img src="assets/templates/page-header-shape-1.png" alt="">
+<section class="py-5 bg-light"
+  style="background-image: url(assets/templates/breadcrumb-bg.jpg); background-position: center;">
+  <div class="container">
+    <div class="row">
+      <!-- Left Content -->
+      <div class="col-lg-6">
+        <h1 class="fw-semibold mb-3">{{course_name}}</h1>
+        <div class="d-flex align-items-center gap-4 mt-2 mb-4 text-muted small">
+          <div>
+            <span class="text-warning material-icons align-middle">star</span>
+            <span class="text-warning material-icons align-middle">star</span>
+            <span class="text-warning material-icons align-middle">star</span>
+            <span class="text-warning material-icons align-middle">star</span>
+            <span class="text-warning material-icons align-middle">star</span>
+            <span></span>
+            <span class="text-dark">(5 Reviews)</span>
+          </div>
+          <div>
+            <span class="material-icons align-middle me-1">schedule</span> {{course_lesson}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="course-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav nav-tabs custom-tabs border-0" role="tablist">
+          <li [ngbNavItem]="1" class="nav-item">
+            <button ngbNavLink class="nav-link">
+              <h5>Overview</h5>
+            </button>
+            <ng-template ngbNavContent>
+              <div class="course-section">
+                <h5 class="fw-semibold mt-5 mb-4">Course Overview</h5>
+                <p>
+                  Our courses are designed to deliver a rich and engaging learning experience. Whether you're just
+                  starting out or looking to sharpen your skills, each course offers step-by-step guidance to help you
+                  master the subject matter with confidence. From theory to hands-on practice, you’ll gain the knowledge
+                  you need to succeed.
+                </p>
+
+                <h5 class="fw-semibold mt-4 mb-4">Comprehensive Learning Experience</h5>
+                <p>
+                  Each course combines video lessons, downloadable resources, quizzes, and real-world projects to ensure
+                  that you not only learn but retain and apply the concepts effectively. We focus on practical learning
+                  so that you can confidently use your skills in real-life scenarios.
+                </p>
+
+                <h5 class="fw-semibold mt-4 mb-4">Expert Instruction</h5>
+                <p>
+                  All our courses are created and taught by experienced instructors who are passionate about teaching
+                  and have real-world expertise in their field. You’ll learn directly from industry professionals,
+                  gaining insights and tips that go beyond textbooks.
+                </p>
+              </div>
+
+            </ng-template>
+          </li>
+          <li [ngbNavItem]="2" class="nav-item">
+            <button ngbNavLink class="nav-link">
+              <h5>Course Content</h5>
+            </button>
+            <ng-template ngbNavContent>
+              <div class="course-section" *ngFor="let item of course_contents">
+                <h5 class="fw-semibold mt-5 mb-4">{{item.name}}</h5>
+                <p>
+                  {{item.description}}
+                </p>
+              </div>
+
+            </ng-template>
+          </li>
+          <li [ngbNavItem]="3" class="nav-item">
+            <button ngbNavLink class="nav-link">
+              <h5>Reviews</h5>
+            </button>
+            <ng-template ngbNavContent>
+              <div class="mb-4 border rounded p-3 mt-5" style="max-height: 300px; overflow-y: auto;">
+                <div class="review mb-3">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <strong>Priya Sinha</strong>
+                    <div class="text-warning">★★★★★</div>
+                  </div>
+                  <p class="text-muted mb-0">Excellent course! The instructions were clear and easy to follow.</p>
+                </div>
+                <hr />
+                <div class="review mb-3">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <strong>Rahul Mehta</strong>
+                    <div class="text-warning">★★★★☆</div>
+                  </div>
+                  <p class="text-muted mb-0">Very informative, but I wish there were more real-world examples.</p>
+                </div>
+                <hr />
+                <div class="review mb-3" *ngIf="let review of showReview">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <strong>Neha Kapoor</strong>
+                    <div class="text-warning">★★★★★</div>
+                  </div>
+                  <p class="text-muted mb-0">Great content and the downloadable materials were very helpful.</p>
+                </div>
+              </div>
+
+              <!-- Submit Review -->
+              <div class="border rounded p-4 bg-light">
+                <h5 class="mb-3 fw-semibold">Leave a Review</h5>
+                <form>
+                  <div class="mb-3">
+                    <label for="reviewName" class="form-label">Your Name</label>
+                    <input type="text" class="form-control" id="reviewName" placeholder="Enter your name" name="name" [(ngModel)]="reviewData.name"/>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="reviewText" class="form-label">Your Review</label>
+                    <textarea class="form-control" id="reviewText" rows="3"
+                      placeholder="Write your feedback here..." name="review" [(ngModel)]="reviewData.review"></textarea>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">Rating</label>
+                    <select class="form-select" name="rating" [(ngModel)]="reviewData.rating">
+                      <option selected disabled>Select rating</option>
+                      <option value="5">★★★★★ - Excellent</option>
+                      <option value="4">★★★★☆ - Good</option>
+                      <option value="3">★★★☆☆ - Average</option>
+                      <option value="2">★★☆☆☆ - Poor</option>
+                      <option value="1">★☆☆☆☆ - Terrible</option>
+                    </select>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary w-100" (click)="submitReview()">Submit Review</button>
+                </form>
+              </div>
+            </ng-template>
+          </li>
+        </ul>
+
+        <div [ngbNavOutlet]="nav" class="tab-content mt-4 animate__animated animate__fadeIn"></div>
+      </div>
+
+      <div class="col-lg-4 mt-4 mt-lg-0">
+        <div class="bg-white p-3 p-md-4 rounded-4 shadow">
+          <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="360" height="200"
+            [attr.poster]="course_image" data-setup='{}'>
+            <source [attr.src]="course_video" type="video/mp4" />
+          </video>
+          <h5 class="text-danger fw-bold mt-4 mb-4">$24.99</h5>
+          <div class="buttons d-flex">
+            <a class="thm-btn">Purchase Now</a>
+            <div class="cart" (click)="addToCart()"><span class="material-icons text-light m-auto">local_mall</span>
             </div>
-            <div class="page-header__shape-2">
-               <img src="assets/templates/page-header-shape-2.png" alt="">
-            </div>
-            <div class="page-header__shape-3">
-               <img src="assets/templates/page-header-shape-3.png" alt="">
-            </div>
-         </div>
-         <h2>Course Details</h2>
-         <div class="thm-breadcrumb__box">
-            <ul class="thm-breadcrumb list-unstyled">
-               <li><a href="#" routerLink="/">Home</a></li>
-               <li><span>//</span></li>
-               <li>Course Details</li>
+          </div>
+
+          <!-- Course Details -->
+          <div class="mt-4">
+            <h5 class="fw-bold mb-4">Course Includes:</h5>
+            <ul class="course-details__info-list-1 list-unstyled">
+              <li class="d-flex justify-content-between py-2">
+                <p class="d-flex align-items-center"><i class="material-icons account me-3 fs-5">library_books</i>Lesson
+                </p>
+                <span>{{course_lesson}}</span>
+              </li>
+              <li class="d-flex justify-content-between py-2">
+                <p class="d-flex align-items-center"><i class="material-icons account me-3 fs-5">category</i>Category
+                </p>
+                <span>{{course_category}}</span>
+              </li>
+              <li class="d-flex justify-content-between py-2">
+                <p class="d-flex align-items-center"><i class="material-icons account me-3 fs-5">equalizer</i>Skill
+                  Level</p>
+                <span>Advance</span>
+              </li>
+              <li class="d-flex justify-content-between py-2">
+                <p class="d-flex align-items-center"><i class="material-icons account me-3 fs-5">language</i>Language
+                </p>
+                <span>English, French</span>
+              </li>
+              <li class="d-flex justify-content-between py-2">
+                <p class="d-flex align-items-center"><i
+                    class="material-icons account me-3 fs-5">verified_user</i>Certificate</p>
+                <span>After Completed </span>
+              </li>
             </ul>
-         </div>
-      </div>
-   </div>
-</section>
-<section class="course-details">
-   <div class="container">
-      <div class="row">
-         <div class="col-xl-8 col-lg-7">
-            <div class="course-details__left">
-               <div class="course-details__img">
-                  <img src="{{course_image}}" alt="">
-               </div>
-               <div class="course-details__content">
-                  <div class="course-details__tag-box">
-                     <div class="course-details__tag-shape"></div>
-                     <span class="course-details__tag">Web Programming</span>
-                  </div>
-                  <h2 class="course-details__title">{{course_name}}</h2>
-                  <h2 class="course-details__overview-title">Course Overview</h2>
-                  <p>
-                     Our courses are designed to deliver a rich and engaging learning experience. Whether you're just
-                     starting out or looking to sharpen your skills, each course offers step-by-step guidance to help
-                     you master the subject matter with confidence. From theory to hands-on practice, you’ll gain the
-                     knowledge you need to succeed.
-                  </p>
-                  <h2 class="course-details__overview-title">Comprehensive Learning Experience</h2>
-                  <p>
-                     Each course combines video lessons, downloadable resources, quizzes, and real-world projects to
-                     ensure that you not only learn but retain and apply the concepts effectively. We focus on practical
-                     learning so that you can confidently use your skills in real-life scenarios.
-                  </p>
-                  <h2 class="course-details__overview-title">Expert Instruction</h2>
-                  <p>
-                     All our courses are created and taught by experienced instructors who are passionate about teaching
-                     and have real-world expertise in their field. You’ll learn directly from industry professionals,
-                     gaining insights and tips that go beyond textbooks.
-                  </p>
-                  <div ngbAccordion>
-                     <div ngbAccordionItem *ngFor="let item of course_contents">
-                        <h2 ngbAccordionHeader>
-                           <button ngbAccordionButton>{{item.name}}</button>
-                        </h2>
-                        <div ngbAccordionCollapse>
-                           <div ngbAccordionBody>
-                              <ng-template>
-                                 {{item.description}}
-                              </ng-template>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+            <h5 class="fw-bold mb-4">Share On:</h5>
+            <ul class="course-details__info-list-1 list-unstyled">
+              <li class="py-2">
+                <p class="d-flex align-items-center gap-3">
 
-               </div>
-            </div>
-         </div>
-         <div class="col-xl-4 col-lg-5">
-            <div class="course-details__right">
-               <div class="course-details__info-box">
-                  <div class="course-details__video-link">
-                     <div class="course-details__video-link-bg">
-                        <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="360"
-                           height="200" [attr.poster]="course_image" data-setup='{}'>
-                           <source [attr.src]="course_video" type="video/mp4" />
-                        </video>
-                     </div>
-                  </div>
-                  <div class="course-details__doller-and-btn-box">
-                     <h2 class="course-details__doller">{{course_price | currency}}</h2>
-                  </div>
-                  <div class="d-flex align-items-center justify-content-between">
-                     <div class="about-one__btn-box"><a href="#" class="about-one__btn thm-btn"><span
-                              class="icon-angles-right"></span>Purchase Now</a></div>
-                     <div class="cart-icon cursor-pointer" (click)="addToCart()"><a><i
-                              class="material-icons">shopping_cart</i></a></div>
-                  </div>
-                  <div class="course-details__info-list">
-                     <h2 class="course-details__info-list-title">This Course Included</h2>
-                     <ul class="course-details__info-list-1 list-unstyled">
-                        <li>
-                           <p><i class="material-icons account">library_books</i>Lesson</p>
-                           <span>{{course_lesson}}</span>
-                        </li>
-                        <li>
-                           <p><i class="material-icons account">category</i>Category</p>
-                           <span>{{course_category}}</span>
-                        </li>
-                        <li>
-                           <p><i class="material-icons account">equalizer</i>Skill Level</p>
-                           <span>Advance</span>
-                        </li>
-                        <li>
-                           <p><i class="material-icons account">language</i>Language</p>
-                           <span>English, French</span>
-                        </li>
-                        <li>
-                           <p><i class="material-icons account">verified_user</i>Certificate</p>
-                           <span>After Completed </span>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</section>
+                  <!-- Facebook -->
+                  <span class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle"
+                    style="width: 40px; height: 40px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="white" viewBox="0 0 24 24">
+                      <path
+                        d="M22.675 0h-21.35C.6 0 0 .6 0 1.325v21.351C0 23.4.6 24 1.325 24h11.49V14.708h-3.13v-3.622h3.13V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.464.099 2.797.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.312h3.59l-.467 3.622h-3.123V24h6.116C23.4 24 24 23.4 24 22.675V1.325C24 .6 23.4 0 22.675 0z" />
+                    </svg>
+                  </span>
 
-<app-newsletter></app-newsletter>
-<app-footer></app-footer>
+                  <!-- Twitter -->
+                  <span class="d-flex align-items-center justify-content-center bg-info text-white rounded-circle"
+                    style="width: 40px; height: 40px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+                      <path
+                        d="M23.954 4.569c-.885.392-1.83.656-2.825.775a4.932 4.932 0 0 0 2.163-2.723 9.864 9.864 0 0 1-3.127 1.195A4.918 4.918 0 0 0 16.616 3c-2.73 0-4.942 2.213-4.942 4.942 0 .39.045.765.127 1.124C7.728 8.86 4.1 6.884 1.671 3.905a4.936 4.936 0 0 0-.666 2.482c0 1.71.869 3.213 2.188 4.096a4.904 4.904 0 0 1-2.239-.616c-.053 1.998 1.397 3.872 3.448 4.29a4.936 4.936 0 0 1-2.23.084c.63 1.953 2.445 3.374 4.604 3.414a9.868 9.868 0 0 1-6.102 2.105c-.396 0-.79-.023-1.17-.068a13.945 13.945 0 0 0 7.557 2.212c9.055 0 14.002-7.496 14.002-13.986 0-.21-.006-.423-.016-.632a10.012 10.012 0 0 0 2.457-2.548l-.047-.02z" />
+                    </svg>
+                  </span>
+
+                  <!-- WhatsApp -->
+                  <span class="d-flex align-items-center justify-content-center bg-success text-white rounded-circle"
+                    style="width: 40px; height: 40px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 32 32">
+                      <path
+                        d="M16.003 2.667c-7.362 0-13.336 5.974-13.336 13.336 0 2.353.616 4.646 1.786 6.682l-1.88 6.89 7.054-1.853a13.293 13.293 0 0 0 6.375 1.606c7.362 0 13.336-5.974 13.336-13.336s-5.974-13.336-13.336-13.336zm0 24.001c-2.009 0-3.979-.524-5.719-1.516l-.406-.239-4.184 1.1 1.115-4.06-.265-.417a10.598 10.598 0 0 1-1.656-5.746c0-5.891 4.796-10.688 10.688-10.688 5.891 0 10.688 4.797 10.688 10.688s-4.797 10.688-10.688 10.688zm5.207-7.667c-.286-.144-1.7-.84-1.963-.936-.264-.097-.456-.144-.647.144s-.744.936-.911 1.128c-.167.192-.335.215-.62.072-.286-.144-1.209-.445-2.303-1.42-.85-.757-1.422-1.691-1.587-1.977-.165-.286-.018-.441.125-.584.129-.129.286-.335.429-.503.144-.168.192-.287.288-.479.096-.192.048-.36-.024-.504-.072-.144-.647-1.56-.888-2.136-.233-.561-.471-.48-.647-.488l-.55-.01c-.192 0-.504.072-.768.36s-1.007.984-1.007 2.4 1.031 2.784 1.175 2.976c.144.192 2.033 3.097 4.927 4.341.688.297 1.223.474 1.64.607.688.219 1.314.189 1.809.114.552-.082 1.7-.696 1.941-1.367.24-.672.24-1.248.168-1.367-.072-.12-.264-.192-.55-.336z" />
+                    </svg>
+                  </span>
+
+                </p>
+              </li>
+
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

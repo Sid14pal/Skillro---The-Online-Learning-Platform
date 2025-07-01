@@ -64,6 +64,7 @@ import { DashboardFooterComponent } from './dashboard/dashboard-footer/dashboard
 import { AddCoursesComponent } from './dashboard/add-courses/add-courses.component';
 import { PlayVideoComponent } from './dashboard/play-video/play-video.component';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
+import { BreadcrumbsComponent } from './template/breadcrumbs/breadcrumbs.component';
 
 
 
@@ -116,6 +117,7 @@ import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
     DashboardFooterComponent,
     AddCoursesComponent,
     PlayVideoComponent,
+    BreadcrumbsComponent,
   ],
   imports: [
     BrowserModule,

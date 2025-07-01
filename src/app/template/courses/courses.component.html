@@ -1,110 +1,153 @@
-<section class="page-header">
-    <div class="page-header__bg" style="background-image: url(assets/templates/page-header-bg-shape.png);">
-    </div>
-    <div class="page-header__shape-4">
-       <img src="assets/templates/page-header-shape-4.png" alt="">
-    </div>
-    <div class="page-header__shape-5">
-       <img src="assets/templates/page-header-shape-5.png" alt="">
-    </div>
-    <div class="container">
-       <div class="page-header__inner">
-          <div class="page-header__img">
-             <img src="assets/templates/page-header-img-1.png" alt="">
-             <div class="page-header__shape-1">
-                <img src="assets/templates/page-header-shape-1.png" alt="">
-             </div>
-             <div class="page-header__shape-2">
-                <img src="assets/templates/page-header-shape-2.png" alt="">
-             </div>
-             <div class="page-header__shape-3">
-                <img src="assets/templates/page-header-shape-3.png" alt="">
-             </div>
-          </div>
-          <h2>All courses</h2>
-          <div class="thm-breadcrumb__box">
-             <ul class="thm-breadcrumb list-unstyled">
-                <li><a href="#" routerLink="/">Home</a></li>
-                <li><span>//</span></li>
-                <li>All courses</li>
-             </ul>
-          </div>
-       </div>
-    </div>
- </section>
+<app-breadcrumbs [page]="pageTitle"></app-breadcrumbs>
 
- <section class="course-list">
+<section class="course-list">
     <div class="container">
         <div class="row">
-            <div class="col-xl-4">
-                <div class="course-grid__left">
-                    <div class="course-grid__sidebar">
-                        <div class="course-grid__discount course-grid__single">
-                            <div class="course-grid__discount-shape-bg" style="background-image: url(assets/images/shapes/course-grid-discount-shape-bg.png);">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 px-2">
+
+                <!-- Left: Toggle and Result Count -->
+                <div class="d-flex align-items-center gap-3 flex-wrap">
+                    <div class="btn-group rounded-pill shadow-sm overflow-hidden outbox shadow-sm">
+                        <button class="btn btn-white px-3 py-2 fw-medium d-flex align-items-center gap-1"
+                            [class.active]="selectedView === 'grid'" (click)="setView('grid')">
+                            <span class="material-icons">grid_view</span> Grid
+                        </button>
+                        <button class="btn btn-white px-3 py-2 fw-medium d-flex align-items-center gap-1"
+                            [class.active]="selectedView === 'list'" (click)="setView('list')">
+                            <span class="material-icons">density_medium</span> List
+                        </button>
+                    </div>
+
+                    <div class="text-muted fs-6">Showing 1–14 of 26 results</div>
+                </div>
+
+                <!-- Right: Search and Sort -->
+                <div class="d-flex align-items-center gap-3 flex-wrap">
+
+                    <div class="input-group shadow-sm search-group rounded-pill overflow-hidden w-auto search-grp">
+                        <input type="text" class="form-control search" placeholder="Search for Courses..."
+                            name="search" />
+                        <span class="input-group-text bg-white border-0 pe-3">
+                            <span class="material-icons">search</span>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="row mt-5">
+            <div *ngIf="selectedView === 'grid'" class="row g-3">
+                <div class="col-lg-4 col-md-4" *ngFor="let student of studentsList">
+                    <div class="tp-course-item p-relative fix mb-30">
+                        <div class="tp-course-thumb">
+                            <a (click)="viewDetails(student)"><img class="course-pink" [src]="student.imageUrl"
+                                    alt=""></a>
+                        </div>
+                        <div class="tp-course-content">
+                            <div class="tp-course-tag mb-10">
+                                <span>{{student.category}}</span>
                             </div>
-                            <h4 class="course-grid__discount-title">20% Discount</h4>
-                            <p class="course-grid__discount-text">is simply dummy text of the printing <br> and
-                                typesetting industry</p>
-                            <div class="course-grid__discount-img">
-                                <img src="assets/templates/course-grid-discount-img-1.png" alt="">
+                            <div class="tp-course-meta">
+                                <span>
+                                    <span>
+                                        <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13.9228 10.0426V2.29411C13.9228 1.51825 13.2949 0.953997 12.5252 1.01445H12.4847C11.1276 1.12529 9.07163 1.82055 7.91706 2.53596L7.80567 2.6065C7.62337 2.71733 7.30935 2.71733 7.11692 2.6065L6.9549 2.50573C5.81046 1.79033 3.75452 1.1152 2.3974 1.00437C1.62768 0.943911 0.999756 1.51827 0.999756 2.28405V10.0426C0.999756 10.6573 1.50613 11.2417 2.12393 11.3122L2.30622 11.3425C3.70386 11.5238 5.87126 12.2392 7.10685 12.9143L7.1372 12.9244C7.30937 13.0252 7.59293 13.0252 7.75498 12.9244C8.99057 12.2393 11.1681 11.5339 12.5758 11.3425L12.7885 11.3122C13.4164 11.2417 13.9228 10.6674 13.9228 10.0426Z"
+                                                stroke="#94928E" stroke-width="1.2" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path d="M7.46118 2.81787V12.4506" stroke="#94928E" stroke-width="1.2"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                    {{student.duration}} Lessons
+                                </span>
                             </div>
+                            <h4 class="tp-course-title">
+                                <a routerLink="course-details" class="text-black">{{student.name}}</a>
+                            </h4>
+                            <div class="tp-course-rating d-flex align-items-end justify-content-between">
+                                <div class="tp-course-rating-star">
+                                    <p>5.0<span> /5</span></p>
+                                    <div class="tp-course-rating-icon">
+                                        <i class="material-icons">star</i>
+                                        <i class="material-icons">star</i>
+                                        <i class="material-icons">star</i>
+                                        <i class="material-icons">star</i>
+                                        <i class="material-icons">star</i>
+                                    </div>
+                                </div>
+                                <div class="tp-course-pricing home-2">
+                                    <span>{{student.price | currency}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tp-course-btn home-2">
+                            <a (click)="viewDetails(student)" class="thm-btn cursor:pointer">View This Course</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-8">
-                <div class="course-list__right">
-                    <div class="course-list__right-top">
-                        <p class="course-list__right-top-text">Showing 12 Courses of 60</p>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6" *ngFor="let student of studentsList">
-                            <div class="tp-course-item p-relative fix mb-30">
-                               <div class="tp-course-thumb">
-                                  <a (click)="viewDetails(student)"><img class="course-pink" [src]="student.imageUrl" alt=""></a>
-                               </div>
-                               <div class="tp-course-content">
-                                  <div class="tp-course-tag mb-10">
-                                     <span>{{student.category}}</span>
-                                  </div>
-                                  <div class="tp-course-meta">
-                                    <span>
-                                       <span>
-                                          <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                             <path d="M13.9228 10.0426V2.29411C13.9228 1.51825 13.2949 0.953997 12.5252 1.01445H12.4847C11.1276 1.12529 9.07163 1.82055 7.91706 2.53596L7.80567 2.6065C7.62337 2.71733 7.30935 2.71733 7.11692 2.6065L6.9549 2.50573C5.81046 1.79033 3.75452 1.1152 2.3974 1.00437C1.62768 0.943911 0.999756 1.51827 0.999756 2.28405V10.0426C0.999756 10.6573 1.50613 11.2417 2.12393 11.3122L2.30622 11.3425C3.70386 11.5238 5.87126 12.2392 7.10685 12.9143L7.1372 12.9244C7.30937 13.0252 7.59293 13.0252 7.75498 12.9244C8.99057 12.2393 11.1681 11.5339 12.5758 11.3425L12.7885 11.3122C13.4164 11.2417 13.9228 10.6674 13.9228 10.0426Z" stroke="#94928E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                             <path d="M7.46118 2.81787V12.4506" stroke="#94928E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                          </svg>
-                                       </span>
-                                       {{student.duration}} Lessons
-                                    </span>
-                                 </div>
-                                  <h4 class="tp-course-title">
-                                     <a routerLink="course-details" class="text-black">{{student.name}}</a>
-                                  </h4>
-                                  <div class="tp-course-rating d-flex align-items-end justify-content-between">
-                                     <div class="tp-course-rating-star">
-                                        <p>5.0<span> /5</span></p>
-                                        <div class="tp-course-rating-icon">
-                                           <i class="material-icons">star</i>
-                                           <i class="material-icons">star</i>
-                                           <i class="material-icons">star</i>
-                                           <i class="material-icons">star</i>
-                                           <i class="material-icons">star</i>
-                                        </div>
-                                     </div>
-                                     <div class="tp-course-pricing home-2">
-                                        <span>{{student.price | currency}}</span>
-                                     </div>
-                                  </div>
-                               </div>
-                               <div class="tp-course-btn home-2">
-                                   <a (click)="viewDetails(student)" class="thm-btn">View This Course</a>
-                               </div>
+
+            <div *ngIf="selectedView === 'list'" class="d-flex flex-column gap-3">
+                <div class="col-md-11 m-auto" *ngFor="let student of studentsList">
+                    <div
+                        class="list-view-card d-flex border rounded p-3 gap-3 align-items-start mb-4 flex-wrap flex-md-nowrap">
+
+                        <!-- Image Section -->
+                        <div class="list-view-thumb">
+                            <a (click)="viewDetails(student)">
+                                <img [src]="student.imageUrl" alt="" class="img-fluid rounded"
+                                    style="width: 240px; height: 140px; object-fit: cover;">
+                            </a>
+                        </div>
+
+                        <!-- Content Section -->
+                        <div class="list-view-content flex-grow-1">
+
+                            <!-- Category Tag -->
+                            <div class="list-view-tag mb-2 tp-course-tag">
+                                <span>{{student.category}}</span>
                             </div>
-                         </div>
-                    </div>    
+
+                            <!-- Title -->
+                            <h4 class="list-view-title mb-2">
+                                <a routerLink="course-details"
+                                    class="text-black text-decoration-none fw-semibold">{{student.name}}</a>
+                            </h4>
+
+                            <!-- Meta: Duration -->
+                            <div class="list-view-meta mb-2 text-muted d-flex align-items-center gap-2">
+                                <span class="d-flex align-items-center gap-1">
+                                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.9228 10.0426V2.29411C13.9228 1.51825 13.2949 0.953997 12.5252 1.01445H12.4847C11.1276 1.12529 9.07163 1.82055 7.91706 2.53596L7.80567 2.6065C7.62337 2.71733 7.30935 2.71733 7.11692 2.6065L6.9549 2.50573C5.81046 1.79033 3.75452 1.1152 2.3974 1.00437C1.62768 0.943911 0.999756 1.51827 0.999756 2.28405V10.0426C0.999756 10.6573 1.50613 11.2417 2.12393 11.3122L2.30622 11.3425C3.70386 11.5238 5.87126 12.2392 7.10685 12.9143L7.1372 12.9244C7.30937 13.0252 7.59293 13.0252 7.75498 12.9244C8.99057 12.2393 11.1681 11.5339 12.5758 11.3425L12.7885 11.3122C13.4164 11.2417 13.9228 10.6674 13.9228 10.0426Z"
+                                            stroke="#94928E" stroke-width="1.2" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                        <path d="M7.46118 2.81787V12.4506" stroke="#94928E" stroke-width="1.2"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                    {{student.duration}} Lessons
+                                </span>
+                            </div>
+
+                            <!-- Rating & Price -->
+                            <div class="d-flex justify-content-between align-items-end flex-wrap gap-2 tp-course-pricing">
+                                  <span class="h5 mb-0">{{student.price | currency}}</span>
+                            </div>
+                        </div>
+
+                        <!-- Button Section -->
+                        <div class="mt-3 mt-md-0 ">
+                            <a (click)="viewDetails(student)" class="thm-btn px-4 py-2 mt-5">View This Course</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+
         </div>
     </div>
 </section>

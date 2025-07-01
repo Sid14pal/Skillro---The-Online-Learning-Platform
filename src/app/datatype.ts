@@ -1,24 +1,24 @@
 export interface Student {
-    id: string;
-    name : string;
-    category : string;
-    duration : string;
-    price: string;
-    imageUrl?: string;
-    videoUrl?: string; 
-    courseContents?: {
+  id: string;
+  name: string;
+  category: string;
+  duration: string;
+  price: string;
+  imageUrl?: string;
+  videoUrl?: string;
+  courseContents?: {
     name: string;
     description: string;
-  }[]; 
+  }[];
 }
 
 export interface courses {
-    id: string;
-    courseName : string;
-    courseId : string;
-    duration : string;
-    courseClass: string;
-    imageUrl?: string;
+  id: string;
+  courseName: string;
+  courseId: string;
+  duration: string;
+  courseClass: string;
+  imageUrl?: string;
 }
 
 export interface Blog {
@@ -45,4 +45,10 @@ export interface checkout {
   year: string;
   cvv: string;
   date: string;
+}
+
+export interface review {
+  name: string,
+  review: string,
+  rating: string,
 }

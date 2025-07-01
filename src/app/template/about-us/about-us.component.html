@@ -1,32 +1,4 @@
-<section class="page-header">
-    <div class="page-header__bg" style="background-image: url(assets/templates/breadcrumb-bg.jpg);">
-    </div>
-    <div class="container">
-       <div class="page-header__inner">
-          <div class="page-header__img">
-             <img src="assets/templates/page-header-img-1.png" alt="">
-             <div class="page-header__shape-1">
-                <img src="assets/templates/page-header-shape-1.png" alt="">
-             </div>
-             <div class="page-header__shape-2">
-                <img src="assets/templates/page-header-shape-2.png" alt="">
-             </div>
-             <div class="page-header__shape-3">
-                <img src="assets/templates/page-header-shape-3.png" alt="">
-             </div>
-          </div>
-          <h2>About Us</h2>
-          <div class="thm-breadcrumb__box">
-             <ul class="thm-breadcrumb list-unstyled">
-                <li><a href="#" routerLink="/"><i class="material-icons">cottage</i></a></li>
-                <li><span>/</span></li>
-                <li>About Us</li>
-             </ul>
-          </div>
-       </div>
-    </div>
- </section>
-
+<app-breadcrumbs [page]="pageTitle"></app-breadcrumbs>
 <app-behind-the-scenes></app-behind-the-scenes>
 <app-text-slide></app-text-slide>
 <app-why-our-students></app-why-our-students>
