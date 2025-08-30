@@ -24,7 +24,7 @@ export class CartComponent {
   }
 
   removeFromCart(itemId: string) {
-    this.openSnackBar('tem Deleted Successfully');
+    this.openSnackBar('Item Deleted Successfully');
     this.firestore.collection('cart').doc(itemId).delete()
   }
 

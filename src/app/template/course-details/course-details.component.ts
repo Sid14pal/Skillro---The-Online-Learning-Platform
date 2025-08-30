@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 import videojs from 'video.js';
 import type Player from 'video.js/dist/types/player';
@@ -16,7 +16,14 @@ export class CourseDetailsComponent implements OnInit, AfterViewInit, OnDestroy 
 
   player!: Player;
   active = 1;
-  showReview: any[] = [];
+  reviewData = {
+    name: '',
+    review: '',
+    rating: ''
+  };
+
+  reviews: any[] = [];
+
 
   course_image: string = '';
   course_name: string = '';
@@ -27,13 +34,7 @@ export class CourseDetailsComponent implements OnInit, AfterViewInit, OnDestroy 
   course_contents: any = [];
   course_video: string = '';
 
-  reviewData: review = {
-    name: '',
-    review: '',
-    rating: '',
-  }
-
-  constructor(private router: ActivatedRoute, private firestore: AngularFirestore, private snackBar: MatSnackBar, private bootstrap: NgbAccordionModule) { }
+  constructor(private router: ActivatedRoute, private firestore: AngularFirestore, private snackBar: MatSnackBar, private bootstrap: NgbAccordionModule, private route: Router) { }
 
   ngOnInit(): void {
     this.router.queryParams.subscribe(params => {
@@ -53,7 +54,10 @@ export class CourseDetailsComponent implements OnInit, AfterViewInit, OnDestroy 
         }
       }
     });
+    this.getReviews();
   }
+
+
 
 
   ngAfterViewInit(): void {
@@ -102,44 +106,29 @@ export class CourseDetailsComponent implements OnInit, AfterViewInit, OnDestroy 
     });
   }
 
-  resetForm() {
-    this.reviewData = {
-      name: '',
-      review: '',
-      rating: '',
-    };
-  }
-
   submitReview() {
-    const review = {
-      reviewInfo: this.reviewData,
+    if (!this.reviewData.name || !this.reviewData.review || !this.reviewData.rating) {
+      alert('Please fill in all fields');
+      return;
     }
 
-        if(!this.validateForm()) {
-      return;
-    } 
+    const review = {
+      ...this.reviewData,
+      timestamp: new Date()  // optional: helps for ordering
+    };
 
     this.firestore.collection('review').add(review)
       .then(() => {
-        this.openSnackBar('You have successfully submitted the review');
-        this.resetForm();
-        console.log(review)
-      })
+        this.reviewData = {name: '', review: '', rating: ''};
+        this.getReviews();  // Refresh reviews
+      });
   }
 
-  validateForm(): boolean {
-    if (!this.reviewData.name) {
-      this.snackBar.open('Please enter your name', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
-      return false;
-    }
-        if (!this.reviewData.review) {
-      this.snackBar.open('Please enter your review', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
-      return false;
-    }
-        if (!this.reviewData.rating) {
-      this.snackBar.open('Please enter the rating', 'Close', { duration: 4000, panelClass: ['danger', 'vertical-center-snackba'],});
-      return false;
-    }
-    return true;
+  getReviews() {
+    this.firestore.collection('review', ref => ref.orderBy('timestamp', 'desc'))
+      .valueChanges()
+      .subscribe(data => {
+        this.reviews = data;
+      });
   }
 }

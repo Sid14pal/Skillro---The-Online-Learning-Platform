@@ -3,7 +3,9 @@
 }
 
 .thm-btn {
-  padding: 11px 89px 12px;
+    padding: 11px 112px 12px;
+    font-size: 19px;
+    cursor: pointer;
 }
 
 .cart {
@@ -13,6 +15,12 @@
   margin: auto;
   border-radius: 50px;
   display: flex;
+}
+
+.content {
+  position: relative;
+  bottom: 220px;
+  margin-bottom: -213px;
 }
 
 
@@ -71,4 +79,12 @@
 .review .text-warning {
   font-size: 0.9rem;
   letter-spacing: 1px;
+}
+
+.review  {
+    min-height: 74px;
+}
+
+.course-poster {
+      border-radius: 20px;
 }

@@ -65,6 +65,10 @@ import { AddCoursesComponent } from './dashboard/add-courses/add-courses.compone
 import { PlayVideoComponent } from './dashboard/play-video/play-video.component';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 import { BreadcrumbsComponent } from './template/breadcrumbs/breadcrumbs.component';
+import { ReviewComponent } from './dashboard/review/review.component';
+import { BarChartComponent } from './dashboard/bar-chart/bar-chart.component';
+import { NgChartsModule } from 'ng2-charts';
+import { PieChartComponent } from './dashboard/pie-chart/pie-chart.component';
 
 
 
@@ -118,6 +122,9 @@ import { BreadcrumbsComponent } from './template/breadcrumbs/breadcrumbs.compone
     AddCoursesComponent,
     PlayVideoComponent,
     BreadcrumbsComponent,
+    ReviewComponent,
+    BarChartComponent,
+    PieChartComponent,
   ],
   imports: [
     BrowserModule,
@@ -130,7 +137,8 @@ import { BreadcrumbsComponent } from './template/breadcrumbs/breadcrumbs.compone
     MatIconModule,
     ReactiveFormsModule,
     CanvasJSAngularChartsModule,
-    NgbAccordionModule
+    NgbAccordionModule,
+    NgChartsModule
     
   ],
   providers: [

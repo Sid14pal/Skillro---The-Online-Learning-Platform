@@ -24,6 +24,7 @@ import { StudentLoginComponent } from './dashboard/student-login/student-login.c
 import { OrdersComponent } from './dashboard/orders/orders.component';
 import { AddCoursesComponent } from './dashboard/add-courses/add-courses.component';
 import { PlayVideoComponent } from './dashboard/play-video/play-video.component';
+import { ReviewComponent } from './dashboard/review/review.component';
 
 const routes: Routes = [
 
@@ -51,6 +52,7 @@ const routes: Routes = [
   {path: 'thankyou', component : ThankyouComponent},
   {path: 'add-courses', component : AddCoursesComponent},
   {path: 'play-video', component : PlayVideoComponent},
+  {path: 'review', component : ReviewComponent},
 
 ];
 

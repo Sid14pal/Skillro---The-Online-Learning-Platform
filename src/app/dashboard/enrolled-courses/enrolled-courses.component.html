@@ -36,23 +36,8 @@
                         </span>
                      </div>
                       <h4 class="tp-course-title">
-                         <a routerLink="course-details" class="text-black">{{item.name}}</a>
+                         <a routerLink="course-details" class="text-black" (click)="playVideo(item.video)">{{item.name}}</a>
                       </h4>
-                      <div class="tp-course-rating d-flex align-items-end justify-content-between">
-                         <div class="tp-course-rating-star">
-                            <p>5.0<span> /5</span></p>
-                            <div class="tp-course-rating-icon">
-                               <i class="material-icons">star</i>
-                               <i class="material-icons">star</i>
-                               <i class="material-icons">star</i>
-                               <i class="material-icons">star</i>
-                               <i class="material-icons">star</i>
-                            </div>
-                         </div>
-                         <div class="tp-course-pricing home-2">
-                            <span>{{item.price | currency}}</span>
-                         </div>
-                      </div>
                    </div>
                    <div class="tp-course-btn home-2">
                        <a class="thm-btn" (click)="playVideo(item.video)">Watch Video</a>

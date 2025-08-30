@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <!-- Left Content -->
-      <div class="col-lg-6">
+      <div class="col-lg-8">
         <h1 class="fw-semibold mb-3">{{course_name}}</h1>
         <div class="d-flex align-items-center gap-4 mt-2 mb-4 text-muted small">
           <div>
@@ -30,7 +30,7 @@
         <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav nav-tabs custom-tabs border-0" role="tablist">
           <li [ngbNavItem]="1" class="nav-item">
             <button ngbNavLink class="nav-link">
-              <h5>Overview</h5>
+              <h4>Overview</h4>
             </button>
             <ng-template ngbNavContent>
               <div class="course-section">
@@ -61,7 +61,7 @@
           </li>
           <li [ngbNavItem]="2" class="nav-item">
             <button ngbNavLink class="nav-link">
-              <h5>Course Content</h5>
+              <h4>Course Content</h4>
             </button>
             <ng-template ngbNavContent>
               <div class="course-section" *ngFor="let item of course_contents">
@@ -75,39 +75,23 @@
           </li>
           <li [ngbNavItem]="3" class="nav-item">
             <button ngbNavLink class="nav-link">
-              <h5>Reviews</h5>
+              <h4>Reviews</h4>
             </button>
             <ng-template ngbNavContent>
               <div class="mb-4 border rounded p-3 mt-5" style="max-height: 300px; overflow-y: auto;">
-                <div class="review mb-3">
+                <div class="review mb-3 border-bottom" *ngFor="let item of reviews">
                   <div class="d-flex justify-content-between align-items-center mb-1">
-                    <strong>Priya Sinha</strong>
-                    <div class="text-warning">★★★★★</div>
+                    <strong>{{ item.name }}</strong>
+                    <div class="text-warning">{{ item.rating }}</div>
                   </div>
-                  <p class="text-muted mb-0">Excellent course! The instructions were clear and easy to follow.</p>
-                </div>
-                <hr />
-                <div class="review mb-3">
-                  <div class="d-flex justify-content-between align-items-center mb-1">
-                    <strong>Rahul Mehta</strong>
-                    <div class="text-warning">★★★★☆</div>
-                  </div>
-                  <p class="text-muted mb-0">Very informative, but I wish there were more real-world examples.</p>
-                </div>
-                <hr />
-                <div class="review mb-3" *ngIf="let review of showReview">
-                  <div class="d-flex justify-content-between align-items-center mb-1">
-                    <strong>Neha Kapoor</strong>
-                    <div class="text-warning">★★★★★</div>
-                  </div>
-                  <p class="text-muted mb-0">Great content and the downloadable materials were very helpful.</p>
+                  <p class="text-muted mb-0">{{ item.review }}</p>
                 </div>
               </div>
 
               <!-- Submit Review -->
               <div class="border rounded p-4 bg-light">
                 <h5 class="mb-3 fw-semibold">Leave a Review</h5>
-                <form>
+                <form (ngSubmit)="submitReview()" #reviewForm="ngForm">
                   <div class="mb-3">
                     <label for="reviewName" class="form-label">Your Name</label>
                     <input type="text" class="form-control" id="reviewName" placeholder="Enter your name" name="name" [(ngModel)]="reviewData.name"/>
@@ -123,15 +107,15 @@
                     <label class="form-label">Rating</label>
                     <select class="form-select" name="rating" [(ngModel)]="reviewData.rating">
                       <option selected disabled>Select rating</option>
-                      <option value="5">★★★★★ - Excellent</option>
-                      <option value="4">★★★★☆ - Good</option>
-                      <option value="3">★★★☆☆ - Average</option>
-                      <option value="2">★★☆☆☆ - Poor</option>
-                      <option value="1">★☆☆☆☆ - Terrible</option>
+                      <option value="★★★★★ - Excellent">★★★★★ - Excellent</option>
+                      <option value="★★★★☆ - Good">★★★★☆ - Good</option>
+                      <option value="★★★☆☆ - Average">★★★☆☆ - Average</option>
+                      <option value="★★☆☆☆ - Poor">★★☆☆☆ - Poor</option>
+                      <option value="★☆☆☆☆ - Terrible">★☆☆☆☆ - Terrible</option>
                     </select>
                   </div>
 
-                  <button type="submit" class="btn btn-primary w-100" (click)="submitReview()">Submit Review</button>
+                  <button type="submit" class="btn btn-primary w-100">Submit Review</button>
                 </form>
               </div>
             </ng-template>
@@ -142,16 +126,11 @@
       </div>
 
       <div class="col-lg-4 mt-4 mt-lg-0">
-        <div class="bg-white p-3 p-md-4 rounded-4 shadow">
-          <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="360" height="200"
-            [attr.poster]="course_image" data-setup='{}'>
-            <source [attr.src]="course_video" type="video/mp4" />
-          </video>
+        <div class="bg-white p-3 p-md-4 rounded-4 shadow content">
+          <img src={{course_image}} class="img-fluid course-poster">
           <h5 class="text-danger fw-bold mt-4 mb-4">$24.99</h5>
           <div class="buttons d-flex">
-            <a class="thm-btn">Purchase Now</a>
-            <div class="cart" (click)="addToCart()"><span class="material-icons text-light m-auto">local_mall</span>
-            </div>
+            <a class="thm-btn" (click)="addToCart()">Add To Cart <span class="material-icons text-light m-auto">local_mall</span></a>
           </div>
 
           <!-- Course Details -->
@@ -215,11 +194,8 @@
                         d="M16.003 2.667c-7.362 0-13.336 5.974-13.336 13.336 0 2.353.616 4.646 1.786 6.682l-1.88 6.89 7.054-1.853a13.293 13.293 0 0 0 6.375 1.606c7.362 0 13.336-5.974 13.336-13.336s-5.974-13.336-13.336-13.336zm0 24.001c-2.009 0-3.979-.524-5.719-1.516l-.406-.239-4.184 1.1 1.115-4.06-.265-.417a10.598 10.598 0 0 1-1.656-5.746c0-5.891 4.796-10.688 10.688-10.688 5.891 0 10.688 4.797 10.688 10.688s-4.797 10.688-10.688 10.688zm5.207-7.667c-.286-.144-1.7-.84-1.963-.936-.264-.097-.456-.144-.647.144s-.744.936-.911 1.128c-.167.192-.335.215-.62.072-.286-.144-1.209-.445-2.303-1.42-.85-.757-1.422-1.691-1.587-1.977-.165-.286-.018-.441.125-.584.129-.129.286-.335.429-.503.144-.168.192-.287.288-.479.096-.192.048-.36-.024-.504-.072-.144-.647-1.56-.888-2.136-.233-.561-.471-.48-.647-.488l-.55-.01c-.192 0-.504.072-.768.36s-1.007.984-1.007 2.4 1.031 2.784 1.175 2.976c.144.192 2.033 3.097 4.927 4.341.688.297 1.223.474 1.64.607.688.219 1.314.189 1.809.114.552-.082 1.7-.696 1.941-1.367.24-.672.24-1.248.168-1.367-.072-.12-.264-.192-.55-.336z" />
                     </svg>
                   </span>
-
                 </p>
               </li>
-
-
             </ul>
           </div>
         </div>
@@ -227,3 +203,5 @@
     </div>
   </div>
 </section>
+
+<app-footer></app-footer>

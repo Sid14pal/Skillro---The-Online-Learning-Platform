@@ -100,8 +100,8 @@ export class ThankyouComponent {
       email: this.email,
       timestamp: new Date()
     }).then(() => {
-      this.snackBar.open('Account created and cart saved!', 'Close', { duration: 4000, panelClass: ['success'] });
-    //  this.router.navigate(['/student-dashboard']);
+      this.snackBar.open('Account created and saved!', 'Close', { duration: 4000, panelClass: ['success'] });
+      this.router.navigate(['/student-login']);
     }).catch(error => {
       this.snackBar.open('Error saving cart: ' + error.message, 'Close', { duration: 4000, panelClass: ['danger'] });
     });

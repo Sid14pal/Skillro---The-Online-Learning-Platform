@@ -1,0 +1,52 @@
+<div class="wrapper">
+
+  <app-dashboard-header></app-dashboard-header>
+
+  <!--=================================
+    Main content -->
+
+  <div>
+
+    <app-dashboard-sidebar></app-dashboard-sidebar>
+
+    <!--=================================
+      wrapper -->
+    <div class="content-wrapper">
+       <div class="ratings-header text-white text-center">
+      <h4 class="text-white">Trendy Studio✨</h4>
+      <div class="rating-summary">(100+) <b>5.0 Ratings</b></div>
+    </div>
+      <!-- widgets -->
+      <div class="row mt-4">
+        <div class="container py-5">
+
+    <div class="review-card col-md-4" *ngFor="let item of reviews">
+      <div class="review-header">
+        <div class="review-info">
+          <div class="review-name-date">
+            <div class="review-name">{{item.name}}</div>
+            <small class="text-muted">{{item.timestamp | date}}</small>
+          </div>
+        </div>
+        <div class="review-stars">
+         {{item.rating}}
+        </div>
+      </div>
+      <p class="mt-3 mb-2">
+       {{item.review}}
+      </p>
+    </div>
+      </div>
+
+      <!--=================================
+        footer -->
+      <app-dashboard-footer></app-dashboard-footer>
+      <!--=================================
+        footer -->
+    </div>
+    <!--=================================
+      wrapper -->
+  </div>
+  <!--=================================
+    Main content -->
+</div>
