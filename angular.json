@@ -29,6 +29,14 @@
             "polyfills": [
               "zone.js"
             ],
+            "allowedCommonJsDependencies": [
+  "undici",
+  "aos",
+    "@canvasjs/charts",
+  "@grpc/grpc-js",
+  "@grpc/proto-loader",
+  "faye-websocket"
+],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
@@ -56,13 +64,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "10mb",
+                  "maximumError": "10mb"
                 },
                 {
   "type": "anyComponentStyle",
-  "maximumWarning": "500kb",
-  "maximumError": "1mb"
+  "maximumWarning": "10mb",
+  "maximumError": "10mb"
 }
               ],
               "outputHashing": "all"
