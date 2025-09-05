@@ -1,1 +1,85 @@
-<p>contact-us works!</p>
+<div class="contact" style="background-image: url(assets/templates/contact-bg.jpg);">
+    <div class="container py-5">
+    <div class="row">
+        <div class="text-center p-5">
+            <h3 class="fw-bold">Get in Touch</h3>
+        <p>We are here to answer any question you may have</p>
+        </div>
+    </div>
+  <div class="row">
+    <!-- Left Side: Form -->
+    <div class="col-lg-6 mb-4">
+      <h3 class="mb-3">Send a Message</h3>
+      <form>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Your Name" name="name" [(ngModel)]="contactData.name">
+          </div>
+          <div class="col-md-6">
+            <input type="email" class="form-control" placeholder="Email Address" name="email" [(ngModel)]="contactData.email">
+          </div>
+          <div class="col-12">
+            <input type="text" class="form-control" placeholder="Subject" name="subject" [(ngModel)]="contactData.subject">
+          </div>
+          <div class="col-12">
+            <textarea class="form-control" rows="5" placeholder="Your message" name="descriptions" [(ngModel)]="contactData.descriptions"></textarea>
+          </div>
+          <div class="col-12 d-flex align-items-center gap-2">
+            <input type="checkbox" class="form-check-input" id="saveInfo" name="checkbox" [(ngModel)]="contactData.checkbox">
+            <label for="saveInfo" class="form-check-label small text-muted">
+              Save my name, email, and website in this browser for the next time I comment.
+            </label>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary px-4 py-2 rounded-pill" (click)="submitContactForm()">
+              Send Message
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Right Side: Info -->
+    <div class="col-lg-5">
+      <h3 class="mb-3">No matter what your question,<br> we will be ready to resolve it.</h3>
+      <p class="text-muted mb-4">
+        We are committed to staying ahead of the fashion curve, constantly updating our
+        inventory with the latest trends and timeless classics.
+      </p>
+
+      <div class="mb-4 d-flex">
+<div class="icon-border me-3">
+  <i class="material-icons">mail</i>
+</div>
+        <div>
+        <h6 class="fw-bold mb-1">Feedbacks</h6>
+        <p class="text-muted small mb-1">Speak to our Friendly team.</p>
+        <a href="mailto:support@gmail.com" class="text-dark fw-semibold">Support.com</a>
+        </div>
+      </div>
+      <div class="mb-4 d-flex">
+<div class="icon-border me-3">
+  <i class="material-icons">call</i>
+</div>
+        <div>
+        <h6 class="fw-bold mb-1">Call Us</h6>
+        <p class="text-muted small mb-1">Mon-Fri from 8am to 5pm</p>
+        <a href="mailto:support@gmail.com" class="text-dark fw-semibold">+1(555) 000-0000</a>
+        </div>
+      </div>
+      <div class="mb-4 d-flex">
+<div class="icon-border me-3">
+  <i class="material-icons">add_location</i>
+</div>
+        <div>
+        <h6 class="fw-bold mb-1">Visit Us</h6>
+        <p class="text-muted small mb-1">Visit our office HQ</p>
+        <a href="mailto:support@gmail.com" class="text-dark fw-semibold">Chicago HQEstica cop, Macomb,<br> MI 48042</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+<app-footer></app-footer>

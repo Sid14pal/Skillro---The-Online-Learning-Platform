@@ -1,0 +1,20 @@
+.contact {
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+}
+
+.icon-border {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #595c5f;
+    border-radius: 15%;
+    background: #fff;
+}
+.icon-border .material-icons {
+  font-size: 24px;
+  color: #595c5f;
+}
