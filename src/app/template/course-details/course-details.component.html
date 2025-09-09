@@ -4,7 +4,7 @@
     <div class="row">
       <!-- Left Content -->
       <div class="col-lg-8">
-        <h1 class="fw-semibold mb-3">{{course_name}}</h1>
+        <h3 class="fw-semibold mb-3">{{course_name}}</h3>
         <div class="d-flex align-items-center gap-4 mt-2 mb-4 text-muted small">
           <div>
             <span class="text-warning material-icons align-middle">star</span>
@@ -30,7 +30,7 @@
         <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav nav-tabs custom-tabs border-0" role="tablist">
           <li [ngbNavItem]="1" class="nav-item">
             <button ngbNavLink class="nav-link">
-              <h4>Overview</h4>
+              <h5>Overview</h5>
             </button>
             <ng-template ngbNavContent>
               <div class="course-section">
@@ -61,7 +61,7 @@
           </li>
           <li [ngbNavItem]="2" class="nav-item">
             <button ngbNavLink class="nav-link">
-              <h4>Course Content</h4>
+              <h5>Course Content</h5>
             </button>
             <ng-template ngbNavContent>
               <div class="course-section" *ngFor="let item of course_contents">
@@ -75,7 +75,7 @@
           </li>
           <li [ngbNavItem]="3" class="nav-item">
             <button ngbNavLink class="nav-link">
-              <h4>Reviews</h4>
+              <h5>Reviews</h5>
             </button>
             <ng-template ngbNavContent>
               <div class="mb-4 border rounded p-3 mt-5" style="max-height: 300px; overflow-y: auto;">
