@@ -12,7 +12,7 @@ import { Student } from '../../datatype';
 export class PopularCoursesComponent {
 
   studentsList: Student[] = [];
-            studentObj: Student = {
+          studentObj: Student = {
               id: '',
               name: '',
               category: '',

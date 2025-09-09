@@ -65,7 +65,7 @@
                                 </span>
                             </div>
                             <h4 class="tp-course-title">
-                                <a routerLink="course-details" class="text-black">{{student.name}}</a>
+                                <a (click)="viewDetails(student)" style="cursor: pointer;" class="text-black">{{student.name}}</a>
                             </h4>
                             <div class="tp-course-rating d-flex align-items-end justify-content-between">
                                 <div class="tp-course-rating-star">
