@@ -62,6 +62,23 @@ export class AddCoursesComponent {
     if (this.currentStep > 0) this.currentStep--;
   }
 
+mainpage() {
+  if (this.currentStep > 1) {
+    this.currentStep -= 2;
+    this.studentObj.id = '';
+    this.studentObj.name = '';
+    this.studentObj.category = '';
+    this.studentObj.duration = '';
+    this.studentObj.price = '';
+    this.courseContents = [{ name: '', description: '' }];
+    this.removeImage();
+    this.removeVideo();
+  } else {
+    this.currentStep = 0; 
+  }
+}
+
+
   onFileSelected(event: any): void {
     const file = event.target.files[0];
     if (file && file.type.startsWith('image/')) {
@@ -135,7 +152,10 @@ export class AddCoursesComponent {
         panelClass: ['success']
       });
 
-    } catch (err) {
+     this.mainpage(); 
+
+    } 
+    catch (err) {
       console.error(err);
       this.snackBar.open('Error publishing course', 'Close', {
         duration: 4000,
