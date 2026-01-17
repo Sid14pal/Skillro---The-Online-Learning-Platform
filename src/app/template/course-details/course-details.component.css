@@ -35,12 +35,14 @@
 }
 
 .custom-tabs .nav-link.active {
-  color: #6c63ff;
-  font-weight: 600;
+  color: #ffffff;
+    font-weight: 600;
+    box-shadow: 4px 6px 0px 0px #03003c;
+    background: #687eff;
 }
 
 .custom-tabs .nav-link.active h5 {
-  color: #6c63ff !important;
+  color: #fff !important;
   font-weight: 600;
 }
 

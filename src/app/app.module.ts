@@ -58,7 +58,6 @@ import { CheckoutComponent } from './template/checkout/checkout.component';
 import { ThankyouComponent } from './template/thankyou/thankyou.component';
 import { AdminLoginComponent } from './dashboard/admin-login/admin-login.component';
 import { StudentLoginComponent } from './dashboard/student-login/student-login.component';
-import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { OrdersComponent } from './dashboard/orders/orders.component';
 import { DashboardFooterComponent } from './dashboard/dashboard-footer/dashboard-footer.component';
 import { AddCoursesComponent } from './dashboard/add-courses/add-courses.component';
@@ -136,7 +135,6 @@ import { PieChartComponent } from './dashboard/pie-chart/pie-chart.component';
     MatSnackBarModule,
     MatIconModule,
     ReactiveFormsModule,
-    CanvasJSAngularChartsModule,
     NgbAccordionModule,
     NgChartsModule
     

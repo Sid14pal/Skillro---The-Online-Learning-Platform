@@ -1,68 +1,29 @@
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-3">
                 <div class="widget1">
                     <div class="logo">
-                        <img src="assets/templates/logo.png" class="img-fluid" alt="">
+                        <img src="assets/templates/logo-footer.png" class="img-fluid" alt="">
                     </div>
                     <p>
                         Learn Anywhere, Anytime.<br>
                         Join thousands of learners building their future with expert-led online courses. 
                     </p>
-                    <div class="socialLinks">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-google-plus-g"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-3">
                 <div class="widget2">
                     <h5>
                         Latest News
                     </h5>
-                    <div class="media d-flex">
-                        <img class="img-fluid" src="assets/templates/blog1.jpg" alt="">
+                    <div class="media d-flex" *ngFor="let blog of blogs | slice:0:3">
+                        <img class="img-fluid" src="{{blog.image}}" alt="" [ngStyle]="{'border-radius': '10px', 'object-fit': 'cover'}">
                         <div class="media-body d-flex align-self-center">
                             <div class="content">
-                                <a href="#">
+                                <a (click)="viewBlogs(blog)" [ngStyle]="{'cursor': 'pointer'}">
                                     <p>
-                                            Did son unreserved themselves indulgence its
-                                    </p>
-                                </a>
-                                <span>
-                                    Aug 17, 2019
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="media d-flex">
-                        <img class="img-fluid" src="assets/templates/blog2.jpg" alt="">
-                        <div class="media-body d-flex align-self-center">
-                            <div class="content">
-                                <a href="#">
-                                    <p>
-                                            Rapturous am eagerness it as resolving household
+                                        {{blog.title}}
                                     </p>
                                 </a>
                                 <span>
@@ -80,68 +41,47 @@
                     </h5>
                     <ul>
                         <li>
-                            <a href="#">
+                            <a routerLink="/home">
                                 Home
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a routerLink="/about-us">
                                 about Us
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a routerLink="/courses">
                                 Courses
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" routerLink="/blog">
                                 Blog
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a routerLink="/contact-us">
                                 Contact Us
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-6 col-lg-2">
+            <div class="col-sm-6 col-lg-3">
                 <div class="widget4">
                     <h5>
                         Our Address
                     </h5>
                     <ul>
                         <li>
-                            <a href="#">
-                                themeforest
-                            </a>
+                            <p class="d-flex"><i class="material-icons me-2">add_location</i> Chicago HQEstica cop, Macomb,<br> MI 48042</p>
                         </li>
                         <li>
-                            <a href="#">
-                                graphicriver
-                            </a>
+                            <p class="d-flex"><i class="material-icons me-2">call</i> +79 2589 7336</p>
                         </li>
                         <li>
-                            <a href="#">
-                                codecanyon
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                videohive
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                redpen
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                codepen
-                            </a>
+                            <p class="d-flex"><i class="material-icons me-2">mail</i> john25"&#64;"test.com</p>
                         </li>
                     </ul>
                 </div>

@@ -1,10 +1,8 @@
-import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
-import videojs from 'video.js';
-import type Player from 'video.js/dist/types/player';
 import { review } from '../../datatype';
 
 @Component({
@@ -12,9 +10,8 @@ import { review } from '../../datatype';
   templateUrl: './course-details.component.html',
   styleUrl: './course-details.component.css',
 })
-export class CourseDetailsComponent implements OnInit, AfterViewInit, OnDestroy {
+export class CourseDetailsComponent implements OnInit {
 
-  player!: Player;
   active = 1;
   reviewData = {
     name: '',
@@ -55,19 +52,6 @@ export class CourseDetailsComponent implements OnInit, AfterViewInit, OnDestroy 
       }
     });
     this.getReviews();
-  }
-
-
-
-
-  ngAfterViewInit(): void {
-    this.player = videojs('my-video');
-  }
-
-  ngOnDestroy(): void {
-    if (this.player) {
-      this.player.dispose();
-    }
   }
 
   addToCart() {

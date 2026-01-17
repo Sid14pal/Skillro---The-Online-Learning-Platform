@@ -14,12 +14,14 @@
        <div class="content-wrapper">
         <div class="row mt-4">
             <div class="col-lg-12 col-md-12">
-              <div>
+              <ng-container *ngIf="isBrowser && videoUrl">
   <video width="100%" height="auto" controls>
     <source [src]="videoUrl" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-</div>
+  <p>{{isBrowser}}</p>
+
+</ng-container>
              </div>
         </div>
         <footer class="bg-white p-4">

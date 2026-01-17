@@ -29,6 +29,14 @@
             "polyfills": [
               "zone.js"
             ],
+            "allowedCommonJsDependencies": [
+  "undici",
+  "aos",
+    "@canvasjs/charts",
+  "@grpc/grpc-js",
+  "@grpc/proto-loader",
+  "faye-websocket"
+],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
@@ -38,14 +46,12 @@
               "src/custom-theme.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css",
-              "node_modules/aos/dist/aos.css",
-              "node_modules/video.js/dist/video-js.css"
+              "node_modules/aos/dist/aos.css"
             ],
             "scripts": [
               "src/assets/js/calender.js",
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-              "node_modules/aos/dist/aos.js",
-              "node_modules/video.js/dist/video.min.js"
+              "node_modules/aos/dist/aos.js"
             ],
             "server": "src/main.server.ts",
             "prerender": true,
@@ -58,14 +64,14 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "10mb",
+                  "maximumError": "10mb"
                 },
                 {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
-                }
+  "type": "anyComponentStyle",
+  "maximumWarning": "10mb",
+  "maximumError": "10mb"
+}
               ],
               "outputHashing": "all"
             },

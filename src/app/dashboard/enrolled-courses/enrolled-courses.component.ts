@@ -28,7 +28,6 @@ student: any;
   }
 
   playVideo(video: string) {
-  console.log('Video URL:', video);
   this.router.navigate(['/play-video'], { queryParams: { video: video } });
 }
 
